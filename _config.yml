@@ -45,6 +45,8 @@ plugins:
 jekyll-minifier:
   compress_css: true
   compress_javascript: true
+  uglifier_args:
+    harmony: true
   compress_html: true
   remove_comments: true
 
