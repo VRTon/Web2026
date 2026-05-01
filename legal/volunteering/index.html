@@ -8,10 +8,94 @@ description: "Volunteering Terms and conditions for VRTon — Virtual Reality Ch
 ---
 {% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
+{% assign doc = t.legal.volunteering %}
+{% assign sec = doc.sections %}
+{% assign g = sec.general %}
+{% assign i = sec.individual %}
+{% assign c = sec.community %}
 
 <main class="legal-page">
     <div class="container">
-        <h1>{{ t.legal.volunteering.title }}</h1>
-        <p><em>{{ t.legal.volunteering.coming_soon }}</em></p>
+        <h1>{{ doc.title }}</h1>
+        <p>{{ doc.subtitle }}</p>
+
+        <section class="legal-section">
+            <h2>{{ sec.intro.title }}</h2>
+            <p>{{ sec.intro.content }}</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ g.title }}</h3>
+
+            <h4>{{ g.nature_title }}</h4>
+            <ul>
+                <li>{{ g.nature_content1 }}</li>
+                <li>{{ g.nature_content2 }}</li>
+            </ul>
+
+            <h4>{{ g.recognition_title }}</h4>
+            <ul>
+                <li>{{ g.recognition_content1 }}</li>
+                <li>{{ g.recognition_content2 }}</li>
+            </ul>
+
+            <h4>{{ g.ownership_title }}</h4>
+            <p>{{ g.ownership_content }}</p>
+
+            <h4>{{ g.communication_title }}</h4>
+            <ul>
+                <li>{{ g.communication_content1 }}</li>
+                <li>{{ g.communication_content2 }}</li>
+            </ul>
+
+            <h4>{{ g.sanctions_title }}</h4>
+            <p>{{ g.sanctions_content }}</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ i.title }}</h3>
+
+            <h4>{{ i.teams_title }}</h4>
+            <ul>
+                <li>{{ i.teams_content1 }}</li>
+                <li>{{ i.teams_content2 }}</li>
+                <li>{{ i.teams_content3 }}</li>
+            </ul>
+
+            <h4>{{ i.commitment_title }}</h4>
+            <ul>
+                <li>{{ i.commitment_content1 }}</li>
+                <li>{{ i.commitment_content2 }}</li>
+                <li>{{ i.commitment_content3 }}</li>
+            </ul>
+
+            <h4>{{ i.leadership_title }}</h4>
+            <ul>
+                <li>{{ i.leadership_content1 }}</li>
+                <li>{{ i.leadership_content2 }}</li>
+                <li>{{ i.leadership_content3 }}</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ c.title }}</h3>
+
+            <h4>{{ c.modalities_title }}</h4>
+            <p>{{ c.modalities_intro }}</p>
+            <ul>
+                <li>{{ c.modalities_activities }}</li>
+                <li>{{ c.modalities_donations }}</li>
+                <li>{{ c.modalities_creative }}</li>
+                <li>{{ c.modalities_outreach }}</li>
+                <li>{{ c.modalities_other }}</li>
+            </ul>
+
+            <h4>{{ c.responsibilities_title }}</h4>
+            <ul>
+                <li>{{ c.responsibilities_content1 }}</li>
+                <li>{{ c.responsibilities_content2 }}</li>
+                <li>{{ c.responsibilities_content3 }}</li>
+            </ul>
+        </section>
     </div>
 </main>
