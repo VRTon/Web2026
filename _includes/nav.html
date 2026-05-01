@@ -16,11 +16,17 @@
             <li class="nav-item nav-lang-item">
                 <span class="nav-link">{{ t.nav.language_label }}:</span>
                 {% for lang_code in site.languages %}
+                    {% assign page_path = page.permalink_lang[lang_code] | default: page.url | default: '/' %}
                     {% if lang_code == site.default_lang %}
-                        <a href="{{ '/' | relative_url }}" class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}">{{ lang_code | upcase }}</a>
+                        {% assign switch_href = page_path %}
                     {% else %}
-                        <a href="{{ '/' | append: lang_code | append: '/' | relative_url }}" class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}">{{ lang_code | upcase }}</a>
+                        {% if page_path == '/' %}
+                            {% assign switch_href = '/' | append: lang_code | append: '/' %}
+                        {% else %}
+                            {% assign switch_href = '/' | append: lang_code | append: page_path %}
+                        {% endif %}
                     {% endif %}
+                    <a {% static_href %}href="{{ switch_href | replace: '//', '/' }}"{% endstatic_href %} class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}">{{ lang_code | upcase }}</a>
                 {% endfor %}
             </li>
         </ul>

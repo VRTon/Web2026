@@ -8,7 +8,6 @@ languages: ["en", "es"]
 default_lang: "en"
 parallel_localization: false
 exclude_from_localization:
-  - assets
   - _site
   - site.webmanifest
   - robots.txt
