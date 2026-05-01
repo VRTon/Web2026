@@ -1,5 +1,7 @@
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ active_lang }}">
 <head>
     {% include head.html %}
 </head>

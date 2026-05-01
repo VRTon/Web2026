@@ -1,14 +1,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% seo %}
+{% assign current_url = page.url | default: '/' %}
+{% for lang_code in site.languages %}
+  {% if lang_code == site.default_lang %}
+    <link rel="alternate" hreflang="{{ lang_code }}" href="{{ site.url }}{{ current_url }}">
+  {% else %}
+    <link rel="alternate" hreflang="{{ lang_code }}" href="{{ site.url }}/{{ lang_code }}{{ current_url }}">
+  {% endif %}
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ current_url }}">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "{{ site.title }}",
+  "name": "{{ t.site.title | default: site.title }}",
   "url": "{{ site.url }}",
   "logo": "{{ site.url }}{{ site.logo }}",
-  "description": "{{ site.description }}",
+  "description": "{{ t.site.description | default: site.description }}",
   "sameAs": [{% for link in site.social.links %}
     "{{ link }}"{% unless forloop.last %},{% endunless %}{% endfor %}
   ]

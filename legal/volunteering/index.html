@@ -1,12 +1,17 @@
 ---
 layout: default
+lang: en
+permalink: /legal/volunteering/
+page_id: legal-volunteering
 title: "Volunteering Terms | VRTon"
 description: "Volunteering Terms and conditions for VRTon — Virtual Reality Charity Event."
 ---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
 
 <main class="legal-page">
     <div class="container">
-        <h1>Volunteering Terms</h1>
-        <p><em>Content coming soon.</em></p>
+        <h1>{{ t.legal.volunteering.title }}</h1>
+        <p><em>{{ t.legal.volunteering.coming_soon }}</em></p>
     </div>
 </main>
