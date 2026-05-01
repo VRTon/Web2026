@@ -49,23 +49,29 @@ function showSlide(year, index) {
 // Auto-play carousels
 function autoPlayCarousels() {
     Object.keys(currentSlides).forEach(year => {
-        moveCarousel(year, 1);
+        if (document.querySelector(`[data-carousel="${year}"]`)) {
+            moveCarousel(year, 1);
+        }
     });
 }
 
-// Start auto-play (every 5 seconds)
-let autoPlayInterval = setInterval(autoPlayCarousels, 5000);
+// Start auto-play only when carousels exist on this page
+const carouselEls = document.querySelectorAll('.carousel');
+let autoPlayInterval;
+if (carouselEls.length > 0) {
+    autoPlayInterval = setInterval(autoPlayCarousels, 5000);
 
-// Pause auto-play on hover
-document.querySelectorAll('.carousel').forEach(carousel => {
-    carousel.addEventListener('mouseenter', () => {
-        clearInterval(autoPlayInterval);
+    // Pause auto-play on hover
+    carouselEls.forEach(carousel => {
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(autoPlayCarousels, 5000);
+        });
     });
-    
-    carousel.addEventListener('mouseleave', () => {
-        autoPlayInterval = setInterval(autoPlayCarousels, 5000);
-    });
-});
+}
 
 // FAQ functionality
 function toggleFAQ(button) {
