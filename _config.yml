@@ -38,3 +38,6 @@ exclude:
   - docker-compose.yml
   - .dockerignore
   - node_modules/
+  - vendor/
+  - .bundle
+  - .github/
