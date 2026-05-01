@@ -40,6 +40,13 @@ plugins:
   - jekyll-polyglot
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-minifier
+
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  compress_html: true
+  remove_comments: true
 
 permalink: pretty
 
