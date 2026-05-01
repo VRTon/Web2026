@@ -11,6 +11,8 @@ exclude_from_localization:
   - _site
   - site.webmanifest
   - robots.txt
+  - styles.css
+  - script.js
 
 title: "VRTon"
 tagline: "Using Technology to Change Lives"

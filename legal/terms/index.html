@@ -8,10 +8,68 @@ description: "Terms of Service for VRTon — Virtual Reality Charity Event."
 ---
 {% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
+{% assign doc = t.legal.terms %}
+{% assign sec = doc.sections %}
 
 <main class="legal-page">
     <div class="container">
-        <h1>{{ t.legal.terms.title }}</h1>
-        <p><em>{{ t.legal.terms.coming_soon }}</em></p>
+        <h1>{{ doc.title }}</h1>
+        <p>{{ doc.subtitle }}</p>
+
+        <section class="legal-section">
+            <h2>{{ sec.scope.title }}</h2>
+            <h3>{{ sec.scope.subtitle }}</h3>
+            <p>{{ sec.scope.content }}</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ sec.compliance.title }}</h3>
+            <p>{{ sec.compliance.intro }}</p>
+            <ul>
+                <li><strong>VRChat</strong> - <a href="https://hello.vrchat.com/legal" target="_blank" rel="noopener noreferrer">{{ sec.compliance.vrchat_tos }}</a></li>
+                <li><strong>VRChat</strong> - <a href="https://hello.vrchat.com/community-guidelines" target="_blank" rel="noopener noreferrer">{{ sec.compliance.vrchat_guidelines }}</a></li>
+                <li><strong>Discord</strong> - <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">{{ sec.compliance.discord_tos }}</a></li>
+                <li><strong>Discord</strong> - <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">{{ sec.compliance.discord_guidelines }}</a></li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ sec.access.title }}</h3>
+            <ul>
+                <li>{{ sec.access.age }}</li>
+                <li>{{ sec.access.free }}</li>
+                <li>{{ sec.access.geographic }}</li>
+                <li>{{ sec.access.vr }}</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ sec.intellectual.title }}</h3>
+            <ul>
+                <li>{{ sec.intellectual.ownership }}</li>
+                <li>{{ sec.intellectual.volunteer }}</li>
+                <li>{{ sec.intellectual.resources }}</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ sec.enforcement.title }}</h3>
+            <ul>
+                <li>{{ sec.enforcement.discretion }}</li>
+                <li>{{ sec.enforcement.immediate }}</li>
+                <li>{{ sec.enforcement.explanation }}</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ sec.liability.title }}</h3>
+            <ul>
+                <li>{{ sec.liability.technical }}</li>
+                <li>{{ sec.liability.conduct }}</li>
+                <li>{{ sec.liability.asis }}</li>
+                <li>{{ sec.liability.acceptance }}</li>
+                <li>{{ sec.liability.donations }}</li>
+            </ul>
+        </section>
     </div>
 </main>

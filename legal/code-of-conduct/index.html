@@ -8,10 +8,98 @@ description: "Code of Conduct for VRTon — Virtual Reality Charity Event."
 ---
 {% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
 {% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
+{% assign doc = t.legal.code_of_conduct %}
+{% assign sec = doc.sections %}
+{% assign r = sec.content_restrictions %}
+{% assign p = sec.prohibited_actions %}
 
 <main class="legal-page">
     <div class="container">
-        <h1>{{ t.legal.code_of_conduct.title }}</h1>
-        <p><em>{{ t.legal.code_of_conduct.coming_soon }}</em></p>
+        <h1>{{ doc.title }}</h1>
+        <p>{{ doc.subtitle }}</p>
+
+        <section class="legal-section">
+            <h2>{{ sec.introduction.title }}</h2>
+            <p>{{ sec.introduction.content }}</p>
+            <p>{{ sec.introduction.moderation }}</p>
+            <p>{{ sec.introduction.scope }}</p>
+            <p>{{ sec.introduction.compliance }}</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ r.title }}</h3>
+
+            <h4>{{ r.sexual_title }}</h4>
+            <ul>
+                <li>{{ r.sexual_avatars }}</li>
+                <li>{{ r.sexual_erp }}</li>
+                <li>{{ r.sexual_media }}</li>
+            </ul>
+
+            <h4>{{ r.disturbing_title }}</h4>
+            <ul>
+                <li>{{ r.disturbing_gore }}</li>
+                <li>{{ r.disturbing_self_harm }}</li>
+            </ul>
+
+            <h4>{{ r.disruptive_title }}</h4>
+            <ul>
+                <li>{{ r.disruptive_avatars }}</li>
+                <li>{{ r.disruptive_behavior }}</li>
+            </ul>
+
+            <h4>{{ r.harmful_title }}</h4>
+            <ul>
+                <li>{{ r.harmful_hate }}</li>
+                <li>{{ r.harmful_politics }}</li>
+                <li>{{ r.harmful_attacks }}</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.intro }}</p>
+
+            <h4>{{ p.spam_title }}</h4>
+            <ul>
+                <li>{{ p.spam_commercial }}</li>
+                <li>{{ p.spam_invites }}</li>
+                <li>{{ p.spam_portals }}</li>
+                <li>{{ p.spam_events }}</li>
+            </ul>
+
+            <h4>{{ p.impersonation_title }}</h4>
+            <ul>
+                <li>{{ p.impersonation_users }}</li>
+                <li>{{ p.impersonation_staff }}</li>
+            </ul>
+
+            <h4>{{ p.information_title }}</h4>
+            <ul>
+                <li>{{ p.information_personal }}</li>
+                <li>{{ p.information_false }}</li>
+            </ul>
+
+            <h4>{{ p.illegal_title }}</h4>
+            <ul>
+                <li>{{ p.illegal_fraud }}</li>
+                <li>{{ p.illegal_piracy }}</li>
+                <li>{{ p.illegal_other }}</li>
+            </ul>
+
+            <h4>{{ p.harassment_title }}</h4>
+            <ul>
+                <li>{{ p.harassment_general }}</li>
+                <li>{{ p.harassment_intimidation }}</li>
+            </ul>
+
+            <h4>{{ p.disruption_title }}</h4>
+            <ul>
+                <li>{{ p.disruption_events }}</li>
+                <li>{{ p.disruption_audio }}</li>
+                <li>{{ p.disruption_avatars }}</li>
+                <li>{{ p.disruption_exploits }}</li>
+            </ul>
+        </section>
     </div>
 </main>
