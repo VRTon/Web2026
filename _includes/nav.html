@@ -5,14 +5,14 @@
     {% endif %}
     <div class="nav-container">
         <div class="nav-logo">
-            <img src="{{ '/assets/logo.png' | relative_url }}" alt="VRTon Logo" class="nav-logo-img" width="40" height="40">
+            <img src="{{ '/assets/logo.png' | relative_url }}" alt="VRTon Logo" class="nav-logo-img" width="40" height="40" fetchpriority="high">
             <span class="nav-brand">{{ t.site.title }}</span>
         </div>
         <ul class="nav-menu">
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#home" class="nav-link">{{ t.nav.home }}</a></li>
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#events" class="nav-link">{{ t.nav.events }}</a></li>
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#faq" class="nav-link">{{ t.nav.faq }}</a></li>
-            <li class="nav-item"><a href="#" class="nav-link nav-btn">{{ t.nav.get_involved }}</a></li>
+            <li class="nav-item"><a href="#" class="nav-link nav-btn" aria-label="{{ t.nav.get_involved }}">{{ t.nav.get_involved }}</a></li>
             <li class="nav-item nav-lang-item">
                 <span class="nav-link">{{ t.nav.language_label }}:</span>
                 {% for lang_code in site.languages %}
@@ -26,7 +26,7 @@
                             {% assign switch_href = '/' | append: lang_code | append: page_path %}
                         {% endif %}
                     {% endif %}
-                    <a {% static_href %}href="{{ switch_href | replace: '//', '/' }}"{% endstatic_href %} class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}">{{ lang_code | upcase }}</a>
+                    <a {% static_href %}href="{{ switch_href | replace: '//', '/' }}"{% endstatic_href %} class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}" aria-label="{% if lang_code == 'en' %}English{% elsif lang_code == 'es' %}Espanol{% else %}{{ lang_code | upcase }}{% endif %}">{{ lang_code | upcase }}</a>
                 {% endfor %}
             </li>
         </ul>
