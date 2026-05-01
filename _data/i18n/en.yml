@@ -1,0 +1,69 @@
+site:
+  title: "VRTon"
+  tagline: "Using Technology to Change Lives"
+  description: "VRTon is a voluntary initiative bringing together VR communities to achieve charitable goals through virtual reality events."
+
+nav:
+  home: "Home"
+  events: "Events"
+  faq: "FAQ"
+  get_involved: "Get Involved"
+  language_label: "Language"
+
+footer:
+  title: "VRTon"
+  text: "Using technology to change lives through virtual reality philanthropy."
+  quick_links: "Quick Links"
+  terms: "Terms of Service"
+  code_of_conduct: "Code of Conduct"
+  volunteering: "Volunteering Terms"
+  connect: "Connect With Us"
+  rights: "All rights reserved."
+
+home:
+  hero:
+    title: "VRTon 2026"
+    subtitle: "November 6th & 7th"
+    attend: "Attend"
+    volunteer: "Volunteer"
+    sponsor: "Sponsor"
+    vrchat_alt: "Experience in VRChat"
+  events:
+    title: "Previous Events"
+    goal_reached: "Goal Reached"
+  faq:
+    title: "Frequently Asked Questions"
+    left:
+      - question: "What is VRTon?"
+        answer_html: "VRTon is a voluntary initiative that brings together communities from the virtual reality metaverse to achieve solidarity goals. We focus on education, inspiration, empathy, and philanthropy while using technology to help others and improve lives."
+      - question: "How can I attend an event?"
+        answer_html: "This year's event will be held on the <b>6th and 7th of November</b>. You can attend by joining our <a href='https://vrc.group/VRTON.0659'>VRChat Group</a>. The event is completely free."
+      - question: "Do I need VR equipment to participate?"
+        answer_html: "No! While VR headsets provide the most immersive experience, you can join our events using a computer or even your phone!"
+      - question: "How can I volunteer?"
+        answer_html: "We're always looking for passionate individuals to join our team! Click <a href='VOLUNTEERING_URL'>here</a> to learn more about the volunteer opportunities available."
+    right:
+      - question: "Where does the money go?"
+        answer_html: "100% of the funds raised go directly to our partner charities and causes. We promote donating using the official links provided by the organizations and don't collect money ourselves."
+      - question: "What kind of activities can we expect on VRTon?"
+        answer_html: "You can expect a variety of activities on VRTon catering to different interests and age groups, including live concerts and shows, educational workshops, awareness campaigns, and community gatherings."
+      - question: "How can I stay updated on upcoming events?"
+        answer_html: "Follow us on our social media channels (Discord, Instagram, X, TikTok, YouTube, and Twitch) for the latest news, event announcements, and behind-the-scenes content."
+
+legal:
+  terms:
+    title: "Terms of Service"
+    coming_soon: "Content coming soon."
+  code_of_conduct:
+    title: "Code of Conduct"
+    coming_soon: "Content coming soon."
+  volunteering:
+    title: "Volunteering Terms"
+    coming_soon: "Content coming soon."
+
+errors:
+  not_found:
+    title: "Page Not Found"
+    headline: "Lost in the Metaverse"
+    message: "The page you are looking for does not exist or has been moved."
+    back_home: "Back to Home"

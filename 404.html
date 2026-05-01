@@ -1,17 +1,21 @@
 ---
 layout: default
+lang: en
+page_id: not-found
 title: "Page Not Found | VRTon"
 description: "The page you are looking for does not exist."
 permalink: /404.html
 ---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
 
 <main class="error-page">
     <div class="container">
         <div class="error-content">
             <p class="error-code">404</p>
-            <h1 class="error-title">Lost in the Metaverse</h1>
-            <p class="error-message">The page you are looking for does not exist or has been moved.</p>
-            <a href="{{ '/' | relative_url }}" class="btn btn-primary">Back to Home</a>
+            <h1 class="error-title">{{ t.errors.not_found.headline }}</h1>
+            <p class="error-message">{{ t.errors.not_found.message }}</p>
+            <a href="{{ '/' | relative_url }}" class="btn btn-primary">{{ t.errors.not_found.back_home }}</a>
         </div>
     </div>
 </main>

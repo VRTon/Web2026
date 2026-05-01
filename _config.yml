@@ -1,6 +1,17 @@
 url: "https://vrton.org"
 baseurl: ""
+safe: false
+whitelist:
+  - jekyll-polyglot
 lang: "en"
+languages: ["en", "es"]
+default_lang: "en"
+parallel_localization: false
+exclude_from_localization:
+  - assets
+  - _site
+  - site.webmanifest
+  - robots.txt
 
 title: "VRTon"
 tagline: "Using Technology to Change Lives"
@@ -25,6 +36,7 @@ twitter:
   card: summary_large_image
 
 plugins:
+  - jekyll-polyglot
   - jekyll-seo-tag
   - jekyll-sitemap
 
@@ -33,7 +45,6 @@ permalink: pretty
 exclude:
   - Gemfile
   - Gemfile.lock
-  - "*.gemspec"
   - Dockerfile
   - docker-compose.yml
   - .dockerignore

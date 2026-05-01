@@ -1,22 +1,26 @@
 <footer class="footer">
+    {% assign lang_root = '/' %}
+    {% if active_lang != site.default_lang %}
+        {% assign lang_root = '/' | append: active_lang | append: '/' %}
+    {% endif %}
     <div class="footer-container">
         <div class="footer-content">
             <div class="footer-section">
-                <h3 class="footer-title">VRTon</h3>
-                <p class="footer-text">Using technology to change lives through virtual reality philanthropy.</p>
+                <h3 class="footer-title">{{ t.footer.title }}</h3>
+                <p class="footer-text">{{ t.footer.text }}</p>
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-heading">Quick Links</h4>
+                <h4 class="footer-heading">{{ t.footer.quick_links }}</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ '/legal/terms/' | relative_url }}" class="footer-link">Terms of Service</a></li>
-                    <li><a href="{{ '/legal/code-of-conduct/' | relative_url }}" class="footer-link">Code of Conduct</a></li>
-                    <li><a href="{{ '/legal/volunteering/' | relative_url }}" class="footer-link">Volunteering Terms</a></li>
+                    <li><a href="{{ lang_root | append: 'legal/terms/' | relative_url }}" class="footer-link">{{ t.footer.terms }}</a></li>
+                    <li><a href="{{ lang_root | append: 'legal/code-of-conduct/' | relative_url }}" class="footer-link">{{ t.footer.code_of_conduct }}</a></li>
+                    <li><a href="{{ lang_root | append: 'legal/volunteering/' | relative_url }}" class="footer-link">{{ t.footer.volunteering }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-heading">Connect With Us</h4>
+                <h4 class="footer-heading">{{ t.footer.connect }}</h4>
                 <div class="footer-social">
                     <a href="https://discord.gg/AR72D2nfpp" class="footer-social-icon discord" aria-label="Discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
                     <a href="https://vrc.group/VRTON.0659" class="footer-social-icon vrchat" aria-label="VRChat" target="_blank" rel="noopener noreferrer"><i class="fas fa-vr-cardboard"></i></a>
@@ -30,7 +34,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p class="footer-copyright">&copy; 2026 VRTon. All rights reserved.</p>
+            <p class="footer-copyright">&copy; 2026 {{ t.footer.title }}. {{ t.footer.rights }}</p>
         </div>
     </div>
 </footer>

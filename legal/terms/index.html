@@ -1,12 +1,17 @@
 ---
 layout: default
+lang: en
+permalink: /legal/terms/
+page_id: legal-terms
 title: "Terms of Service | VRTon"
 description: "Terms of Service for VRTon — Virtual Reality Charity Event."
 ---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
 
 <main class="legal-page">
     <div class="container">
-        <h1>Terms of Service</h1>
-        <p><em>Content coming soon.</em></p>
+        <h1>{{ t.legal.terms.title }}</h1>
+        <p><em>{{ t.legal.terms.coming_soon }}</em></p>
     </div>
 </main>
