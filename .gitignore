@@ -1,0 +1,25 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# Gemfile.lock is committed for apps (keeps CI reproducible)
+# Remove the next line if you prefer not to commit it
+# Gemfile.lock
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*~

@@ -1,0 +1,251 @@
+---
+layout: default
+title: "VRTon 2026 - Using Technology to Change Lives"
+description: "VRTon 2026 — November 6th & 7th. A virtual reality charity event uniting VR communities to raise funds and change lives."
+image: "/assets/logo.png"
+---
+
+    <!-- Header Section -->
+    <header class="hero-section" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="{{ '/assets/logo.png' | relative_url }}" alt="VRTon Logo" class="logo" fetchpriority="high">
+            </div>
+
+            <div class="hero-text">
+                <h1 class="hero-title">VRTon 2026</h1>
+                <h2 class="hero-subtitle">November 6th &amp; 7th</h2>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Attend</button>
+                    <button class="btn btn-accent">Volunteer</button>
+                    <button class="btn btn-accent">Sponsor</button>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="vrchat-badge">
+                        <img src="{{ '/assets/vrchat-placeholder.png' | relative_url }}" alt="Experience in VRChat" class="vrchat-img" loading="lazy">
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://discord.gg/AR72D2nfpp" class="social-icon discord" aria-label="Discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                        <a href="https://vrchat.com/home/group/grp_d66fc7e0-955b-42aa-9abb-372bc72c178f" class="social-icon vrchat" aria-label="VRChat" target="_blank" rel="noopener noreferrer"><i class="fas fa-vr-cardboard"></i></a>
+                        <a href="https://www.instagram.com/vrtonof/" class="social-icon instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/vrtonof" class="social-icon twitter" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><i class="fab fa-x"></i></a>
+                        <a href="https://www.tiktok.com/@vrtonoficial" class="social-icon tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@VRTonOficial" class="social-icon youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.twitch.tv/vrtonof" class="social-icon twitch" aria-label="Twitch" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Previous Events Section -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <h2 class="section-title">Previous Events</h2>
+
+            <div class="events-container">
+                <!-- Event 2025 -->
+                <div class="event-card event-left">
+                    <div class="carousel" data-carousel="2025">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ '/assets/Eventos/2025/event-2025-1.png' | relative_url }}" alt="VRTon 2025 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2025/event-2025-2.png' | relative_url }}" alt="VRTon 2025 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2025/event-2025-3.png' | relative_url }}" alt="VRTon 2025 Event" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('2025', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('2025', 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="showSlide('2025', 0)"></span>
+                            <span class="indicator" onclick="showSlide('2025', 1)"></span>
+                            <span class="indicator" onclick="showSlide('2025', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">VRTon 2025</h3>
+                        <p class="event-goal">Goal Reached: <span class="amount">U$D 3.255</span></p>
+                    </div>
+                    <div class="event-collaborators">
+                        <img src="{{ '/assets/Comunidades/ElPecado.webp' | relative_url }}" alt="El Pecado" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/Furality.webp' | relative_url }}" alt="Furality" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/BurlyNoir.webp' | relative_url }}" alt="Burly Noir" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CultOfSecrets.png' | relative_url }}" alt="Cult of Secrets" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CalamityLogo.png' | relative_url }}" alt="Calamity" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CopaCabana.webp' | relative_url }}" alt="Copa Cabana" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/Xtasis.png' | relative_url }}" alt="Xtasis" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/PIVR.webp' | relative_url }}" alt="PIVR" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/GohanTrackers.png' | relative_url }}" alt="Gohan Trackers" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/valenvrc.png' | relative_url }}" alt="ValenVRC" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/VRChateando.png' | relative_url }}" alt="VRChateando" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CafeMononita.png' | relative_url }}" alt="Café Mononita" class="collab-logo" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Event 2024 -->
+                <div class="event-card event-right">
+                    <div class="carousel" data-carousel="2024">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ '/assets/Eventos/2024/event-2024-1.png' | relative_url }}" alt="VRTon 2024 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2024/event-2024-2.png' | relative_url }}" alt="VRTon 2024 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2024/event-2024-3.png' | relative_url }}" alt="VRTon 2024 Event" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('2024', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('2024', 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="showSlide('2024', 0)"></span>
+                            <span class="indicator" onclick="showSlide('2024', 1)"></span>
+                            <span class="indicator" onclick="showSlide('2024', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">VRTon 2024</h3>
+                        <p class="event-goal">Goal Reached: <span class="amount">U$D 1458</span></p>
+                    </div>
+                    <div class="event-collaborators">
+                        <img src="{{ '/assets/Comunidades/ElPecado.webp' | relative_url }}" alt="El Pecado" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/Xtasis.png' | relative_url }}" alt="Xtasis" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/50ajolopesos.png' | relative_url }}" alt="50 Ajolo Pesos" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CalamityLogo.png' | relative_url }}" alt="Calamity" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CultOfSecrets.png' | relative_url }}" alt="Cult of Secrets" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/ElAlba.webp' | relative_url }}" alt="El Alba" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/TeamLatam.png' | relative_url }}" alt="Team Latam" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/5DAcademy.webp' | relative_url }}" alt="5D Academy" class="collab-logo" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Event 2023 -->
+                <div class="event-card event-left">
+                    <div class="carousel" data-carousel="2023">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ '/assets/Eventos/2023/event-2023-1.jpg' | relative_url }}" alt="VRTon 2023 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2023/event-2023-2.jpg' | relative_url }}" alt="VRTon 2023 Event" loading="lazy">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ '/assets/Eventos/2023/event-2023-3.jpg' | relative_url }}" alt="VRTon 2023 Event" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('2023', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('2023', 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="showSlide('2023', 0)"></span>
+                            <span class="indicator" onclick="showSlide('2023', 1)"></span>
+                            <span class="indicator" onclick="showSlide('2023', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">VRTon 2023</h3>
+                        <p class="event-goal">Goal Reached: <span class="amount">U$D 474</span></p>
+                    </div>
+                    <div class="event-collaborators">
+                        <img src="{{ '/assets/Comunidades/Xtasis.png' | relative_url }}" alt="Xtasis" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/ElPecado.webp' | relative_url }}" alt="El Pecado" class="collab-logo" loading="lazy">
+                        <img src="{{ '/assets/Comunidades/CultOfSecrets.png' | relative_url }}" alt="Cult of Secrets" class="collab-logo" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-grid">
+                <!-- Column 1 -->
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What is VRTon?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>VRTon is a voluntary initiative that brings together communities from the virtual reality metaverse to achieve solidary goals. We focus on education, inspiration, empathy, and philanthropy while using technology to help others and improve lives.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How can I attend an event?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>This years event will be held on the <b>6th and 7th of November</b>, you can attend by joining our <a href="https://vrc.group/VRTON.0659">VRChat Group</a>. The event is completely free.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need VR equipment to participate?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No! While VR headsets provide the most immersive experience, you can join our events using a computer or even your phone!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How can I volunteer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're always looking for passionate individuals to join our team! Click <a href="{{ '/legal/volunteering/' | relative_url }}">here</a> to learn more about the volunteer opportunities available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Where does the money go?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>100% of the funds raised go directly to our partner charities and causes. We promote donating using the official links provided by the organizations and don't collect money ourselves.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What kind of activities can we expect on VRTon?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can expect a variety of activities on VRTon catering to different interests and age groups, including live concerts and shows, educational workshops, awareness campaigns, and community gatherings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How can I stay updated on upcoming events?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Follow us on our social media channels (Discord, Instagram, X, TikTok, YouTube, and Twitch) for the latest news, event announcements, and behind-the-scenes content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

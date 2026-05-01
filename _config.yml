@@ -1,0 +1,40 @@
+url: "https://vrton.org"
+baseurl: ""
+lang: "en"
+
+title: "VRTon"
+tagline: "Using Technology to Change Lives"
+description: "VRTon is a voluntary initiative bringing together VR communities to achieve charitable goals through virtual reality events."
+logo: "/assets/logo.png"
+
+author:
+  name: "VRTon"
+
+social:
+  name: "VRTon"
+  links:
+    - "https://discord.gg/AR72D2nfpp"
+    - "https://www.instagram.com/vrtonof/"
+    - "https://x.com/vrtonof"
+    - "https://www.tiktok.com/@vrtonoficial"
+    - "https://www.youtube.com/@VRTonOficial"
+    - "https://www.twitch.tv/vrtonof"
+
+twitter:
+  username: "vrtonof"
+  card: summary_large_image
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
+  - Dockerfile
+  - docker-compose.yml
+  - .dockerignore
+  - node_modules/

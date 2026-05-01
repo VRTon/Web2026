@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}{{ site.logo }}",
+  "description": "{{ site.description }}",
+  "sameAs": [{% for link in site.social.links %}
+    "{{ link }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<meta name="theme-color" content="#d33741">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
