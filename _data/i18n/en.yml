@@ -52,11 +52,11 @@ home:
 
 legal:
   terms:
-    title: "VRTon 2025 Terms and Conditions"
+    title: "VRTon 2026 Terms and Conditions"
     subtitle: "Event Rules and Policies"
     sections:
       scope:
-        title: "VRTon 2025 Terms and Conditions"
+        title: "VRTon 2026 Terms and Conditions"
         subtitle: "1. Scope"
         content: "These Terms and Conditions apply to the use of all spaces and activities related to VRTon, including the main event, Discord server, VRChat group, official website, and social media. They apply before, during, and after the event."
       compliance:
@@ -88,9 +88,9 @@ legal:
         conduct: "VRTon is not responsible for user conduct within or outside official spaces."
         asis: "All content and services are delivered \"as is\", without guarantee of operation or future support."
         acceptance: "Participation implies acceptance of these conditions and moderation decisions."
-        donations: "All VRTon 2025 donations are made through official donation channels provided by Teleton Chile. VRTon is not responsible for any transaction made through unofficial means."
+        donations: "All VRTon 2026 donations are made through official donation channels provided by the choosen charity. VRTon is not responsible for any transaction made through unofficial means."
   code_of_conduct:
-    title: "VRTon 2025 Code of Conduct"
+    title: "VRTon 2026 Code of Conduct"
     subtitle: "Event Rules and Standards"
     sections:
       introduction:
@@ -114,7 +114,7 @@ legal:
         harmful_title: "1.4 Harmful speech"
         harmful_hate: "Expressions of hate, racism, xenophobia, homophobia, transphobia, sexism or any form of discrimination."
         harmful_politics: "Political or religious conversations."
-        harmful_attacks: "Comments that seek to dismiss or attack VRTon, Teleton Chile, associated communities or participants."
+        harmful_attacks: "Comments that seek to dismiss or attack VRTon, the selected charity, associated communities or participants."
       prohibited_actions:
         title: "2. Prohibited Actions"
         intro: "In addition to content, the following behaviors are prohibited in all VRTon spaces:"
@@ -142,7 +142,7 @@ legal:
         disruption_avatars: "Use of offensive, annoying avatars or with effects intended to disrupt."
         disruption_exploits: "Use of modified clients or other resources intended to exploit event systems for personal gain or disruption of others' experience."
   volunteering:
-    title: "VRTon 2025 Volunteering and Collaboration Terms"
+    title: "VRTon 2026 Volunteering and Collaboration Terms"
     subtitle: "Learn the conditions to be part of the VRTon team"
     sections:
       intro:
