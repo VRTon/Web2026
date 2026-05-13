@@ -115,6 +115,11 @@ body {
     color: var(--vrton-red);
 }
 
+.nav-link-active {
+    color: var(--vrton-red);
+    font-weight: 700;
+}
+
 .nav-btn {
     background: var(--vrton-red);
     color: var(--vrton-white) !important;

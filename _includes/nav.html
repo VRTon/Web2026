@@ -12,9 +12,7 @@
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#home" class="nav-link">{{ t.nav.home }}</a></li>
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#events" class="nav-link">{{ t.nav.events }}</a></li>
             <li class="nav-item"><a href="{{ lang_root | relative_url }}#faq" class="nav-link">{{ t.nav.faq }}</a></li>
-            <li class="nav-item"><a href="#" class="nav-link nav-btn" aria-label="{{ t.nav.get_involved }}">{{ t.nav.get_involved }}</a></li>
             <li class="nav-item nav-lang-item">
-                <span class="nav-link">{{ t.nav.language_label }}:</span>
                 {% for lang_code in site.languages %}
                     {% assign page_path = page.permalink_lang[lang_code] | default: page.url | default: '/' %}
                     {% if lang_code == site.default_lang %}
@@ -26,7 +24,7 @@
                             {% assign switch_href = '/' | append: lang_code | append: page_path %}
                         {% endif %}
                     {% endif %}
-                    <a {% static_href %}href="{{ switch_href | replace: '//', '/' }}"{% endstatic_href %} class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}" aria-label="{% if lang_code == 'en' %}English{% elsif lang_code == 'es' %}Espanol{% else %}{{ lang_code | upcase }}{% endif %}">{{ lang_code | upcase }}</a>
+                    <a {% static_href %}href="{{ switch_href | replace: '//', '/' }}"{% endstatic_href %} class="nav-link{% if active_lang == lang_code %} nav-link-active{% endif %}" aria-label="{% if lang_code == 'en' %}English{% elsif lang_code == 'es' %}Español{% else %}{{ lang_code | upcase }}{% endif %}">{% if lang_code == 'en' %}🇺🇸{% elsif lang_code == 'es' %}🇪🇸{% else %}{{ lang_code | upcase }}{% endif %}</a>
                 {% endfor %}
             </li>
         </ul>

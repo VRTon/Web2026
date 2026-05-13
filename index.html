@@ -30,9 +30,9 @@ image: "/assets/logo.png"
                 <h2 class="hero-subtitle">{{ t.home.hero.subtitle }}</h2>
 
                 <div class="action-buttons">
-                    <button class="btn btn-primary">{{ t.home.hero.attend }}</button>
-                    <button class="btn btn-accent">{{ t.home.hero.volunteer }}</button>
-                    <button class="btn btn-accent">{{ t.home.hero.sponsor }}</button>
+                    <a href="{{ '/discord/' | relative_url }}" class="btn btn-primary">{{ t.home.hero.attend }}</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7f-826J4-Ca9-QZ9GRjV9-HMOqhsM8yF1M65bfwb5ZfliwA/viewform?usp=header" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.volunteer }}</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7f-826J4-Ca9-QZ9GRjV9-HMOqhsM8yF1M65bfwb5ZfliwA/viewform?usp=header" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.sponsor }}</a>
                 </div>
 
                 <div class="bottom-section">
