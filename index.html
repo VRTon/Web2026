@@ -16,6 +16,10 @@ image: "/assets/logo.png"
 {% assign lang_root = '/' | append: active_lang | append: '/' %}
 {% endif %}
 {% assign volunteering_url = lang_root | append: 'legal/volunteering/' | relative_url %}
+{% assign volunteer_sponsor_form_url = 'https://forms.gle/3fgqHpuLAs8mDVqV8' %}
+{% if active_lang == 'es' %}
+{% assign volunteer_sponsor_form_url = 'https://forms.gle/ubg5U2t4eMCuu9k18' %}
+{% endif %}
 
     <!-- Header Section -->
     <header class="hero-section" id="home">
@@ -31,8 +35,8 @@ image: "/assets/logo.png"
 
                 <div class="action-buttons">
                     <a href="{{ '/discord' | relative_url }}" class="btn btn-primary">{{ t.home.hero.attend }}</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7f-826J4-Ca9-QZ9GRjV9-HMOqhsM8yF1M65bfwb5ZfliwA/viewform?usp=header" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.volunteer }}</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7f-826J4-Ca9-QZ9GRjV9-HMOqhsM8yF1M65bfwb5ZfliwA/viewform?usp=header" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.sponsor }}</a>
+                    <a href="{{ volunteer_sponsor_form_url }}" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.volunteer }}</a>
+                    <a href="{{ volunteer_sponsor_form_url }}" class="btn btn-accent" target="_blank" rel="noopener noreferrer">{{ t.home.hero.sponsor }}</a>
                 </div>
 
                 <div class="bottom-section">
