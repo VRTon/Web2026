@@ -1,20 +1,29 @@
 ---
 layout: default
-lang: en
+lang: es
 permalink: /legal/terms/
 page_id: legal-terms
 title: "Terms of Service | VRTon"
 description: "Terms of Service for VRTon — Virtual Reality Charity Event."
 ---
-{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
-{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.es %}
 {% assign doc = t.legal.terms %}
 {% assign sec = doc.sections %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+    {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
 
-<main class="legal-page">
-    <div class="container">
-        <h1>{{ doc.title }}</h1>
-        <p>{{ doc.subtitle }}</p>
+<main class="legal-page" id="main-content" tabindex="-1">
+    <div class="legal-layout">
+        {% include legal-sidebar.html %}
+        <article class="legal-document">
+        <header class="legal-document-header">
+            <p class="eyebrow">{{ t.legal_ui.eyebrow }}</p>
+            <h1>{{ doc.title }}</h1>
+            <p>{{ doc.subtitle }}</p>
+        </header>
 
         <section class="legal-section">
             <h2>{{ sec.scope.title }}</h2>
@@ -71,5 +80,6 @@ description: "Terms of Service for VRTon — Virtual Reality Charity Event."
                 <li>{{ sec.liability.donations }}</li>
             </ul>
         </section>
+        </article>
     </div>
 </main>

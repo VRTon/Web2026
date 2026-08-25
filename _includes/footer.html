@@ -1,40 +1,49 @@
-<footer class="footer">
-    {% assign lang_root = '/' %}
-    {% if active_lang != site.default_lang %}
-        {% assign lang_root = '/' | append: active_lang | append: '/' %}
-    {% endif %}
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="footer-title">{{ t.footer.title }}</h3>
-                <p class="footer-text">{{ t.footer.text }}</p>
-            </div>
-
-            <div class="footer-section">
-                <h4 class="footer-heading">{{ t.footer.quick_links }}</h4>
-                <ul class="footer-links">
-                    <li><a href="{{ lang_root | append: 'legal/terms/' | relative_url }}" class="footer-link">{{ t.footer.terms }}</a></li>
-                    <li><a href="{{ lang_root | append: 'legal/code-of-conduct/' | relative_url }}" class="footer-link">{{ t.footer.code_of_conduct }}</a></li>
-                    <li><a href="{{ lang_root | append: 'legal/volunteering/' | relative_url }}" class="footer-link">{{ t.footer.volunteering }}</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4 class="footer-heading">{{ t.footer.connect }}</h4>
-                <div class="footer-social">
-                    <a href="https://discord.gg/AR72D2nfpp" class="footer-social-icon discord" aria-label="Discord" title="Discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i><span class="sr-only">Discord</span></a>
-                    <a href="https://vrc.group/VRTON.0659" class="footer-social-icon vrchat" aria-label="VRChat" title="VRChat" target="_blank" rel="noopener noreferrer"><i class="fas fa-vr-cardboard" aria-hidden="true"></i><span class="sr-only">VRChat</span></a>
-                    <a href="https://www.instagram.com/vrtonof/" class="footer-social-icon instagram" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
-                    <a href="https://x.com/vrtonof" class="footer-social-icon twitter" aria-label="X (Twitter)" title="X (Twitter)" target="_blank" rel="noopener noreferrer"><i class="fab fa-x" aria-hidden="true"></i><span class="sr-only">X (Twitter)</span></a>
-                    <a href="https://www.tiktok.com/@vrtonoficial" class="footer-social-icon tiktok" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i><span class="sr-only">TikTok</span></a>
-                    <a href="https://www.youtube.com/@VRTonOficial" class="footer-social-icon youtube" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span></a>
-                    <a href="https://www.twitch.tv/vrtonof" class="footer-social-icon twitch" aria-label="Twitch" title="Twitch" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch" aria-hidden="true"></i><span class="sr-only">Twitch</span></a>
-                </div>
-            </div>
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+    {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+<footer class="site-footer">
+    <div class="footer-shell">
+        <div class="footer-brand">
+            <a class="brand brand-footer" href="{{ lang_root | relative_url }}">
+                <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="56" height="56" loading="lazy">
+                <span>VRTon</span>
+            </a>
+            <p>{{ t.footer_v2.description }}</p>
         </div>
 
-        <div class="footer-bottom">
-            <p class="footer-copyright">&copy; 2026 {{ t.footer.title }}. {{ t.footer.rights }}</p>
+        <div class="footer-column">
+            <h2>{{ t.footer_v2.navigate }}</h2>
+            <a href="{{ lang_root | relative_url }}#about">{{ t.nav_v2.about }}</a>
+            <a href="{{ lang_root | append: 'ediciones/' | relative_url }}">{{ t.nav_v2.events }}</a>
+            <a href="{{ lang_root | append: 'schedule/' | relative_url }}">{{ t.nav_v2.schedule }}</a>
+            <a href="{{ lang_root | append: 'recursos/' | relative_url }}">{{ t.nav_v2.resources }}</a>
+            <a href="{{ lang_root | relative_url }}#faq">{{ t.nav_v2.faq }}</a>
+        </div>
+
+        <div class="footer-column">
+            <h2>{{ t.footer_v2.legal }}</h2>
+            <a href="{{ lang_root | append: 'legal/terms/' | relative_url }}">{{ t.footer.terms }}</a>
+            <a href="{{ lang_root | append: 'legal/code-of-conduct/' | relative_url }}">{{ t.footer.code_of_conduct }}</a>
+            <a href="{{ lang_root | append: 'legal/volunteering/' | relative_url }}">{{ t.footer.volunteering }}</a>
+            <button type="button" data-open-accessibility>{{ t.footer_v2.accessibility_preferences }}</button>
+        </div>
+
+        <div class="footer-column">
+            <h2>{{ t.footer_v2.connect }}</h2>
+            <a href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="{{ site.data.site.community.vrchat }}" target="_blank" rel="noopener noreferrer">VRChat</a>
+            {% for social in site.data.site.social %}
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 {{ t.footer_v2.copyright }}</p>
+        <div class="footer-languages" aria-label="{{ t.nav_v2.language }}">
+            <a href="/"{% if active_lang == 'es' %} aria-current="page"{% endif %}>ES</a>
+            <a href="/en/"{% if active_lang == 'en' %} aria-current="page"{% endif %}>EN</a>
         </div>
     </div>
 </footer>
