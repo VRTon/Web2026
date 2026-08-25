@@ -249,7 +249,7 @@ home_v2:
   about_go_to: "Mostrar mensaje"
   about_slides:
     - title: "Comunidades virtuales, impacto real"
-      text: "VRTon es una iniciativa impulsada por voluntarios que reúne a personas y comunidades de distintas partes del mundo en torno a una pasión común: la tecnología, la realidad virtual y su capacidad para conectar personas.<br>Utilizamos la realidad virtual, principalmente a través de VRChat, como un espacio para promover la solidaridad, educar y concientizar sobre distintas realidades, fortalecer los vínculos entre comunidades y recaudar fondos para generar un impacto positivo y tangible.<br>A lo largo de sus distintas ediciones, VRTon busca demostrar que las comunidades virtuales pueden trascender las fronteras geográficas y convertir la creatividad, el entretenimiento y la colaboración en acciones capaces de generar un cambio en el mundo real."
+      text: "VRTon es una iniciativa impulsada por voluntarios que reúne a personas y comunidades de distintas partes del mundo en torno a una pasión común: la tecnología, la realidad virtual y su capacidad para conectar personas.<br><br>Utilizamos la realidad virtual, principalmente a través de VRChat, como un espacio para promover la solidaridad, educar y concientizar sobre distintas realidades, fortalecer los vínculos entre comunidades y recaudar fondos para generar un impacto positivo y tangible."
       image: "/assets/Eventos/2025/event-2025-1.webp"
       image_alt: "Foto grupal de participantes de VRTon 2025 en VRChat"
 #      cta_label: "Asistir"
@@ -262,7 +262,7 @@ home_v2:
       cta_url: "https://www.teleton.cl/"
     - title: "24+ horas de amor"
       text: "Este <b>6 y 7 de noviembre</b> podras disfrutar de una amplia variedad de actividades, shows y talleres en vivo. Las actividades se repartirán entre dos instancias: la principal y la de fiesta. El evento es completamente gratuito y abierto a todo público <b>no necesitas un visor de realidad virtual para entrar</b>, puedes acceder desde tu computadora o teléfono."
-      image: "/assets/Eventos/2024/event-2025-2.webp"
+      image: "/assets/Eventos/2025/event-2025-2.webp"
       image_alt: "Participantes reunidos durante VRTon 2025"
       cta_label: "Revisar el itinerario"
       cta_path: "schedule/"
