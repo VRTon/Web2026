@@ -58,10 +58,10 @@ avatar_assets: []
 
 world_assets:
   - name:
-      es: "Booth VRTon para VTuberFest"
-      en: "VRTon booth for VTuberFest"
-    format: "ZIP · PNG"
-    file: "/assets/2026/BoothVRTon_VTuberFest.zip"
+      es: "Pósters promocionales de VRTon 2026"
+      en: "VRTon 2026 promotional posters"
+    format: "ZIP · 6 PNG · ES/EN"
+    file: "/assets/2026/VRTon-2026-posters-promocionales.zip"
 
 brand_kit:
   version: "2026"
