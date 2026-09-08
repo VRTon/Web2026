@@ -18,7 +18,7 @@
         <div class="nav-panel" id="primary-navigation">
             <ul class="nav-links">
                 <li><a href="{{ lang_root | relative_url }}">{{ t.nav_v2.home }}</a></li>
-                <li><a href="{{ lang_root | append: 'schedule/' | relative_url }}">{{ t.nav_v2.schedule }}</a></li>
+                <li><button type="button" data-notice="{{ t.home_v2.schedule_pending }}">{{ t.nav_v2.schedule }}</button></li>
                 <li><a href="{{ lang_root | append: 'recursos/' | relative_url }}">{{ t.nav_v2.resources }}</a></li>
                 <li><a href="{{ lang_root | append: 'ediciones/' | relative_url }}">{{ t.nav_v2.previous_editions }}</a></li>
                 <li><a href="{{ lang_root | append: 'legal/terms/' | relative_url }}">{{ t.nav_v2.legal }}</a></li>

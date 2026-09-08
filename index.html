@@ -102,7 +102,9 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
                 <p>{{ slide.text }}</p>
                 {% if slide.cta_label %}
                   <div class="about-slide-actions">
-                    {% if slide.cta_path %}
+                    {% if slide.cta_disabled %}
+                      <button class="button button-secondary" type="button" disabled>{{ slide.cta_label }}</button>
+                    {% elsif slide.cta_path %}
                       <a class="button button-secondary" href="{{ lang_root | append: slide.cta_path | relative_url }}">{{ slide.cta_label }}</a>
                     {% elsif slide.cta_attend %}
                       <a class="button button-secondary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">{{ slide.cta_label }}</a>
@@ -173,18 +175,14 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
         <p class="eyebrow">{{ t.home_v2.schedule_kicker }}</p>
         <h2 id="schedule-title">{{ t.home_v2.schedule_title }}</h2>
         <p>{{ t.home_v2.schedule_text }}</p>
-        <a class="button button-accent" href="{{ lang_root | append: 'schedule/' | relative_url }}">{{ t.home_v2.schedule_cta }}</a>
+        <button class="button button-accent" type="button" disabled>{{ t.home_v2.schedule_cta }}</button>
       </div>
-      <div class="schedule-placeholder" aria-label="{{ t.home_v2.schedule_pending }}">
-        <div class="schedule-placeholder-top">
-          <span>{{ t.schedule.day_one }}</span>
-          <span class="status-pill">{{ t.home_v2.schedule_pending }}</span>
-        </div>
-        <div class="schedule-line"><span>10:00</span><i></i></div>
-        <div class="schedule-line"><span>12:00</span><i></i></div>
-        <div class="schedule-line"><span>14:00</span><i></i></div>
-        <div class="schedule-line"><span>16:00</span><i></i></div>
-      </div>
+      <img class="schedule-preview-image"
+           src="{{ '/assets/2026/itinerario-en-preparacion.png' | relative_url }}"
+           alt="{{ t.home_v2.schedule_image_alt }}"
+           width="1536"
+           height="1024"
+           loading="lazy">
     </div>
   </section>
 

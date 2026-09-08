@@ -265,7 +265,7 @@ home_v2:
       image: "/assets/Eventos/2025/event-2025-2.webp"
       image_alt: "Participantes reunidos durante VRTon 2025"
       cta_label: "Revisar el itinerario"
-      cta_path: "schedule/"
+      cta_disabled: true
 #    - title: "Entrá con o sin visor"
 #      text: "El evento se realizará en VRChat. No necesitás un visor de realidad virtual: podés entrar desde una PC o un teléfono compatible. También se transmitirá por YouTube, Twitch y TikTok."
 #      show_vrchat: true
@@ -283,9 +283,10 @@ home_v2:
   participants_intro: "Organizaciones y comunidades confirmadas para la edición 2026."
   schedule_kicker: "Itinerario 2026"
   schedule_title: "Dos días para encontrarnos"
-  schedule_text: "El itinerario se muestra en la hora local de cada visitante. Las actividades actuales son ejemplos y se reemplazarán cuando se confirmen las definitivas."
+  schedule_text: "Este año podrás disfrutar de shows en vivo, sets de DJs, charlas, actividades comunitarias, talleres y mucho más, repartidos entre la instancia principal y la de fiesta."
   schedule_cta: "Ver itinerario"
   schedule_pending: "Itinerario en preparación"
+  schedule_image_alt: "Equipo de VRTon preparando el itinerario 2026 junto a una pizarra de actividades"
   faq_kicker: "Información útil"
   faq_title: "Preguntas frecuentes"
   faq_image_alt: "Mascota de cristal de VRTon 2026"

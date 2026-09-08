@@ -323,6 +323,12 @@ p {
   text-decoration: none;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
 .button-primary,
 .btn-primary {
   border-color: var(--primary);
@@ -501,17 +507,21 @@ p {
   list-style: none;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
   display: inline-flex;
   padding: 0.65rem 0.75rem;
   border-radius: 999px;
+  border: 0;
+  background: none;
   color: var(--text-soft);
   font-size: 0.92rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links button:hover {
   background: var(--page-alt);
   color: var(--text);
 }
@@ -1200,52 +1210,10 @@ p {
   color: var(--text-soft);
 }
 
-.schedule-placeholder {
-  padding: 1.3rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-}
-
-.schedule-placeholder-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.3rem;
-  font-weight: 850;
-}
-
-.status-pill {
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  background: var(--primary-soft);
-  color: var(--text);
-  font-size: 0.75rem;
-}
-
-.schedule-line {
-  display: grid;
-  align-items: center;
-  gap: 1rem;
-  grid-template-columns: 3.5rem 1fr;
-}
-
-.schedule-line span {
-  color: var(--text-soft);
-  font-size: 0.75rem;
-}
-
-.schedule-line i {
-  display: block;
-  height: 3.2rem;
-  margin-block: 0.25rem;
-  border-radius: 0.75rem;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--primary) 12%, var(--surface)),
-    color-mix(in srgb, var(--cyan) 8%, var(--surface))
-  );
+.schedule-preview-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 1.25rem 2rem rgb(23 33 43 / 15%));
 }
 
 .faq-layout {
@@ -2763,7 +2731,6 @@ p {
 .asset-category-card {
   --category-accent: var(--primary);
   display: grid;
-  min-height: 30rem;
   align-content: start;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   overflow: hidden;
@@ -2776,27 +2743,6 @@ p {
 
 .asset-category-world {
   --category-accent: var(--cyan);
-}
-
-.asset-category-icon {
-  display: grid;
-  width: 5.5rem;
-  aspect-ratio: 1;
-  margin-bottom: 3rem;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--category-accent) 35%, var(--border));
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--category-accent) 10%, var(--surface));
-  color: var(--category-accent);
-}
-
-.asset-category-icon svg {
-  width: 3.2rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.2;
 }
 
 .resource-type-label {
@@ -3055,7 +3001,8 @@ p {
     display: grid;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-links button {
     min-height: 3rem;
     align-items: center;
     padding-inline: 1rem;
@@ -3159,7 +3106,8 @@ p {
     display: grid;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-links button {
     min-height: 3rem;
     align-items: center;
     padding-inline: 1rem;
@@ -3629,14 +3577,6 @@ p {
   .asset-category-grid,
   .avatar-resource-grid {
     grid-template-columns: 1fr;
-  }
-
-  .asset-category-card {
-    min-height: 25rem;
-  }
-
-  .asset-category-icon {
-    margin-bottom: 2rem;
   }
 
   .resource-empty {
