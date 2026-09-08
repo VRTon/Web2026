@@ -1,0 +1,149 @@
+---
+layout: default
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign schedule_data = site.data.schedule %}
+{% assign schedule = schedule_data.editions | where: "year", page.schedule_year | first %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+  {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+
+<main id="main-content" tabindex="-1" class="schedule-page">
+  <header class="page-hero">
+    <div class="content-shell page-hero-grid">
+      <div>
+        <p class="eyebrow">VRTon {{ schedule.year }}</p>
+        <h1>{{ t.schedule.title }} {{ schedule.year }}</h1>
+        <p>{{ t.schedule.intro }}</p>
+      </div>
+      <dl class="timezone-card">
+        <div>
+          <dt>{{ t.schedule.local_timezone }}</dt>
+          <dd data-local-timezone>—</dd>
+        </div>
+        <div>
+          <dt>{{ t.schedule.official_timezone }}</dt>
+          <dd>{{ schedule_data.official_timezone.label }}</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="section schedule-content" aria-labelledby="schedule-table-title">
+    <div class="content-shell">
+      {% if schedule.activities.size > 0 %}
+        <h2 class="sr-only" id="schedule-table-title">{{ t.schedule.title }} {{ schedule.year }}</h2>
+
+        <div class="schedule-table-wrap" data-schedule-grid data-official-timezone="{{ schedule_data.official_timezone.id }}">
+          <table class="schedule-table">
+            {% assign schedule_column_count = schedule.tracks.size | plus: 1 %}
+            <thead>
+              <tr>
+                <th scope="col">{{ t.schedule.time }}</th>
+                {% for track in schedule.tracks %}
+                  <th scope="col" class="schedule-{{ track.id }}-heading">{{ track.label[active_lang] | default: track.label.es }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            {% for day in schedule.days %}
+              <tbody class="schedule-day-group">
+                <tr class="schedule-day-divider">
+                  <th colspan="{{ schedule_column_count }}" scope="rowgroup">{{ day.label[active_lang] | default: day.label.es }}</th>
+                </tr>
+                {% assign day_slots = schedule.slots | where: "group_day", day.date %}
+                {% for slot in day_slots %}
+                  {% assign slot_activities = schedule.activities | where: "hour", slot.hour %}
+                  <tr class="schedule-entry" data-day="{{ day.date }}" data-hour="{{ slot.hour }}">
+                    <th scope="row">
+                      <time data-schedule-time data-start-at="{{ slot.start_at }}" data-end-at="{{ slot.end_at }}" data-show-end="{% if schedule.show_end_times == false %}false{% else %}true{% endif %}">{{ slot.start }}{% unless schedule.show_end_times == false %}–{{ slot.end }}{% endunless %}</time>
+                    </th>
+                    {% for track in schedule.tracks %}
+                      {% assign track_activities = slot_activities | where: "track", track.id %}
+                      <td class="schedule-instance-cell schedule-{{ track.id }}-cell">
+                        {% if track_activities.size > 0 %}
+                          {% for activity in track_activities %}
+                            <button class="schedule-activity-card schedule-activity-{{ track.id }}{% if activity.featured %} schedule-activity-featured{% endif %}" type="button" aria-haspopup="dialog"
+                                    data-schedule-activity
+                                    data-activity-title="{{ activity.title[active_lang] | default: activity.title.es | escape }}"
+                                    data-activity-description="{{ activity.description[active_lang] | default: activity.description.es | escape }}"
+                                    data-activity-instance="{{ track.label[active_lang] | default: track.label.es | escape }}"
+                                    data-activity-start="{{ slot.start_at }}"
+                                    data-activity-end="{{ slot.end_at }}"
+                                    data-show-end="{% if schedule.show_end_times == false %}false{% else %}true{% endif %}">
+                              <span class="schedule-activity-marker" aria-hidden="true"></span>
+                              <span>{{ activity.title[active_lang] | default: activity.title.es }}</span>
+                              <span class="sr-only">— {{ t.schedule.open_details }}</span>
+                            </button>
+                          {% endfor %}
+                        {% else %}
+                          <span class="schedule-empty" aria-hidden="true">—</span>
+                          <span class="sr-only">{{ t.schedule.no_activity }}</span>
+                        {% endif %}
+                      </td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            {% endfor %}
+          </table>
+        </div>
+      {% else %}
+        <h2 class="sr-only" id="schedule-table-title">{{ t.schedule.title }} {{ schedule.year }}</h2>
+        <div class="empty-state">
+          <span class="empty-state-icon" aria-hidden="true">▷</span>
+          <h2>{{ t.schedule.archive_empty_title }}</h2>
+          <p>{{ t.schedule.archive_empty_text }}</p>
+          <a class="button button-secondary" href="{{ lang_root | append: 'ediciones/' | relative_url }}">{{ t.schedule.back_editions }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+{% if schedule.activities.size > 0 %}
+<dialog class="schedule-dialog" id="schedule-dialog" aria-labelledby="schedule-dialog-title">
+  <div class="schedule-dialog-card">
+    <header class="schedule-dialog-header">
+      <p class="eyebrow">{{ t.schedule.activity_details }}</p>
+      <form method="dialog">
+        <button class="icon-button" value="close" aria-label="{{ t.accessibility.close }}" data-close-schedule-dialog>×</button>
+      </form>
+    </header>
+    <h2 id="schedule-dialog-title" data-schedule-dialog-title></h2>
+    <dl class="schedule-dialog-meta">
+      <div>
+        <dt>{{ t.schedule.time }}</dt>
+        <dd data-schedule-dialog-time></dd>
+      </div>
+      <div>
+        <dt>{{ t.schedule.track }}</dt>
+        <dd data-schedule-dialog-instance></dd>
+      </div>
+    </dl>
+    <p data-schedule-dialog-description></p>
+  </div>
+</dialog>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ t.nav_v2.home | jsonify }},
+      "item": {{ site.url | append: lang_root | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ t.schedule.title | append: ' ' | append: schedule.year | jsonify }},
+      "item": {{ site.url | append: page.url | jsonify }}
+    }
+  ]
+}
+</script>

@@ -1,0 +1,217 @@
+---
+layout: default
+lang: es
+permalink: /recursos/
+page_id: resources
+title: "Recursos de VRTon"
+description: "Avatares públicos, assets para creadores y kit de marca de VRTon."
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign resources = site.data.resources %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+  {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+
+<main id="main-content" tabindex="-1" class="resources-page">
+  <header class="resources-hero">
+    <div class="content-shell resources-hero-grid">
+      <div class="resources-hero-copy">
+        <p class="eyebrow">{{ t.resources_page.eyebrow }}</p>
+        <h1>{{ t.resources_page.title }}</h1>
+        <p>{{ t.resources_page.intro }}</p>
+      </div>
+
+      <div class="resources-hero-art" aria-hidden="true">
+        <span class="resource-orbit resource-orbit-large"></span>
+        <span class="resource-orbit resource-orbit-small"></span>
+        <span class="resource-orbit-dot resource-orbit-dot-red"></span>
+        <span class="resource-orbit-dot resource-orbit-dot-yellow"></span>
+        <span class="resource-orbit-dot resource-orbit-dot-cyan"></span>
+        <div class="resources-hero-logo">
+          <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="220" height="220">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="resource-paths" aria-labelledby="resource-paths-title">
+    <div class="content-shell">
+      <h2 class="sr-only" id="resource-paths-title">{{ t.resources_page.paths_title }}</h2>
+      <ol class="resource-path-grid">
+        <li>
+          <a class="resource-path-card resource-path-red" href="#avatars">
+            <span class="resource-path-number">01</span>
+            <span>
+              <small>{{ t.resources_page.path_existing_kicker }}</small>
+              <strong>{{ t.resources_page.path_existing_title }}</strong>
+              <em>{{ t.resources_page.path_existing_text }}</em>
+            </span>
+            <span class="resource-path-arrow" aria-hidden="true">↘</span>
+          </a>
+        </li>
+        <li>
+          <a class="resource-path-card resource-path-green" href="#assets">
+            <span class="resource-path-number">02</span>
+            <span>
+              <small>{{ t.resources_page.path_add_kicker }}</small>
+              <strong>{{ t.resources_page.path_add_title }}</strong>
+              <em>{{ t.resources_page.path_add_text }}</em>
+            </span>
+            <span class="resource-path-arrow" aria-hidden="true">↘</span>
+          </a>
+        </li>
+        <li>
+          <a class="resource-path-card resource-path-cyan" href="#brand-kit">
+            <span class="resource-path-number">03</span>
+            <span>
+              <small>{{ t.resources_page.path_new_kicker }}</small>
+              <strong>{{ t.resources_page.path_new_title }}</strong>
+              <em>{{ t.resources_page.path_new_text }}</em>
+            </span>
+            <span class="resource-path-arrow" aria-hidden="true">↘</span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="section section-tinted resource-section" id="avatars" aria-labelledby="avatars-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide resource-heading-row">
+        <div>
+          <p class="eyebrow">{{ t.resources_page.avatars_kicker }}</p>
+          <h2 id="avatars-title">{{ t.resources_page.avatars_title }}</h2>
+        </div>
+        <p>{{ t.resources_page.avatars_intro }}</p>
+      </div>
+
+      {% if resources.avatars.size > 0 %}
+        <div class="avatar-resource-grid">
+          {% for avatar in resources.avatars %}
+            {% assign avatar_name = avatar.name[active_lang] | default: avatar.name.es %}
+            {% assign avatar_alt = avatar.alt[active_lang] | default: avatar.alt.es | default: avatar_name %}
+            <article class="avatar-resource-card">
+              <a href="{{ avatar.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.resources_page.open_avatar }} {{ avatar_name }}">
+                <img{% if avatar.is_placeholder %} class="avatar-placeholder-image"{% endif %} src="{{ avatar.thumbnail | relative_url }}" alt="{{ avatar_alt }}" width="720" height="900" loading="lazy">
+                <span class="avatar-resource-overlay">
+                  <span class="resource-type-pill">VRChat</span>
+                  <strong>{{ avatar_name }}</strong>
+                  <span>{{ t.resources_page.open_avatar }} <i aria-hidden="true">↗</i></span>
+                </span>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="resource-empty resource-empty-avatars">
+          <div class="resource-empty-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div>
+            <h3>{{ t.resources_page.avatars_empty_title }}</h3>
+            <p>{{ t.resources_page.avatars_empty_text }}</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="section resource-section" id="assets" aria-labelledby="assets-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide resource-heading-row">
+        <div>
+          <p class="eyebrow">{{ t.resources_page.assets_kicker }}</p>
+          <h2 id="assets-title">{{ t.resources_page.assets_title }}</h2>
+        </div>
+        <p>{{ t.resources_page.assets_intro }}</p>
+      </div>
+
+      <div class="asset-category-grid">
+        <article class="asset-category-card asset-category-avatar">
+          <div class="asset-category-copy">
+            <p class="resource-type-label">{{ t.resources_page.for_avatars }}</p>
+            <h3>{{ t.resources_page.avatar_assets_title }}</h3>
+            <p>{{ t.resources_page.avatar_assets_text }}</p>
+          </div>
+          {% if resources.avatar_assets.size > 0 %}
+            <ul class="download-list">
+              {% for asset in resources.avatar_assets %}
+                {% assign asset_name = asset.name[active_lang] | default: asset.name.es %}
+                <li>
+                  <div><strong>{{ asset_name }}</strong><span>{{ asset.format }}</span></div>
+                  <a class="button button-secondary button-small" href="{{ asset.file | relative_url }}" download>{{ t.resources_page.download }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="resource-pending"><span aria-hidden="true"></span>{{ t.resources_page.assets_pending }}</p>
+          {% endif %}
+        </article>
+
+        <article class="asset-category-card asset-category-world">
+          <div class="asset-category-copy">
+            <p class="resource-type-label">{{ t.resources_page.for_worlds }}</p>
+            <h3>{{ t.resources_page.world_assets_title }}</h3>
+            <p>{{ t.resources_page.world_assets_text }}</p>
+          </div>
+          {% if resources.world_assets.size > 0 %}
+            <ul class="download-list">
+              {% for asset in resources.world_assets %}
+                {% assign asset_name = asset.name[active_lang] | default: asset.name.es %}
+                <li>
+                  <div><strong>{{ asset_name }}</strong><span>{{ asset.format }}</span></div>
+                  <a class="button button-secondary button-small" href="{{ asset.file | relative_url }}" download>{{ t.resources_page.download }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="resource-pending"><span aria-hidden="true"></span>{{ t.resources_page.assets_pending }}</p>
+          {% endif %}
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section brand-kit-section" id="brand-kit" aria-labelledby="brand-kit-title">
+    <div class="content-shell">
+      <div class="brand-kit-panel">
+        <div class="brand-kit-copy">
+          <p class="eyebrow eyebrow-light">{{ t.resources_page.brand_kicker }}</p>
+          <h2 id="brand-kit-title">{{ t.resources_page.brand_title }}</h2>
+          <p>{{ t.resources_page.brand_text }}</p>
+          <ul class="brand-kit-contents" aria-label="{{ t.resources_page.brand_includes }}">
+            <li>{{ t.resources_page.brand_logo }}</li>
+            <li>{{ t.resources_page.brand_palette }}</li>
+            <li>{{ t.resources_page.brand_notes }}</li>
+          </ul>
+          <a class="button button-light" href="{{ resources.brand_kit.file | relative_url }}" download>
+            {{ t.resources_page.download_brand_kit }}
+            <span aria-hidden="true">↓</span>
+          </a>
+          <p class="brand-kit-version">{{ t.resources_page.version }} {{ resources.brand_kit.version }} · ZIP</p>
+        </div>
+        <div class="brand-kit-preview" aria-hidden="true">
+          <span class="brand-kit-stamp">VRTon</span>
+          <div class="brand-kit-logo-card">
+            <img src="{{ resources.brand_kit.preview | relative_url }}" alt="" width="260" height="260" loading="lazy">
+          </div>
+          <div class="brand-kit-swatches">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ t.resources_page.title | jsonify }},
+  "description": {{ t.resources_page.intro | jsonify }},
+  "url": {{ site.url | append: lang_root | append: 'recursos/' | jsonify }}
+}
+</script>

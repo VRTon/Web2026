@@ -1,44 +1,32 @@
 ---
 layout: default
-lang: en
+lang: es
 permalink: /links/
 page_id: links
 title: "VRTon — Links"
 description: "Find all VRTon social media and community links in one place."
 ---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}{% assign lang_root = '/' | append: active_lang | append: '/' %}{% endif %}
 
-<section class="hero-section">
-    <div class="hero-background"></div>
-    <div class="links-page">
+<main class="links-page" id="main-content" tabindex="-1">
+    <div class="content-shell">
         <div class="links-card">
-            <a href="/">
-                <img src="{{ '/assets/logo.png' | relative_url }}" alt="VRTon Logo" class="logo">
+            <a href="{{ lang_root | relative_url }}">
+                <img src="{{ '/assets/logo.png' | relative_url }}" alt="VRTon" class="logo" width="140" height="140">
             </a>
             <h1 class="hero-title">VRTon</h1>
+            <p>{{ t.footer_v2.description }}</p>
 
-            <nav class="links-list" aria-label="Social media links">
-                <a href="https://discord.gg/AR72D2nfpp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-discord" aria-hidden="true"></i> Discord
-                </a>
-                <a href="https://vrchat.com/home/group/grp_d66fc7e0-955b-42aa-9abb-372bc72c178f" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-vr-cardboard" aria-hidden="true"></i> VRChat
-                </a>
-                <a href="https://www.instagram.com/vrtonof/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-                </a>
-                <a href="https://x.com/vrtonof" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-x-twitter" aria-hidden="true"></i> X (Twitter)
-                </a>
-                <a href="https://www.tiktok.com/@vrtonoficial" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
-                </a>
-                <a href="https://www.youtube.com/@VRTonOficial" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
-                </a>
-                <a href="https://www.twitch.tv/vrtonof" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitch" aria-hidden="true"></i> Twitch
-                </a>
+            <nav class="links-list" aria-label="{{ t.footer_v2.connect }}">
+                <a href="{{ site.data.site.community.discord }}" class="button button-primary" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="{{ site.data.site.community.vrchat }}" class="button button-secondary" target="_blank" rel="noopener noreferrer">VRChat</a>
+                {% for social in site.data.site.social %}
+                    <a href="{{ social.url }}" class="button button-secondary" target="_blank" rel="noopener noreferrer">{{ social.name }}</a>
+                {% endfor %}
             </nav>
         </div>
     </div>
-</section>
+</main>

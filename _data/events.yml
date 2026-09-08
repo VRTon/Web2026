@@ -1,0 +1,76 @@
+- year: 2025
+  slug: "2025"
+  amount: "USD 3,255"
+  images:
+    - path: "/assets/Eventos/2025/event-2025-1.webp"
+      alt:
+        es: "Foto grupal de participantes de VRTon 2025 en VRChat"
+        en: "Group photo of VRTon 2025 participants in VRChat"
+    - path: "/assets/Eventos/2025/event-2025-2.webp"
+      alt:
+        es: "Actividad comunitaria durante VRTon 2025"
+        en: "Community activity during VRTon 2025"
+    - path: "/assets/Eventos/2025/event-2025-3.webp"
+      alt:
+        es: "Participantes reunidos durante VRTon 2025"
+        en: "Participants gathered during VRTon 2025"
+  communities:
+    - { name: "El Pecado", logo: "/assets/Comunidades/ElPecado.webp" }
+    - { name: "Furality", logo: "/assets/Comunidades/Furality.webp" }
+    - { name: "Burly Noir", logo: "/assets/Comunidades/BurlyNoir.webp" }
+    - { name: "Cult of Secrets", logo: "/assets/Comunidades/CultOfSecrets.webp" }
+    - { name: "Calamity", logo: "/assets/Comunidades/CalamityLogo.webp" }
+    - { name: "Copa Cabana", logo: "/assets/Comunidades/CopaCabana.webp" }
+    - { name: "Xtasis", logo: "/assets/Comunidades/Xtasis.webp" }
+    - { name: "PIVR", logo: "/assets/Comunidades/PIVR.webp" }
+    - { name: "Gohan Trackers", logo: "/assets/Comunidades/GohanTrackers.webp" }
+    - { name: "ValenVRC", logo: "/assets/Comunidades/valenvrc.webp" }
+    - { name: "VRChateando", logo: "/assets/Comunidades/VRChateando.webp" }
+    - { name: "Café Mononita", logo: "/assets/Comunidades/CafeMononita.webp" }
+
+- year: 2024
+  slug: "2024"
+  amount: "USD 1,458"
+  images:
+    - path: "/assets/Eventos/2024/event-2024-1.webp"
+      alt:
+        es: "Foto grupal de participantes de VRTon 2024 en VRChat"
+        en: "Group photo of VRTon 2024 participants in VRChat"
+    - path: "/assets/Eventos/2024/event-2024-2.webp"
+      alt:
+        es: "Actividad comunitaria durante VRTon 2024"
+        en: "Community activity during VRTon 2024"
+    - path: "/assets/Eventos/2024/event-2024-3.webp"
+      alt:
+        es: "Participantes reunidos durante VRTon 2024"
+        en: "Participants gathered during VRTon 2024"
+  communities:
+    - { name: "El Pecado", logo: "/assets/Comunidades/ElPecado.webp" }
+    - { name: "Xtasis", logo: "/assets/Comunidades/Xtasis.webp" }
+    - { name: "50 Ajolo Pesos", logo: "/assets/Comunidades/50ajolopesos.webp" }
+    - { name: "Calamity", logo: "/assets/Comunidades/CalamityLogo.webp" }
+    - { name: "Cult of Secrets", logo: "/assets/Comunidades/CultOfSecrets.webp" }
+    - { name: "El Alba", logo: "/assets/Comunidades/ElAlba.webp" }
+    - { name: "Team Latam", logo: "/assets/Comunidades/TeamLatam.webp" }
+    - { name: "5D Academy", logo: "/assets/Comunidades/5DAcademy.webp" }
+
+- year: 2023
+  slug: "2023"
+  amount: "USD 474"
+  images:
+    - path: "/assets/Eventos/2023/event-2023-1.webp"
+      alt:
+        es: "Foto grupal de participantes de VRTon 2023 en VRChat"
+        en: "Group photo of VRTon 2023 participants in VRChat"
+    - path: "/assets/Eventos/2023/event-2023-2.webp"
+      alt:
+        es: "Actividad comunitaria durante VRTon 2023"
+        en: "Community activity during VRTon 2023"
+    - path: "/assets/Eventos/2023/event-2023-3.webp"
+      alt:
+        es: "Participantes reunidos durante VRTon 2023"
+        en: "Participants gathered during VRTon 2023"
+  communities:
+    - { name: "Xtasis", logo: "/assets/Comunidades/Xtasis.webp" }
+    - { name: "El Pecado", logo: "/assets/Comunidades/ElPecado.webp" }
+    - { name: "Cult of Secrets", logo: "/assets/Comunidades/CultOfSecrets.webp" }

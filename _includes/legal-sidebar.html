@@ -1,0 +1,21 @@
+<aside class="legal-sidebar" aria-label="{{ t.legal_ui.navigation }}">
+  <div class="legal-sidebar-panel">
+    <h2>{{ t.legal_ui.title }}</h2>
+    <nav class="legal-page-nav" aria-label="{{ t.legal_ui.navigation }}">
+      <a href="{{ lang_root | append: 'legal/terms/' | relative_url }}"{% if page.page_id == 'legal-terms' %} aria-current="page"{% endif %}>
+        {{ t.footer.terms }}
+      </a>
+      <a href="{{ lang_root | append: 'legal/code-of-conduct/' | relative_url }}"{% if page.page_id == 'legal-code-of-conduct' %} aria-current="page"{% endif %}>
+        {{ t.footer.code_of_conduct }}
+      </a>
+      <a href="{{ lang_root | append: 'legal/volunteering/' | relative_url }}"{% if page.page_id == 'legal-volunteering' %} aria-current="page"{% endif %}>
+        {{ t.footer.volunteering }}
+      </a>
+    </nav>
+
+    <div class="legal-support-card">
+      <span aria-hidden="true">♡</span>
+      <p>{{ t.legal_ui.support }}</p>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,159 @@
+current_year: 2026
+official_timezone:
+  id: "America/Santiago"
+  label: "Chile"
+
+editions:
+  - year: 2026
+    event: "VRTon 2026"
+    start_date: "2026-11-06"
+    end_date: "2026-11-07"
+    days:
+      - date: "2026-11-06"
+        label:
+          es: "6 de noviembre"
+          en: "November 6"
+      - date: "2026-11-07"
+        label:
+          es: "7 de noviembre"
+          en: "November 7"
+    show_end_times: true
+    tracks:
+      - id: "main"
+        label: { es: "Instancia principal", en: "Main instance" }
+      - id: "party"
+        label: { es: "Instancia de fiesta", en: "Party instance" }
+    slots:
+      - { hour: 1, group_day: "2026-11-06", start_at: "2026-11-06T20:00:00", end_at: "2026-11-06T21:00:00", start: "20:00", end: "21:00" }
+      - { hour: 2, group_day: "2026-11-06", start_at: "2026-11-06T21:00:00", end_at: "2026-11-06T22:00:00", start: "21:00", end: "22:00" }
+      - { hour: 3, group_day: "2026-11-06", start_at: "2026-11-06T22:00:00", end_at: "2026-11-06T23:00:00", start: "22:00", end: "23:00" }
+      - { hour: 4, group_day: "2026-11-06", start_at: "2026-11-06T23:00:00", end_at: "2026-11-07T00:00:00", start: "23:00", end: "00:00" }
+      - { hour: 5, group_day: "2026-11-07", start_at: "2026-11-07T00:00:00", end_at: "2026-11-07T01:00:00", start: "00:00", end: "01:00" }
+      - { hour: 6, group_day: "2026-11-07", start_at: "2026-11-07T01:00:00", end_at: "2026-11-07T02:00:00", start: "01:00", end: "02:00" }
+      - { hour: 7, group_day: "2026-11-07", start_at: "2026-11-07T02:00:00", end_at: "2026-11-07T03:00:00", start: "02:00", end: "03:00" }
+      - { hour: 8, group_day: "2026-11-07", start_at: "2026-11-07T03:00:00", end_at: "2026-11-07T04:00:00", start: "03:00", end: "04:00" }
+      - { hour: 9, group_day: "2026-11-07", start_at: "2026-11-07T04:00:00", end_at: "2026-11-07T05:00:00", start: "04:00", end: "05:00" }
+      - { hour: 10, group_day: "2026-11-07", start_at: "2026-11-07T05:00:00", end_at: "2026-11-07T06:00:00", start: "05:00", end: "06:00" }
+      - { hour: 11, group_day: "2026-11-07", start_at: "2026-11-07T06:00:00", end_at: "2026-11-07T07:00:00", start: "06:00", end: "07:00" }
+      - { hour: 12, group_day: "2026-11-07", start_at: "2026-11-07T07:00:00", end_at: "2026-11-07T08:00:00", start: "07:00", end: "08:00" }
+      - { hour: 13, group_day: "2026-11-07", start_at: "2026-11-07T08:00:00", end_at: "2026-11-07T09:00:00", start: "08:00", end: "09:00" }
+      - { hour: 14, group_day: "2026-11-07", start_at: "2026-11-07T09:00:00", end_at: "2026-11-07T10:00:00", start: "09:00", end: "10:00" }
+      - { hour: 15, group_day: "2026-11-07", start_at: "2026-11-07T10:00:00", end_at: "2026-11-07T11:00:00", start: "10:00", end: "11:00" }
+      - { hour: 16, group_day: "2026-11-07", start_at: "2026-11-07T11:00:00", end_at: "2026-11-07T12:00:00", start: "11:00", end: "12:00" }
+      - { hour: 17, group_day: "2026-11-07", start_at: "2026-11-07T12:00:00", end_at: "2026-11-07T13:00:00", start: "12:00", end: "13:00" }
+      - { hour: 18, group_day: "2026-11-07", start_at: "2026-11-07T13:00:00", end_at: "2026-11-07T14:00:00", start: "13:00", end: "14:00" }
+      - { hour: 19, group_day: "2026-11-07", start_at: "2026-11-07T14:00:00", end_at: "2026-11-07T15:00:00", start: "14:00", end: "15:00" }
+      - { hour: 20, group_day: "2026-11-07", start_at: "2026-11-07T15:00:00", end_at: "2026-11-07T16:00:00", start: "15:00", end: "16:00" }
+      - { hour: 21, group_day: "2026-11-07", start_at: "2026-11-07T16:00:00", end_at: "2026-11-07T17:00:00", start: "16:00", end: "17:00" }
+      - { hour: 22, group_day: "2026-11-07", start_at: "2026-11-07T17:00:00", end_at: "2026-11-07T18:00:00", start: "17:00", end: "18:00" }
+      - { hour: 23, group_day: "2026-11-07", start_at: "2026-11-07T18:00:00", end_at: "2026-11-07T19:00:00", start: "18:00", end: "19:00" }
+      - { hour: 24, group_day: "2026-11-07", start_at: "2026-11-07T19:00:00", end_at: "2026-11-07T20:00:00", start: "19:00", end: "20:00" }
+      - { hour: 25, group_day: "2026-11-07", start_at: "2026-11-07T20:00:00", end_at: "2026-11-07T21:00:00", start: "20:00", end: "21:00" }
+      - { hour: 26, group_day: "2026-11-07", start_at: "2026-11-07T21:00:00", end_at: "2026-11-07T22:00:00", start: "21:00", end: "22:00" }
+      - { hour: 27, group_day: "2026-11-07", start_at: "2026-11-07T22:00:00", end_at: "2026-11-07T23:00:00", start: "22:00", end: "23:00" }
+      - { hour: 28, group_day: "2026-11-07", start_at: "2026-11-07T23:00:00", end_at: "2026-11-08T00:00:00", start: "23:00", end: "00:00" }
+      - { hour: 29, group_day: "2026-11-07", start_at: "2026-11-08T00:00:00", end_at: "2026-11-08T01:00:00", start: "00:00", end: "01:00" }
+    activities:
+      - { hour: 1, track: "main", title: { es: "Previa" }, description: { es: "" } }
+      - { hour: 2, track: "main", title: { es: "Previa" }, description: { es: "" } }
+      - { hour: 3, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
+      - { hour: 4, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
+      - { hour: 5, track: "main", featured: true, title: { es: "Show de Dancer" }, description: { es: "Hosted by The Secret Society" } }
+      - { hour: 6, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 7, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 8, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 9, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
+      - { hour: 14, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
+      - { hour: 15, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
+      - { hour: 16, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teleton" }, description: { es: "" } }
+      - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales" }, description: { es: "" } }
+      - { hour: 21, track: "main", title: { es: "Arena Magica" }, description: { es: "" } }
+      - { hour: 22, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 23, track: "main", title: { es: "Artistas Invitados" }, description: { es: "Hosted by Copa Cabana" } }
+      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "Como se hizo esta y anteriores ediciones de VRTon? Conoce al equipo de tras, las tecnologias usadas y los desafios superados!" } }
+      - { hour: 26, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 27, track: "main", title: { es: "Subasta Solidaria" }, description: { es: "Hosted by Jugando con Lag" } }
+      - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
+      - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
+      - { hour: 5, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 6, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
+      - { hour: 7, track: "party", title: { es: "WonderBimbo" }, description: { es: "" } }
+      - { hour: 8, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
+      - { hour: 9, track: "party", title: { es: "Sperto" }, description: { es: "" } }
+      - { hour: 10, track: "party", title: { es: "Ramses0418" }, description: { es: "" } }
+      - { hour: 11, track: "party", title: { es: "DJ May" }, description: { es: "" } }
+      - { hour: 12, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
+
+  - year: 2025
+    event: "VRTon 2025"
+    start_date: "2025-11-28"
+    end_date: "2025-11-29"
+    days:
+      - date: "2025-11-28"
+        label:
+          es: "Viernes 28 de noviembre"
+          en: "Friday, November 28"
+      - date: "2025-11-29"
+        label:
+          es: "Sábado 29 de noviembre"
+          en: "Saturday, November 29"
+    show_end_times: false
+    tracks:
+      - id: "main"
+        label: { es: "Instancia", en: "Instance" }
+    slots:
+      - { hour: 1, group_day: "2025-11-28", start_at: "2025-11-28T22:00:00", end_at: "2025-11-28T23:00:00", start: "22:00", end: "23:00" }
+      - { hour: 2, group_day: "2025-11-28", start_at: "2025-11-28T23:00:00", end_at: "2025-11-29T00:00:00", start: "23:00", end: "00:00" }
+      - { hour: 3, group_day: "2025-11-28", start_at: "2025-11-29T00:00:00", end_at: "2025-11-29T01:00:00", start: "00:00", end: "01:00" }
+      - { hour: 4, group_day: "2025-11-28", start_at: "2025-11-29T01:00:00", end_at: "2025-11-29T02:00:00", start: "01:00", end: "02:00" }
+      - { hour: 5, group_day: "2025-11-28", start_at: "2025-11-29T02:00:00", end_at: "2025-11-29T03:00:00", start: "02:00", end: "03:00" }
+      - { hour: 6, group_day: "2025-11-28", start_at: "2025-11-29T03:00:00", end_at: "2025-11-29T04:00:00", start: "03:00", end: "04:00" }
+      - { hour: 7, group_day: "2025-11-28", start_at: "2025-11-29T04:00:00", end_at: "2025-11-29T05:00:00", start: "04:00", end: "05:00" }
+      - { hour: 8, group_day: "2025-11-28", start_at: "2025-11-29T05:00:00", end_at: "2025-11-29T06:00:00", start: "05:00", end: "06:00" }
+      - { hour: 9, group_day: "2025-11-29", start_at: "2025-11-29T10:00:00", end_at: "2025-11-29T11:00:00", start: "10:00", end: "11:00" }
+      - { hour: 10, group_day: "2025-11-29", start_at: "2025-11-29T11:00:00", end_at: "2025-11-29T12:00:00", start: "11:00", end: "12:00" }
+      - { hour: 11, group_day: "2025-11-29", start_at: "2025-11-29T13:00:00", end_at: "2025-11-29T14:00:00", start: "13:00", end: "14:00" }
+      - { hour: 12, group_day: "2025-11-29", start_at: "2025-11-29T14:00:00", end_at: "2025-11-29T15:00:00", start: "14:00", end: "15:00" }
+      - { hour: 13, group_day: "2025-11-29", start_at: "2025-11-29T16:00:00", end_at: "2025-11-29T17:00:00", start: "16:00", end: "17:00" }
+      - { hour: 14, group_day: "2025-11-29", start_at: "2025-11-29T17:00:00", end_at: "2025-11-29T18:00:00", start: "17:00", end: "18:00" }
+      - { hour: 15, group_day: "2025-11-29", start_at: "2025-11-29T18:00:00", end_at: "2025-11-29T19:00:00", start: "18:00", end: "19:00" }
+      - { hour: 16, group_day: "2025-11-29", start_at: "2025-11-29T20:00:00", end_at: "2025-11-29T21:00:00", start: "20:00", end: "21:00" }
+      - { hour: 17, group_day: "2025-11-29", start_at: "2025-11-29T22:00:00", end_at: "2025-11-29T23:00:00", start: "22:00", end: "23:00" }
+      - { hour: 18, group_day: "2025-11-29", start_at: "2025-11-29T23:00:00", end_at: "2025-11-30T00:00:00", start: "23:00", end: "00:00" }
+    activities:
+      - { hour: 1, track: "main", title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
+      - { hour: 2, track: "main", title: { es: "Charla sobre Teleton" }, description: { es: "" } }
+      - { hour: 3, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
+      - { hour: 4, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
+      - { hour: 5, track: "main", title: { es: "DJ SET - O’Leafer" }, description: { es: "" } }
+      - { hour: 6, track: "main", title: { es: "DJ SET - Ramses0418" }, description: { es: "" } }
+      - { hour: 7, track: "main", title: { es: "DJ SET - JamirDG" }, description: { es: "" } }
+      - { hour: 8, track: "main", title: { es: "DJ SET - Alvarozzzz" }, description: { es: "" } }
+      - { hour: 8, track: "main", title: { es: "DJ SET - DannyLasagna" }, description: { es: "" } }
+      - { hour: 9, track: "main", title: { es: "Charla Medica" }, description: { es: "" } }
+      - { hour: 10, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
+      - { hour: 11, track: "main", title: { es: "Visita Guiada" }, description: { es: "" } }
+      - { hour: 12, track: "main", title: { es: "Rol de Coliseo" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "Zumbaton" }, description: { es: "" } }
+      - { hour: 14, track: "main", title: { es: "Triatlon" }, description: { es: "" } }
+      - { hour: 15, track: "main", title: { es: "Carrera de Sillas" }, description: { es: "" } }
+      - { hour: 16, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
+      - { hour: 17, track: "main", title: { es: "Rifa Solidaria" }, description: { es: "" } }
+      - { hour: 18, track: "main", title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
+
+  - year: 2024
+    event: "VRTon 2024"
+    days: []
+    slots: []
+    activities: []
+
+  - year: 2023
+    event: "VRTon 2023"
+    days: []
+    slots: []
+    activities: []

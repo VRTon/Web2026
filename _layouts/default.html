@@ -1,14 +1,64 @@
-{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
-{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.en %}
-<!DOCTYPE html>
-<html lang="{{ active_lang }}">
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n[site.default_lang] | default: site.data.i18n.es %}
+<!doctype html>
+<html lang="{{ active_lang }}" data-theme="system" data-text-size="normal">
 <head>
     {% include head.html %}
 </head>
-<body>
+<body data-page-id="{{ page.page_id | default: 'page' }}"
+      data-language="{{ active_lang }}"
+      data-read-label="{{ t.accessibility.read_page }}"
+      data-pause-label="{{ t.accessibility.pause_reading }}"
+      data-resume-label="{{ t.accessibility.resume_reading }}"
+      data-stop-label="{{ t.accessibility.stop_reading }}">
+    <a class="skip-link" href="#main-content">{{ t.accessibility.skip }}</a>
+    <div class="sr-only" id="status-message" role="status" aria-live="polite"></div>
     {% include nav.html %}
     {{ content }}
     {% include footer.html %}
-    <script src="{{ '/script.js' | relative_url }}"></script>
+
+    <button class="icon-button floating-accessibility" type="button" data-open-accessibility aria-label="{{ t.nav_v2.accessibility }}" title="{{ t.nav_v2.accessibility }}">
+        <span aria-hidden="true">Aa</span>
+    </button>
+
+    <dialog class="preferences-dialog" id="accessibility-dialog" aria-labelledby="preferences-title">
+        <form method="dialog" class="preferences-card">
+            <div class="preferences-header">
+                <h2 id="preferences-title">{{ t.accessibility.panel_title }}</h2>
+                <button class="icon-button" value="close" aria-label="{{ t.accessibility.close }}">×</button>
+            </div>
+
+            <fieldset class="preference-group">
+                <legend>{{ t.accessibility.theme_label }}</legend>
+                <div class="segmented-control">
+                    <label><input type="radio" name="theme" value="system"> <span>{{ t.accessibility.theme_system }}</span></label>
+                    <label><input type="radio" name="theme" value="light"> <span>{{ t.accessibility.theme_light }}</span></label>
+                    <label><input type="radio" name="theme" value="dark"> <span>{{ t.accessibility.theme_dark }}</span></label>
+                </div>
+            </fieldset>
+
+            <fieldset class="preference-group">
+                <legend>{{ t.accessibility.text_size }}</legend>
+                <div class="segmented-control">
+                    <label><input type="radio" name="text-size" value="normal"> <span>{{ t.accessibility.text_normal }}</span></label>
+                    <label><input type="radio" name="text-size" value="large"> <span>{{ t.accessibility.text_large }}</span></label>
+                    <label><input type="radio" name="text-size" value="xlarge"> <span>{{ t.accessibility.text_xlarge }}</span></label>
+                </div>
+            </fieldset>
+
+            <div class="preference-toggles">
+                <label class="switch-row"><input type="checkbox" name="high-contrast"> <span>{{ t.accessibility.high_contrast }}</span></label>
+                <label class="switch-row"><input type="checkbox" name="reduce-motion"> <span>{{ t.accessibility.reduce_motion }}</span></label>
+                <label class="switch-row"><input type="checkbox" name="underline-links"> <span>{{ t.accessibility.underline_links }}</span></label>
+            </div>
+
+            <div class="preferences-actions">
+                <button class="button button-secondary" type="button" id="reset-preferences">{{ t.accessibility.reset }}</button>
+                <button class="button button-primary" value="close">{{ t.accessibility.close }}</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="{{ '/script.js' | relative_url }}" defer></script>
 </body>
 </html>

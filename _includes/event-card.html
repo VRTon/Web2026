@@ -1,0 +1,24 @@
+{% assign card_event = include.event %}
+{% assign event_alt = card_event.images.first.alt[active_lang] | default: card_event.images.first.alt.es %}
+{% assign event_url = lang_root | append: 'events/' | append: card_event.slug | append: '/' %}
+<article class="event-card">
+  <a class="event-image" href="{{ event_url | relative_url }}" aria-label="{{ t.home_v2.view_event }} VRTon {{ card_event.year }}">
+    <img src="{{ card_event.images.first.path | relative_url }}"
+         alt="{{ event_alt }}"
+         width="1920"
+         height="1080"
+         loading="lazy">
+    <span class="event-year">{{ card_event.year }}</span>
+  </a>
+  <div class="event-card-body">
+    <div>
+      <p class="event-label">VRTon {{ card_event.year }}</p>
+      <h3>{{ card_event.amount }}</h3>
+      <p>{{ t.home_v2.raised }}</p>
+    </div>
+    <div class="event-card-meta">
+      <span>{{ card_event.communities.size }} {{ t.home_v2.communities | downcase }}</span>
+      <a href="{{ event_url | relative_url }}">{{ t.home_v2.view_event }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>
