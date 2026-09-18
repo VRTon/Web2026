@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_3" data-name="3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#New_Pattern_3);
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+    </style>
+    <pattern id="New_Pattern_3" data-name="New Pattern 3" x="0" y="0" width="30" height="30" patternTransform="translate(-8725.81 8309.02) rotate(45) scale(1.68)" patternUnits="userSpaceOnUse" viewBox="0 0 30 30">
+      <g>
+        <rect class="cls-1" width="30" height="30"/>
+        <circle class="cls-3" cx="30" cy="22.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="30" r="1.62"/>
+        <circle class="cls-3" cx="0" cy="22.5" r="1.62"/>
+        <circle class="cls-3" cx="30" cy="7.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="15" r="1.62"/>
+        <circle class="cls-3" cx="0" cy="7.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="0" r="1.62"/>
+      </g>
+    </pattern>
+  </defs>
+  <polygon class="cls-2" points="783.75 783.75 1025.44 787.37 880.49 594.02 1078.05 454.85 847.26 383.47 925.17 154.83 696.53 232.74 625.15 1.95 485.98 199.51 292.63 54.56 296.25 296.25 54.56 292.63 199.51 485.98 1.95 625.15 232.74 696.53 154.83 925.17 383.47 847.26 454.85 1078.05 594.02 880.49 787.37 1025.44 783.75 783.75"/>
+</svg>
