@@ -1,0 +1,56 @@
+---
+layout: default
+lang: es
+permalink: /ediciones/
+page_id: editions
+title: "Ediciones de VRTon"
+description: "Archivo de todas las ediciones documentadas de VRTon."
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+  {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+
+<main id="main-content" tabindex="-1" class="editions-page">
+  <header class="page-hero">
+    <div class="content-shell">
+      <p class="eyebrow">{{ t.editions_page.eyebrow }}</p>
+      <h1>{{ t.editions_page.title }}</h1>
+      <p>{{ t.editions_page.intro }}</p>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="editions-list-title">
+    <div class="content-shell">
+      <h2 class="sr-only" id="editions-list-title">{{ t.editions_page.list_title }}</h2>
+      <div class="event-grid event-grid-all">
+        {% for event in site.data.events %}
+          {% include event-card.html event=event %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ t.nav_v2.home | jsonify }},
+      "item": {{ site.url | append: lang_root | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ t.editions_page.title | jsonify }},
+      "item": {{ site.url | append: lang_root | append: 'ediciones/' | jsonify }}
+    }
+  ]
+}
+</script>

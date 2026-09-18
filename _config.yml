@@ -3,12 +3,17 @@ baseurl: ""
 safe: false
 whitelist:
   - jekyll-polyglot
-lang: "en"
-languages: ["en", "es"]
-default_lang: "en"
+lang: "es"
+languages: ["es", "en"]
+default_lang: "es"
 parallel_localization: false
 exclude_from_localization:
   - _site
+  - es/
+  - terms/
+  - code-of-conduct/
+  - volunteering/
+  - discord.html
   - site.webmanifest
   - robots.txt
   - styles.css
@@ -62,3 +67,4 @@ exclude:
   - vendor/
   - .bundle
   - .github/
+  - VRTon Web/

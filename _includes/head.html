@@ -1,7 +1,68 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% seo %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{% assign meta_title = page.title | default: site.title %}
+{% assign meta_description = page.description | default: t.site.description %}
+{% case page.page_id %}
+  {% when 'home' %}
+    {% assign meta_title = t.seo.home_title %}
+    {% assign meta_description = t.seo.home_description %}
+  {% when 'schedule' %}
+    {% assign meta_title = t.seo.schedule_title | append: ' ' | append: page.schedule_year %}
+    {% assign meta_description = t.seo.schedule_description %}
+  {% when 'editions' %}
+    {% assign meta_title = t.seo.editions_title %}
+    {% assign meta_description = t.seo.editions_description %}
+  {% when 'resources' %}
+    {% assign meta_title = t.seo.resources_title %}
+    {% assign meta_description = t.seo.resources_description %}
+  {% when 'links' %}
+    {% assign meta_title = t.seo.links_title %}
+    {% assign meta_description = t.seo.links_description %}
+  {% when 'not-found' %}
+    {% assign meta_title = t.seo.not_found_title %}
+    {% assign meta_description = t.seo.not_found_description %}
+  {% when 'legal-terms' %}
+    {% assign meta_title = t.legal.terms.title %}
+    {% assign meta_description = t.legal.terms.subtitle %}
+  {% when 'legal-code-of-conduct' %}
+    {% assign meta_title = t.legal.code_of_conduct.title %}
+    {% assign meta_description = t.legal.code_of_conduct.subtitle %}
+  {% when 'legal-volunteering' %}
+    {% assign meta_title = t.legal.volunteering.title %}
+    {% assign meta_description = t.legal.volunteering.subtitle %}
+{% endcase %}
+{% if page.event_year %}
+  {% assign meta_title = 'VRTon ' | append: page.event_year %}
+  {% assign meta_description = t.seo.event_description %}
+{% endif %}
+{% unless meta_title contains 'VRTon' %}
+  {% assign meta_title = meta_title | append: ' | VRTon' %}
+{% endunless %}
+{% assign meta_image = page.image | default: site.logo %}
+{% assign canonical_url = site.url | append: page.url %}
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_description | escape }}">
+<link rel="canonical" href="{{ canonical_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VRTon">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ site.url }}{{ meta_image }}">
+<meta property="og:locale" content="{% if active_lang == 'es' %}es_AR{% else %}en_US{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vrtonof">
+<meta name="twitter:title" content="{{ meta_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ site.url }}{{ meta_image }}">
 {% assign current_url = page.url | default: '/' %}
+{% assign default_url_path = current_url %}
+{% if active_lang != site.default_lang %}
+  {% assign active_lang_prefix = '/' | append: active_lang %}
+  {% assign default_url_path = current_url | remove_first: active_lang_prefix %}
+  {% if default_url_path == '' %}{% assign default_url_path = '/' %}{% endif %}
+{% endif %}
 {% for lang_code in site.languages %}
   {% if lang_code == site.default_lang %}
     <link rel="alternate" hreflang="{{ lang_code }}" href="{{ site.url }}{{ current_url }}">
@@ -9,18 +70,16 @@
     <link rel="alternate" hreflang="{{ lang_code }}" href="{{ site.url }}/{{ lang_code }}{{ current_url }}">
   {% endif %}
 {% endfor %}
-<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ current_url }}">
+<link rel="alternate" hreflang="x-default" {% static_href %}href="{{ site.url }}{{ default_url_path }}"{% endstatic_href %}>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "{{ t.site.title | default: site.title }}",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}{{ site.logo }}",
-  "description": "{{ t.site.description | default: site.description }}",
-  "sameAs": [{% for link in site.social.links %}
-    "{{ link }}"{% unless forloop.last %},{% endunless %}{% endfor %}
-  ]
+  "name": {{ t.site.title | default: site.title | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "logo": {{ site.url | append: site.logo | jsonify }},
+  "description": {{ t.site.description | default: site.description | jsonify }},
+  "sameAs": {{ site.social.links | jsonify }}
 }
 </script>
 <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
@@ -28,10 +87,21 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-<meta name="theme-color" content="#d33741">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<meta name="theme-color" content="#f7f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101820" media="(prefers-color-scheme: dark)">
+<script>
+  (function () {
+    try {
+      var saved = JSON.parse(localStorage.getItem('vrton-preferences') || '{}');
+      var root = document.documentElement;
+      root.dataset.theme = saved.theme || 'system';
+      root.dataset.textSize = saved.textSize || 'normal';
+      if (saved.highContrast) root.dataset.highContrast = 'true';
+      if (saved.reduceMotion) root.dataset.reduceMotion = 'true';
+      if (saved.underlineLinks) root.dataset.underlineLinks = 'true';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'system';
+    }
+  }());
+</script>
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">

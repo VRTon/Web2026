@@ -1,0 +1,29 @@
+current_event:
+  name: "VRTon 2026"
+  year: "2026"
+  start_date: "2026-11-06"
+  end_date: "2026-11-07"
+  attend_url: "https://vrc.group/VRTON.0659"
+  volunteer_form:
+    es: "https://forms.gle/ubg5U2t4eMCuu9k18"
+    en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
+  sponsor_form:
+    es: "https://forms.gle/ubg5U2t4eMCuu9k18"
+    en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
+  donation_url: ""
+
+community:
+  vrchat: "https://vrc.group/VRTON.0659"
+  discord: "https://discord.gg/AR72D2nfpp"
+
+social:
+  - name: "Instagram"
+    url: "https://www.instagram.com/vrtonof/"
+  - name: "X"
+    url: "https://x.com/vrtonof"
+  - name: "TikTok"
+    url: "https://www.tiktok.com/@vrtonoficial"
+  - name: "YouTube"
+    url: "https://www.youtube.com/@VRTonOficial"
+  - name: "Twitch"
+    url: "https://www.twitch.tv/vrtonof"

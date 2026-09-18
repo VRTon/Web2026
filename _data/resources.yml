@@ -1,0 +1,69 @@
+avatars:
+  - name:
+      es: "Aiden"
+      en: "Aiden"
+    alt:
+      es: "Avatar público Aiden de VRTon"
+      en: "VRTon public avatar Aiden"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_46d1653f-3557-43dc-a089-262787b73987"
+  - name:
+      es: "Adonis"
+      en: "Adonis"
+    alt:
+      es: "Avatar público Adonis de VRTon"
+      en: "VRTon public avatar Adonis"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_0089f514-62dc-4546-ac9f-515687cc1d1d"
+  - name:
+      es: "Ari"
+      en: "Ari"
+    alt:
+      es: "Avatar público Ari de VRTon"
+      en: "VRTon public avatar Ari"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_e3d63d24-e8a9-4955-956f-fc7379cef9dd"
+  - name:
+      es: "Madi"
+      en: "Madi"
+    alt:
+      es: "Avatar público Madi de VRTon"
+      en: "VRTon public avatar Madi"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_decf262a-7ca5-48ec-9e81-28ba04eaa910"
+  - name:
+      es: "Lilith"
+      en: "Lilith"
+    alt:
+      es: "Avatar público Lilith de VRTon"
+      en: "VRTon public avatar Lilith"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_1c126f43-5143-45d6-9a8f-5356d1b4763b"
+  - name:
+      es: "Ali"
+      en: "Ali"
+    alt:
+      es: "Avatar público Ali de VRTon"
+      en: "VRTon public avatar Ali"
+    thumbnail: "/assets/logo.png"
+    is_placeholder: true
+    url: "https://vrchat.com/home/avatar/avtr_776a39ce-f9d2-4677-9c2b-5ad5eb69a669"
+
+avatar_assets: []
+
+world_assets:
+  - name:
+      es: "Pósters promocionales de VRTon 2026"
+      en: "VRTon 2026 promotional posters"
+    format: "ZIP · 6 PNG · ES/EN"
+    file: "/assets/2026/VRTon-2026-posters-promocionales.zip"
+
+brand_kit:
+  version: "2026"
+  file: "/assets/downloads/VRTon-brand-kit-2026.zip"
+  preview: "/assets/2026/Logo.png"

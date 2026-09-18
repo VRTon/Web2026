@@ -1,0 +1,115 @@
+---
+layout: default
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign event = site.data.events | where: "year", page.event_year | first %}
+{% assign hero_image = event.images.first %}
+{% assign hero_alt = hero_image.alt[active_lang] | default: hero_image.alt.es %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+  {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+
+<main id="main-content" tabindex="-1" class="event-page">
+  <header class="event-hero">
+    <img src="{{ hero_image.path | relative_url }}" alt="{{ hero_alt }}" width="1920" height="1080" fetchpriority="high">
+    <div class="event-hero-overlay"></div>
+    <div class="content-shell event-hero-content">
+      <p class="eyebrow eyebrow-light">{{ t.event_page.archive_kicker }}</p>
+      <h1>{{ t.event_page.title_prefix }} {{ event.year }}</h1>
+      <p>{{ t.event_page.summary }}</p>
+    </div>
+  </header>
+
+  <section class="event-summary" aria-label="{{ t.event_page.title_prefix }} {{ event.year }}">
+    <div class="content-shell">
+      <dl class="stats-grid event-stats">
+        <div>
+          <dt>{{ t.event_page.raised }}</dt>
+          <dd>{{ event.amount }}</dd>
+        </div>
+        <div>
+          <dt>{{ t.event_page.communities }}</dt>
+          <dd>{{ event.communities.size }}</dd>
+        </div>
+        <div>
+          <dt>{{ t.event_page.beneficiary }}</dt>
+          <dd class="unconfirmed">{{ t.event_page.unconfirmed }}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="gallery-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide">
+        <h2 id="gallery-title">{{ t.event_page.gallery }}</h2>
+        <p>{{ t.event_page.gallery_intro }}</p>
+      </div>
+      <div class="gallery-grid">
+        {% for image in event.images %}
+          {% assign image_alt = image.alt[active_lang] | default: image.alt.es %}
+          <button class="gallery-item" type="button" data-gallery-image="{{ image.path | relative_url }}" data-gallery-alt="{{ image_alt | escape }}">
+            <img src="{{ image.path | relative_url }}" alt="{{ image_alt }}" width="1920" height="1080" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            <span aria-hidden="true">↗</span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted" aria-labelledby="community-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide">
+        <h2 id="community-title">{{ t.event_page.participants }}</h2>
+      </div>
+      <ul class="event-community-grid" aria-label="{{ t.event_page.participants }}">
+        {% for community in event.communities %}
+          <li>
+            <img src="{{ community.logo | relative_url }}" alt="" width="120" height="120" loading="lazy">
+            <span>{{ community.name }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="event-page-actions">
+        <a class="button button-secondary" href="{{ lang_root | append: 'schedule/' | append: event.year | append: '/' | relative_url }}">{{ t.event_page.view_schedule }}</a>
+        <a class="text-link back-link" href="{{ lang_root | append: 'ediciones/' | relative_url }}"><span aria-hidden="true">←</span> {{ t.event_page.back }}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="image-dialog" id="image-dialog" aria-label="{{ t.event_page.gallery }}">
+  <form method="dialog">
+    <button class="icon-button" aria-label="{{ t.accessibility.close }}">×</button>
+  </form>
+  <img src="" alt="">
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ t.nav_v2.home | jsonify }},
+      "item": {{ site.url | append: lang_root | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ t.home_v2.events_title | jsonify }},
+      "item": {{ site.url | append: lang_root | append: 'ediciones/' | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "VRTon {{ event.year }}",
+      "item": {{ site.url | append: lang_root | append: 'events/' | append: event.slug | append: '/' | jsonify }}
+    }
+  ]
+}
+</script>

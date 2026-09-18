@@ -1,7 +1,9 @@
 {
     "name": "VRTon",
     "short_name": "VRTon",
-    "description": "Using Technology to Change Lives",
+    "description": "Comunidades virtuales unidas para cambiar vidas",
+    "lang": "es",
+    "dir": "ltr",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -14,8 +16,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#d33741",
-    "background_color": "#0a0a0a",
+    "theme_color": "#d92f45",
+    "background_color": "#fbfaf8",
     "display": "standalone",
     "start_url": "/"
 }
