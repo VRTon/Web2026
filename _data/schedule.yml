@@ -59,24 +59,24 @@ editions:
       - { hour: 3, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
       - { hour: 4, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
       - { hour: 5, track: "main", featured: true, title: { es: "Show de Dancer" }, description: { es: "Hosted by The Secret Society" } }
-      - { hour: 6, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 6, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 7, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 8, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 9, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 13, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
-      - { hour: 14, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
-      - { hour: 15, track: "main", title: { es: "HOSTIA TIO TIME" }, description: { es: "" } }
-      - { hour: 16, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
-      - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teleton" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
+      - { hour: 14, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
+      - { hour: 15, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
+      - { hour: 16, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
+      - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teletón" }, description: { es: "" } }
       - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales" }, description: { es: "" } }
-      - { hour: 21, track: "main", title: { es: "Arena Magica" }, description: { es: "" } }
-      - { hour: 22, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 21, track: "main", title: { es: "Arena Mágica" }, description: { es: "" } }
+      - { hour: 22, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 23, track: "main", title: { es: "Artistas Invitados" }, description: { es: "Hosted by Copa Cabana" } }
-      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "Como se hizo esta y anteriores ediciones de VRTon? Conoce al equipo de tras, las tecnologias usadas y los desafios superados!" } }
-      - { hour: 26, track: "main", featured: true, title: { es: "Computo" }, description: { es: "" } }
+      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "¿Cómo se hicieron esta y las anteriores ediciones de VRTon? Conocé al equipo de detrás, las tecnologías usadas y los desafíos superados." } }
+      - { hour: 26, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 27, track: "main", title: { es: "Subasta Solidaria" }, description: { es: "Hosted by Jugando con Lag" } }
       - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
       - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
@@ -127,7 +127,7 @@ editions:
       - { hour: 18, group_day: "2025-11-29", start_at: "2025-11-29T23:00:00", end_at: "2025-11-30T00:00:00", start: "23:00", end: "00:00" }
     activities:
       - { hour: 1, track: "main", title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
-      - { hour: 2, track: "main", title: { es: "Charla sobre Teleton" }, description: { es: "" } }
+      - { hour: 2, track: "main", title: { es: "Charla sobre Teletón" }, description: { es: "" } }
       - { hour: 3, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
       - { hour: 4, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
       - { hour: 5, track: "main", title: { es: "DJ SET - O’Leafer" }, description: { es: "" } }
@@ -135,12 +135,12 @@ editions:
       - { hour: 7, track: "main", title: { es: "DJ SET - JamirDG" }, description: { es: "" } }
       - { hour: 8, track: "main", title: { es: "DJ SET - Alvarozzzz" }, description: { es: "" } }
       - { hour: 8, track: "main", title: { es: "DJ SET - DannyLasagna" }, description: { es: "" } }
-      - { hour: 9, track: "main", title: { es: "Charla Medica" }, description: { es: "" } }
+      - { hour: 9, track: "main", title: { es: "Charla Médica" }, description: { es: "" } }
       - { hour: 10, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
       - { hour: 11, track: "main", title: { es: "Visita Guiada" }, description: { es: "" } }
       - { hour: 12, track: "main", title: { es: "Rol de Coliseo" }, description: { es: "" } }
-      - { hour: 13, track: "main", title: { es: "Zumbaton" }, description: { es: "" } }
-      - { hour: 14, track: "main", title: { es: "Triatlon" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "Zumbatón" }, description: { es: "" } }
+      - { hour: 14, track: "main", title: { es: "Triatlón" }, description: { es: "" } }
       - { hour: 15, track: "main", title: { es: "Carrera de Sillas" }, description: { es: "" } }
       - { hour: 16, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
       - { hour: 17, track: "main", title: { es: "Rifa Solidaria" }, description: { es: "" } }
