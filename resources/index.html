@@ -16,66 +16,17 @@ description: "Avatares públicos, assets para creadores y kit de marca de VRTon.
 
 <main id="main-content" tabindex="-1" class="resources-page">
   <header class="resources-hero">
-    <div class="content-shell resources-hero-grid">
-      <div class="resources-hero-copy">
-        <p class="eyebrow">{{ t.resources_page.eyebrow }}</p>
-        <h1>{{ t.resources_page.title }}</h1>
-        <p>{{ t.resources_page.intro }}</p>
-      </div>
-
-      <div class="resources-hero-art" aria-hidden="true">
-        <span class="resource-orbit resource-orbit-large"></span>
-        <span class="resource-orbit resource-orbit-small"></span>
-        <span class="resource-orbit-dot resource-orbit-dot-red"></span>
-        <span class="resource-orbit-dot resource-orbit-dot-yellow"></span>
-        <span class="resource-orbit-dot resource-orbit-dot-cyan"></span>
-        <div class="resources-hero-logo">
-          <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="220" height="220">
-        </div>
-      </div>
+    <div class="content-shell resources-hero-copy">
+      <p class="eyebrow">{{ t.resources_page.eyebrow }}</p>
+      <h1>{{ t.resources_page.title }}</h1>
+      <p>{{ t.resources_page.intro }}</p>
+      <nav class="resource-paths" aria-label="{{ t.resources_page.paths_title }}">
+        <a class="button button-secondary button-small" href="#avatars">{{ t.resources_page.path_existing_title }}</a>
+        <a class="button button-secondary button-small" href="#assets">{{ t.resources_page.path_add_title }}</a>
+        <a class="button button-secondary button-small" href="#brand-kit">{{ t.resources_page.path_new_title }}</a>
+      </nav>
     </div>
   </header>
-
-  <nav class="resource-paths" aria-labelledby="resource-paths-title">
-    <div class="content-shell">
-      <h2 class="sr-only" id="resource-paths-title">{{ t.resources_page.paths_title }}</h2>
-      <ol class="resource-path-grid">
-        <li>
-          <a class="resource-path-card resource-path-red" href="#avatars">
-            <span class="resource-path-number">01</span>
-            <span>
-              <small>{{ t.resources_page.path_existing_kicker }}</small>
-              <strong>{{ t.resources_page.path_existing_title }}</strong>
-              <em>{{ t.resources_page.path_existing_text }}</em>
-            </span>
-            <span class="resource-path-arrow" aria-hidden="true">↘</span>
-          </a>
-        </li>
-        <li>
-          <a class="resource-path-card resource-path-green" href="#assets">
-            <span class="resource-path-number">02</span>
-            <span>
-              <small>{{ t.resources_page.path_add_kicker }}</small>
-              <strong>{{ t.resources_page.path_add_title }}</strong>
-              <em>{{ t.resources_page.path_add_text }}</em>
-            </span>
-            <span class="resource-path-arrow" aria-hidden="true">↘</span>
-          </a>
-        </li>
-        <li>
-          <a class="resource-path-card resource-path-cyan" href="#brand-kit">
-            <span class="resource-path-number">03</span>
-            <span>
-              <small>{{ t.resources_page.path_new_kicker }}</small>
-              <strong>{{ t.resources_page.path_new_title }}</strong>
-              <em>{{ t.resources_page.path_new_text }}</em>
-            </span>
-            <span class="resource-path-arrow" aria-hidden="true">↘</span>
-          </a>
-        </li>
-      </ol>
-    </div>
-  </nav>
 
   <section class="section section-tinted resource-section" id="avatars" aria-labelledby="avatars-title">
     <div class="content-shell">
@@ -92,9 +43,9 @@ description: "Avatares públicos, assets para creadores y kit de marca de VRTon.
           {% for avatar in resources.avatars %}
             {% assign avatar_name = avatar.name[active_lang] | default: avatar.name.es %}
             {% assign avatar_alt = avatar.alt[active_lang] | default: avatar.alt.es | default: avatar_name %}
-            <article class="avatar-resource-card">
+            <article class="avatar-resource-card{% if avatar.featured %} avatar-resource-card-featured{% endif %}">
               <a href="{{ avatar.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.resources_page.open_avatar }} {{ avatar_name }}">
-                <img{% if avatar.is_placeholder %} class="avatar-placeholder-image"{% endif %} src="{{ avatar.thumbnail | relative_url }}" alt="{{ avatar_alt }}" width="720" height="900" loading="lazy">
+                <img{% if avatar.is_placeholder %} class="avatar-placeholder-image"{% endif %} src="{{ avatar.thumbnail | relative_url }}" alt="{{ avatar_alt }}" {% if avatar.featured %}width="800" height="600"{% else %}width="720" height="900"{% endif %} loading="lazy">
                 <span class="avatar-resource-overlay">
                   <span class="resource-type-pill">VRChat</span>
                   <strong>{{ avatar_name }}</strong>

@@ -1,5 +1,23 @@
 avatars:
   - name:
+      es: "VRTon Fem Opti"
+      en: "VRTon Fem Opti"
+    alt:
+      es: "Avatar VRTon Fem Opti creado por Shadowofthygods"
+      en: "VRTon Fem Opti avatar created by Shadowofthygods"
+    thumbnail: "/assets/avatars/vrton-fem-opti.png"
+    featured: true
+    url: "https://vrchat.com/home/avatar/avtr_6bb461de-049c-45d6-a071-57e3541fa873"
+  - name:
+      es: "VRTon Masc Opti"
+      en: "VRTon Masc Opti"
+    alt:
+      es: "Avatar VRTon Masc Opti creado por Shadowofthygods"
+      en: "VRTon Masc Opti avatar created by Shadowofthygods"
+    thumbnail: "/assets/avatars/vrton-masc-opti.png"
+    featured: true
+    url: "https://vrchat.com/home/avatar/avtr_68a8851a-cb72-47c7-9e9a-1774db382946"
+  - name:
       es: "Aiden"
       en: "Aiden"
     alt:
