@@ -11,6 +11,9 @@ layout: default
 {% endif %}
 
 <main id="main-content" tabindex="-1" class="schedule-page">
+  {% if schedule.year == schedule_data.current_year %}
+    <p class="content-shell schedule-warning"><span aria-hidden="true">⚠</span> {{ t.schedule.subject_to_change }}</p>
+  {% endif %}
   <header class="page-hero">
     <div class="content-shell page-hero-grid">
       <div>

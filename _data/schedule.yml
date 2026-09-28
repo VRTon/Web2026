@@ -66,9 +66,9 @@ editions:
       - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
       - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 13, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
-      - { hour: 14, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
-      - { hour: 15, track: "main", title: { es: "HOSTIA TÍO TIME" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
+      - { hour: 14, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
+      - { hour: 15, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
       - { hour: 16, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teletón" }, description: { es: "" } }
       - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales" }, description: { es: "" } }
@@ -80,14 +80,14 @@ editions:
       - { hour: 27, track: "main", title: { es: "Subasta Solidaria" }, description: { es: "Hosted by Jugando con Lag" } }
       - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
       - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
-      - { hour: 5, track: "party", title: { es: "YuanX" }, description: { es: "" } }
-      - { hour: 6, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
-      - { hour: 7, track: "party", title: { es: "WonderBimbo" }, description: { es: "" } }
-      - { hour: 8, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
-      - { hour: 9, track: "party", title: { es: "Sperto" }, description: { es: "" } }
-      - { hour: 10, track: "party", title: { es: "Ramses0418" }, description: { es: "" } }
-      - { hour: 11, track: "party", title: { es: "DJ May" }, description: { es: "" } }
-      - { hour: 12, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
+      - { hour: 5, track: "party", title: { es: "Sperto" }, description: { es: "" } }
+      - { hour: 6, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
+      - { hour: 7, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 8, track: "party", title: { es: "Ramses" }, description: { es: "" } }
+      - { hour: 9, track: "party", title: { es: "DannyLasagna" }, description: { es: "" } }
+      - { hour: 10, track: "party", title: { es: "NebularSoul" }, description: { es: "" } }
+      - { hour: 11, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
+      - { hour: 12, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
 
   - year: 2025
     event: "VRTon 2025"
