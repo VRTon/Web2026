@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#New_Pattern_3);
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+    </style>
+    <pattern id="New_Pattern_3" data-name="New Pattern 3" x="0" y="0" width="30" height="30" patternTransform="translate(-6587.54 8309.02) rotate(45) scale(1.68)" patternUnits="userSpaceOnUse" viewBox="0 0 30 30">
+      <g>
+        <rect class="cls-1" width="30" height="30"/>
+        <circle class="cls-3" cx="30" cy="22.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="30" r="1.62"/>
+        <circle class="cls-3" cx="0" cy="22.5" r="1.62"/>
+        <circle class="cls-3" cx="30" cy="7.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="15" r="1.62"/>
+        <circle class="cls-3" cx="0" cy="7.5" r="1.62"/>
+        <circle class="cls-3" cx="15" cy="0" r="1.62"/>
+      </g>
+    </pattern>
+  </defs>
+  <circle class="cls-2" cx="540" cy="540" r="444.71"/>
+</svg>
