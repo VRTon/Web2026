@@ -146,6 +146,24 @@
     }
   }
 
+  var attendanceDialog = document.getElementById("attendance-dialog");
+  if (attendanceDialog && typeof attendanceDialog.showModal === "function") {
+    var attendanceTrigger = null;
+    document.querySelectorAll("[data-open-attendance]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        attendanceTrigger = link;
+        attendanceDialog.showModal();
+      });
+    });
+    attendanceDialog.addEventListener("close", function () {
+      if (attendanceTrigger) attendanceTrigger.focus();
+    });
+    attendanceDialog.addEventListener("click", function (event) {
+      if (event.target === attendanceDialog) attendanceDialog.close();
+    });
+  }
+
   document.querySelectorAll(".theme-toggle").forEach(function (button) {
     button.addEventListener("click", function () {
       var order = ["system", "light", "dark"];

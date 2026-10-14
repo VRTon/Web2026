@@ -52,7 +52,7 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
         <time class="hero-date" datetime="{{ current_event.start_date }}">{{ t.home_v2.date_compact }}</time>
 
         <div class="hero-actions" aria-label="{{ t.home_v2.event_label }}">
-          <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.attend }}</a>
+          <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ t.home_v2.attend }}</a>
           <a class="button button-secondary" href="{{ volunteer_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.volunteer }}</a>
         </div>
       </div>
@@ -107,7 +107,7 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
                     {% elsif slide.cta_path %}
                       <a class="button button-secondary" href="{{ lang_root | append: slide.cta_path | relative_url }}">{{ slide.cta_label }}</a>
                     {% elsif slide.cta_attend %}
-                      <a class="button button-secondary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">{{ slide.cta_label }}</a>
+                      <a class="button button-secondary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ slide.cta_label }}</a>
                     {% elsif slide.cta_url %}
                       <a class="button button-secondary" href="{{ slide.cta_url }}" target="_blank" rel="noopener noreferrer">{{ slide.cta_label }}</a>
                     {% endif %}
@@ -245,12 +245,27 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
       </div>
 
       <div class="participation-actions">
-        <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.participate_attend }}</a>
+        <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ t.home_v2.participate_attend }}</a>
         <a class="button button-secondary" href="{{ volunteer_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.participate_volunteer }}</a>
       </div>
     </div>
   </section>
 </main>
+
+<dialog class="preferences-dialog attendance-dialog" id="attendance-dialog" aria-labelledby="attendance-title">
+  <div class="preferences-card">
+    <div class="preferences-header">
+      <h2 id="attendance-title">{{ t.home_v2.attendance_title }}</h2>
+      <form method="dialog"><button class="icon-button" aria-label="{{ t.accessibility.close }}">×</button></form>
+    </div>
+    <ol class="attendance-steps">
+      <li>{{ t.home_v2.attendance_register }} <a href="https://vrchat.com/" target="_blank" rel="noopener noreferrer">VRChat</a>.</li>
+      <li>{{ t.home_v2.attendance_join }} <a href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">VRTON.0659</a>.</li>
+      <li>{{ t.home_v2.attendance_calendar }} <a href="https://vrchat.com/home/group/grp_d66fc7e0-955b-42aa-9abb-372bc72c178f/calendar/cal_7bf39952-a3b2-45f8-923e-08d8535749b9" target="_blank" rel="noopener noreferrer">{{ t.home_v2.attendance_calendar_link }}</a>.</li>
+    </ol>
+    <p class="attendance-note">{{ t.home_v2.attendance_note }} <a href="https://vrton.org/discord" target="_blank" rel="noopener noreferrer">{{ t.home_v2.attendance_discord }}</a>.</p>
+  </div>
+</dialog>
 
 <script type="application/ld+json">
 {
