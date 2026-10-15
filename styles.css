@@ -559,7 +559,7 @@ p {
   min-height: 0;
   overflow: hidden;
   padding-block: clamp(1.75rem, 2.5vw, 2.5rem);
-  background: #f4f7ff url("/assets/2026/cielos-de-cristal-hero-background.png") center bottom / cover no-repeat;
+  background: #f4f7ff url("/assets/2026/cielos-de-cristal-hero-background.webp") center bottom / cover no-repeat;
   color: #17212b;
   isolation: isolate;
 }
@@ -1339,7 +1339,7 @@ p {
 }
 
 .participation-abstract-art {
-  --participation-art: url("/assets/2026/cielos-de-cristal-participation-city.png");
+  --participation-art: url("/assets/2026/cielos-de-cristal-participation-city.webp");
   position: absolute;
   z-index: -1;
   top: 50%;
