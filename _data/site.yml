@@ -7,9 +7,6 @@ current_event:
   volunteer_form:
     es: "https://forms.gle/ubg5U2t4eMCuu9k18"
     en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
-  sponsor_form:
-    es: "https://forms.gle/ubg5U2t4eMCuu9k18"
-    en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
   donation_url: ""
 
 community:

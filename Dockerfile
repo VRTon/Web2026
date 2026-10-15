@@ -1,13 +1,13 @@
 # Stage 1: install gems into a layer cache
-FROM ruby:3.2-alpine AS deps
-RUN apk add --no-cache build-base git
+FROM ruby:4.0-alpine AS deps
+RUN apk add --no-cache build-base
 WORKDIR /site
 COPY Gemfile Gemfile.lock* ./
 RUN bundle install
 
 # Stage 2: dev server (gems copied, source bind-mounted at runtime)
-FROM ruby:3.2-alpine AS dev
-RUN apk add --no-cache build-base git nodejs
+FROM ruby:4.0-alpine AS dev
+RUN apk add --no-cache nodejs zip
 COPY --from=deps /usr/local/bundle /usr/local/bundle
 WORKDIR /site
 EXPOSE 4000 35729
