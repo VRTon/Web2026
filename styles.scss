@@ -525,6 +525,7 @@ p {
   overflow: hidden;
   padding-block: clamp(1.75rem, 2.5vw, 2.5rem);
   background: #f4f7ff url("/assets/2026/cielos-de-cristal-hero-background.webp") center bottom / cover no-repeat;
+  background-image: image-set(url("/assets/thumbnails/2026/hero-background.avif") type("image/avif"), url("/assets/2026/cielos-de-cristal-hero-background.webp") type("image/webp"));
   color: #17212b;
   isolation: isolate;
 }
@@ -597,9 +598,6 @@ p {
   bottom: var(--heart-static-bottom, 2rem);
   width: var(--heart-size);
   aspect-ratio: 100 / 90;
-  background-image: var(--heart-photo);
-  background-position: center;
-  background-size: cover;
   clip-path: polygon(50% 100%, 7% 58%, 1% 42%, 1% 27%, 7% 13%, 19% 4%, 34% 4%, 50% 18%, 66% 4%, 81% 4%, 93% 13%, 99% 27%, 99% 42%, 93% 58%);
   filter: drop-shadow(0 0.4rem 0.65rem rgb(23 33 43 / 18%)) saturate(0.9);
   opacity: 0.58;
@@ -607,6 +605,14 @@ p {
   will-change: transform, opacity;
   -webkit-mask: url("/assets/heart-photo-mask.svg") center / contain no-repeat;
   mask: url("/assets/heart-photo-mask.svg") center / contain no-repeat;
+}
+
+.memory-heart img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .memory-heart-left {
@@ -1280,7 +1286,7 @@ p {
 }
 
 .participation-abstract-art {
-  --participation-art: url("/assets/2026/cielos-de-cristal-participation-city.webp");
+  --participation-art: url("/assets/thumbnails/2026/participation-mask.webp");
   position: absolute;
   z-index: -1;
   top: 50%;

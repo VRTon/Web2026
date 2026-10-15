@@ -50,7 +50,16 @@ for the circular homepage crops and contained archive logos.
 The full-size originals remain available when opening gallery photos and in the
 download kits. Metadata also retains the original image URLs. Regenerate variants
 with `python scripts/prepare_home_images.py` (requires Pillow locally; no new build
-or browser dependency). Event photos and community logos use WebP quality 85;
-the homepage edition logo, decorative heart photos, and brand/logo variants use
-lossless WebP encoding after resizing. Run the generated-site check after adding
+or browser dependency). Photos, community logos and homepage illustration variants
+use WebP quality 85. The hearts reuse existing event previews. The homepage logo
+has 800/1100/1600px candidates so mobile pixel densities do not unnecessarily jump
+to the full original; the schedule and FAQ illustrations are responsive too.
+Brand/logo variants remain lossless. `2026/participation-mask.webp` retains the
+original alpha channel exactly while discarding RGB that CSS masks do not use.
+The homepage background prefers `2026/hero-background.avif` (quality 65) with
+the original WebP as a CSS fallback. Only AVIF is preloaded, avoiding downloading
+both formats in supporting browsers. Decorative hearts use native low-priority
+lazy images, preserving their existing masks and animations.
+Obsolete lossless heart previews and the former 800px edition preview were removed.
+Run the generated-site check after adding
 images: it also validates every `srcset` URL and gallery original.
