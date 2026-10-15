@@ -201,8 +201,8 @@
       if (event.key === "Escape") setNavigation(false);
     });
 
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 820) setNavigation(false);
+    window.matchMedia("(min-width: 1081px)").addEventListener("change", function (event) {
+      if (event.matches) setNavigation(false);
     });
   }
 
@@ -250,6 +250,7 @@
     var pointerPaused = false;
     var focusPaused = false;
     var visibilityPaused = document.hidden;
+    var offscreenPaused = false;
 
     if (slides.length < 2 || !progress || !controls || !progressTrack) return;
 
@@ -258,7 +259,7 @@
     carousel.classList.add("is-ready");
 
     function shouldPause() {
-      return manuallyPaused || pointerPaused || focusPaused || visibilityPaused;
+      return manuallyPaused || pointerPaused || focusPaused || visibilityPaused || offscreenPaused;
     }
 
     function updateToggle() {
@@ -394,6 +395,13 @@
       syncClock();
     });
 
+    if (window.IntersectionObserver) {
+      new IntersectionObserver(function (entries) {
+        offscreenPaused = !entries[0].isIntersecting;
+        syncClock();
+      }).observe(carousel);
+    }
+
     if (window.MutationObserver) {
       new MutationObserver(function () {
         if (root.dataset.reduceMotion === "true") {
@@ -481,7 +489,17 @@
     });
   }
 
-  setupCommunityWings();
+  var communityStage = document.querySelector("[data-community-wings]");
+  if (communityStage && window.IntersectionObserver) {
+    var communityObserver = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      communityObserver.disconnect();
+      setupCommunityWings();
+    }, { rootMargin: "200px" });
+    communityObserver.observe(communityStage);
+  } else {
+    setupCommunityWings();
+  }
 
   document.querySelectorAll(".language-switcher a, .footer-languages a").forEach(function (link) {
     link.addEventListener("click", function () {
@@ -516,7 +534,23 @@
 
   var scheduleGrid = document.querySelector("[data-schedule-grid]");
   if (scheduleGrid) {
-    function dateInTimeZone(dateTime, timeZone) {
+    var zoneFormatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: scheduleGrid.dataset.officialTimezone || "America/Santiago",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hourCycle: "h23"
+    });
+    var timeFormatter = new Intl.DateTimeFormat(body.dataset.language === "en" ? "en-US" : "es-CL", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    });
+
+    function dateInTimeZone(dateTime) {
       var match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/.exec(dateTime);
       if (!match) return new Date(NaN);
 
@@ -528,16 +562,6 @@
         Number(match[5]),
         Number(match[6])
       );
-      var zoneFormatter = new Intl.DateTimeFormat("en-US", {
-        timeZone: timeZone,
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hourCycle: "h23"
-      });
 
       function offsetAt(timestamp) {
         var values = {};
@@ -552,16 +576,10 @@
     }
 
     function formatScheduleRange(startAt, endAt, showEnd) {
-      var officialTimeZone = scheduleGrid.dataset.officialTimezone || "America/Santiago";
-      var start = dateInTimeZone(startAt, officialTimeZone);
-      var end = dateInTimeZone(endAt, officialTimeZone);
+      var start = dateInTimeZone(startAt);
+      var end = dateInTimeZone(endAt);
       if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return "";
 
-      var timeFormatter = new Intl.DateTimeFormat(body.dataset.language === "en" ? "en-US" : "es-CL", {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-      });
       if (showEnd === false) return timeFormatter.format(start);
       return timeFormatter.format(start) + "–" + timeFormatter.format(end);
     }
@@ -621,12 +639,10 @@
     var language = body.dataset.language === "en" ? "en" : "es";
     var labels = language === "es" ? {
       contents: "Contenido",
-      print: "Imprimir",
-      home: "Volver al inicio"
+      print: "Imprimir"
     } : {
       contents: "Contents",
-      print: "Print",
-      home: "Back to home"
+      print: "Print"
     };
 
     var headings = Array.prototype.slice.call(legalContainer.querySelectorAll(".legal-section h2, .legal-section h3"));

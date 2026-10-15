@@ -1,38 +1,15 @@
 site:
   title: "VRTon"
-  tagline: "Usando tecnología para cambiar vidas"
   description: "VRTon es una iniciativa voluntaria que une comunidades VR para alcanzar objetivos solidarios mediante eventos de realidad virtual."
 
-nav:
-  home: "Inicio"
-  events: "Eventos"
-  faq: "Preguntas"
-  get_involved: "Únete"
-  language_label: "Idioma"
-
 footer:
-  title: "VRTon"
-  text: "Usando tecnología para cambiar vidas a través de la filantropía en realidad virtual."
-  quick_links: "Enlaces Rápidos"
   terms: "Términos de Servicio"
   code_of_conduct: "Código de Conducta"
   volunteering: "Términos de Voluntariado"
-  connect: "Conecta con Nosotros"
-  rights: "Todos los derechos reservados."
-
 home:
   hero:
     title: "VRTon 2026"
-    subtitle: "6 y 7 de Noviembre"
-    attend: "Asistir"
-    volunteer: "Voluntariado"
-    sponsor: "Patrocinar"
-    vrchat_alt: "Vive la experiencia en VRChat"
-  events:
-    title: "Eventos Anteriores"
-    goal_reached: "Meta Alcanzada"
   faq:
-    title: "Preguntas Frecuentes"
     left:
       - question: "¿Qué es VRTon?"
         answer_html: "VRTon es una iniciativa voluntaria que une comunidades del metaverso de realidad virtual para lograr objetivos solidarios. Nos enfocamos en educación, inspiración, empatía y filantropía, usando la tecnología para ayudar a otros y mejorar vidas."
@@ -193,7 +170,6 @@ legal:
 
 errors:
   not_found:
-    title: "Página no encontrada"
     headline: "Perdido en el Metaverso"
     message: "La página que buscas no existe o fue movida."
     back_home: "Volver al Inicio"
@@ -222,10 +198,8 @@ legal_ui:
 
 home_v2:
   eyebrow: "Evento solidario en realidad virtual"
-  title: "Comunidades virtuales, impacto real."
   lead: "VRTon reúne comunidades de realidad virtual para compartir, celebrar y apoyar causas solidarias a través de un evento gratuito y abierto."
   event_label: "Próxima edición"
-  date: "6 y 7 de noviembre de 2026"
   date_compact: "6 y 7 de noviembre"
   attend: "Quiero asistir"
   attendance_title: "Asiste a VRTon 2026"
@@ -236,11 +210,7 @@ home_v2:
   attendance_note: "Si es posible, usa un avatar optimizado. ¿Tienes preguntas o necesitas ayuda? Únete a nuestro"
   attendance_discord: "servidor de Discord"
   volunteer: "Ser voluntario"
-  sponsor: "Patrocinar"
-  donate: "Donar"
   donation_pending: "El enlace oficial de donación se publicará cuando la organización beneficiaria lo confirme."
-  transparency_note: "VRTon no recauda dinero directamente: las donaciones se realizan mediante los canales oficiales de la organización beneficiaria."
-  photo_caption: "Una comunidad que se encuentra en VR y trabaja por causas reales."
   about_kicker: "Sobre VRTon"
   about_title: "VRTon en pocas palabras"
   about_carousel_roledescription: "carrusel"
@@ -285,9 +255,7 @@ home_v2:
   communities: "Comunidades participantes"
   view_event: "Ver edición"
   view_all: "Ver todas las ediciones"
-  participants_kicker: "Hecho en comunidad"
   participants_title: "Comunidades de VRTon 2026"
-  participants_intro: "Organizaciones y comunidades confirmadas para la edición 2026."
   schedule_kicker: "Itinerario 2026"
   schedule_title: "Dos días para encontrarnos"
   schedule_text: "Este año podrás disfrutar de espectáculos en vivo, sesiones de DJ, charlas, actividades comunitarias, talleres y mucho más, repartidos entre la instancia principal y la de fiesta."
@@ -357,22 +325,13 @@ event_page:
   back: "Volver a ediciones"
 
 schedule:
-  eyebrow: "VRTon 2026"
   title: "Itinerario"
   intro: "Los horarios se convierten automáticamente a tu zona horaria local."
   subject_to_change: "El itinerario aún está sujeto a cambios."
   local_timezone: "Tu zona horaria"
   official_timezone: "Zona horaria oficial"
-  not_confirmed: "Aún no confirmada"
-  main_track: "Instancia principal"
-  party_track: "Instancia de fiesta"
-  pending_title: "El itinerario está en preparación"
-  pending_text: "Las actividades, responsables y horarios se publicarán aquí cuando hayan sido confirmados."
-  back_home: "Volver al inicio"
   time: "Horario"
-  activity: "Actividad"
   track: "Instancia"
-  details: "Detalles"
   activity_details: "Detalles de la actividad"
   open_details: "Abrir detalles"
   no_activity: "Sin actividad en esta instancia"
@@ -396,7 +355,6 @@ accessibility:
   underline_links: "Subrayar enlaces"
   reset: "Restablecer preferencias"
   skip: "Saltar al contenido"
-  preferences_saved: "Preferencias guardadas"
   read_page: "Leer página"
   pause_reading: "Pausar"
   resume_reading: "Reanudar"
@@ -407,7 +365,6 @@ footer_v2:
   navigate: "Explorar"
   legal: "Información legal"
   connect: "Comunidad"
-  privacy_preferences: "Preferencias de privacidad"
   accessibility_preferences: "Preferencias de accesibilidad"
   copyright: "VRTon. Todos los derechos reservados."
 

@@ -1,10 +1,11 @@
+---
+---
 :root {
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Arial Rounded MT Bold", "Trebuchet MS", var(--font-sans);
   --page: #fbfaf8;
   --page-alt: #f1f4f5;
   --surface: #ffffff;
-  --surface-raised: #ffffff;
   --surface-inverse: #14202b;
   --text: #17212b;
   --text-soft: #5a6670;
@@ -20,9 +21,7 @@
   --cyan: #1989ad;
   --purple: #7550ba;
   --focus: #006edc;
-  --success: #247a45;
   --warning: #9a5c00;
-  --error: #b4232f;
   --shadow-sm: 0 8px 24px rgb(21 33 43 / 8%);
   --shadow-lg: 0 24px 70px rgb(21 33 43 / 16%);
   --radius-sm: 0.65rem;
@@ -38,7 +37,6 @@
   --page: #101820;
   --page-alt: #16222c;
   --surface: #1b2934;
-  --surface-raised: #22333f;
   --surface-inverse: #f4f7f8;
   --text: #f3f6f7;
   --text-soft: #b9c4ca;
@@ -54,9 +52,7 @@
   --cyan: #55c3e7;
   --purple: #a989e5;
   --focus: #73b9ff;
-  --success: #76d198;
   --warning: #ffd071;
-  --error: #ff8993;
   --shadow-sm: 0 8px 24px rgb(0 0 0 / 22%);
   --shadow-lg: 0 24px 70px rgb(0 0 0 / 34%);
   color-scheme: dark;
@@ -67,7 +63,6 @@
     --page: #101820;
     --page-alt: #16222c;
     --surface: #1b2934;
-    --surface-raised: #22333f;
     --surface-inverse: #f4f7f8;
     --text: #f3f6f7;
     --text-soft: #b9c4ca;
@@ -83,9 +78,7 @@
     --cyan: #55c3e7;
     --purple: #a989e5;
     --focus: #73b9ff;
-    --success: #76d198;
     --warning: #ffd071;
-    --error: #ff8993;
     --shadow-sm: 0 8px 24px rgb(0 0 0 / 22%);
     --shadow-lg: 0 24px 70px rgb(0 0 0 / 34%);
     color-scheme: dark;
@@ -165,7 +158,7 @@ button {
 }
 
 a {
-  color: var(--primary);
+  color: var(--primary-hover);
   text-decoration-thickness: 0.09em;
   text-underline-offset: 0.18em;
 }
@@ -252,18 +245,12 @@ p {
   gap: 0.55rem;
   align-items: center;
   margin-bottom: 0.9rem;
-  color: var(--primary);
+  color: var(--primary-hover);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   line-height: 1.3;
   text-transform: uppercase;
-}
-
-.section-tinted .eyebrow,
-.schedule-preview .eyebrow,
-.page-hero .eyebrow {
-  color: var(--primary-hover);
 }
 
 .eyebrow > span {
@@ -306,8 +293,7 @@ p {
   transform: translateY(0);
 }
 
-.button,
-.btn {
+.button {
   display: inline-flex;
   min-height: 3rem;
   align-items: center;
@@ -323,8 +309,7 @@ p {
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
 }
 
-.button:hover,
-.btn:hover {
+.button:hover {
   transform: translateY(-2px);
   text-decoration: none;
 }
@@ -335,40 +320,26 @@ p {
   transform: none;
 }
 
-.button-primary,
-.btn-primary {
+.button-primary {
   border-color: var(--primary);
   background: var(--primary);
-  color: #fff;
+  color: var(--text-inverse);
 }
 
-.button-primary:hover,
-.btn-primary:hover {
+.button-primary:hover {
   border-color: var(--primary-hover);
   background: var(--primary-hover);
-  color: #fff;
+  color: var(--text-inverse);
 }
 
-.button-secondary,
-.btn-secondary {
+.button-secondary {
   border-color: var(--border-strong);
   background: var(--surface);
   color: var(--text);
 }
 
-.button-secondary:hover,
-.btn-secondary:hover {
+.button-secondary:hover {
   border-color: var(--text);
-  background: var(--page-alt);
-  color: var(--text);
-}
-
-.button-ghost {
-  background: transparent;
-  color: var(--text);
-}
-
-.button-ghost:hover {
   background: var(--page-alt);
   color: var(--text);
 }
@@ -394,18 +365,6 @@ p {
   border-color: #fff;
   background: #edf2f4;
   color: #14202b;
-}
-
-.button-outline-light {
-  border-color: rgb(255 255 255 / 65%);
-  background: transparent;
-  color: #fff;
-}
-
-.button-outline-light:hover {
-  border-color: #fff;
-  background: rgb(255 255 255 / 12%);
-  color: #fff;
 }
 
 .button-small {
@@ -590,7 +549,7 @@ p {
 }
 
 .hero-brand-morph-left {
-  --brand-shape: url("/assets/2026/Manual%20de%20Marca/Elementos%20Visuales/Morph/8.svg");
+  --brand-shape: url("/assets/shapes/hero-morph-left.svg");
   bottom: -7rem;
   left: -4rem;
   background: linear-gradient(135deg, var(--orange), var(--primary));
@@ -598,7 +557,7 @@ p {
 }
 
 .hero-brand-pop {
-  --brand-shape: url("/assets/2026/Manual%20de%20Marca/Elementos%20Visuales/Pop/1.svg");
+  --brand-shape: url("/assets/shapes/hero-pop.svg");
   top: -5rem;
   left: 13%;
   width: 11rem;
@@ -607,7 +566,7 @@ p {
 }
 
 .hero-brand-morph-right {
-  --brand-shape: url("/assets/2026/Manual%20de%20Marca/Elementos%20Visuales/Morph/10.svg");
+  --brand-shape: url("/assets/shapes/hero-morph-right.svg");
   top: -7rem;
   right: -4rem;
   width: 15rem;
@@ -616,7 +575,7 @@ p {
 }
 
 .hero-brand-lines {
-  --brand-shape: url("/assets/2026/Manual%20de%20Marca/Elementos%20Visuales/Lines/24.svg");
+  --brand-shape: url("/assets/shapes/hero-lines.svg");
   right: 13%;
   bottom: -6rem;
   width: 12rem;
@@ -822,16 +781,16 @@ p {
 }
 
 .hero-actions .button:first-child {
-  border-color: #ff5368;
-  background: #e43b51;
+  border-color: #d92f45;
+  background: #d92f45;
   color: #fff;
   box-shadow: 0 0.8rem 2.2rem rgb(217 47 69 / 26%);
 }
 
 .hero-actions .button:hover,
 .hero-actions .button:first-child:hover {
-  border-color: #ff7182;
-  background: #f14a60;
+  border-color: #b91f35;
+  background: #b91f35;
   color: #fff;
   transform: translateY(-2px);
 }
@@ -936,22 +895,6 @@ p {
   }
 }
 
-.about-slide-red {
-  --slide-accent: var(--primary);
-}
-
-.about-slide-blue {
-  --slide-accent: var(--cyan);
-}
-
-.about-slide-purple {
-  --slide-accent: var(--purple);
-}
-
-.about-slide-green {
-  --slide-accent: var(--green);
-}
-
 .about-slide-media {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -964,14 +907,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.about-slide-media-vrchat {
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--cyan) 16%, transparent), transparent 34%),
-    radial-gradient(circle at 82% 78%, color-mix(in srgb, var(--purple) 15%, transparent), transparent 38%);
 }
 
 .about-slide-copy {
@@ -1900,6 +1835,7 @@ p {
 }
 
 .schedule-table-wrap {
+  position: relative;
   overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -1944,7 +1880,7 @@ p {
 
 .schedule-table thead .schedule-party-heading {
   background: color-mix(in srgb, var(--purple) 10%, var(--surface));
-  color: var(--purple);
+  color: color-mix(in srgb, var(--purple) 85%, var(--text));
 }
 
 .schedule-day-divider th {
@@ -2124,7 +2060,6 @@ p {
 
 .event-page-actions .back-link {
   margin-top: 0;
-  color: var(--primary-hover);
 }
 
 .empty-state {
@@ -2215,7 +2150,7 @@ p {
 
 .legal-page-nav a[aria-current="page"] {
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-hover);
 }
 
 .legal-support-card {

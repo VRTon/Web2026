@@ -14,11 +14,11 @@ jobs:
             contents: read
 
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
 
             - uses: ruby/setup-ruby@v1
               with:
-                  ruby-version: '3.2'
+                  ruby-version: '4.0'
                   bundler-cache: true
 
             - name: Build site
@@ -26,11 +26,17 @@ jobs:
               env:
                   JEKYLL_ENV: production
 
+            - name: Check generated site and schedule
+              run: |
+                  python3 scripts/check_site.py
+                  node scripts/check-schedule.cjs
+
             - name: Upload build artifacts
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                   name: jekyll-site
                   path: _site/
+                  compression-level: 0
 
     deploy:
         runs-on: ubuntu-latest
@@ -39,12 +45,10 @@ jobs:
 
         permissions:
             contents: write
-            pages: write
-            id-token: write
 
         steps:
             - name: Download build artifacts
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v8
               with:
                   name: jekyll-site
                   path: _site/

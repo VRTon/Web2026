@@ -1,3 +1,7 @@
 _site/
 .jekyll-cache/
 .git/
+VRTon Web/
+Docs/
+graphify-out/
+.tmp*/

@@ -1,38 +1,15 @@
 site:
   title: "VRTon"
-  tagline: "Using Technology to Change Lives"
   description: "VRTon is a voluntary initiative bringing together VR communities to achieve charitable goals through virtual reality events."
 
-nav:
-  home: "Home"
-  events: "Events"
-  faq: "FAQ"
-  get_involved: "Get Involved"
-  language_label: "Language"
-
 footer:
-  title: "VRTon"
-  text: "Using technology to change lives through virtual reality philanthropy."
-  quick_links: "Quick Links"
   terms: "Terms of Service"
   code_of_conduct: "Code of Conduct"
   volunteering: "Volunteering Terms"
-  connect: "Connect With Us"
-  rights: "All rights reserved."
-
 home:
   hero:
     title: "VRTon 2026"
-    subtitle: "November 6th & 7th"
-    attend: "Attend"
-    volunteer: "Volunteer"
-    sponsor: "Sponsor"
-    vrchat_alt: "Experience in VRChat"
-  events:
-    title: "Previous Events"
-    goal_reached: "Goal Reached"
   faq:
-    title: "Frequently Asked Questions"
     left:
       - question: "What is VRTon?"
         answer_html: "VRTon is a voluntary initiative that brings together communities from the virtual reality metaverse to achieve solidarity goals. We focus on education, inspiration, empathy, and philanthropy while using technology to help others and improve lives."
@@ -193,7 +170,6 @@ legal:
 
 errors:
   not_found:
-    title: "Page Not Found"
     headline: "Lost in the Metaverse"
     message: "The page you are looking for does not exist or has been moved."
     back_home: "Back to Home"
@@ -222,10 +198,8 @@ legal_ui:
 
 home_v2:
   eyebrow: "Virtual reality charity event"
-  title: "Virtual communities, real impact."
   lead: "VRTon brings virtual reality communities together to share, celebrate, and support charitable causes through a free and open event."
   event_label: "Next edition"
-  date: "November 6 and 7, 2026"
   date_compact: "November 6 — 7"
   attend: "Attend the event"
   attendance_title: "Attend VRTon 2026"
@@ -236,11 +210,7 @@ home_v2:
   attendance_note: "Please bring an optimized avatar if possible. Have questions or need help? Join our"
   attendance_discord: "Discord server"
   volunteer: "Volunteer"
-  sponsor: "Sponsor"
-  donate: "Donate"
   donation_pending: "The official donation link will be published when it is confirmed by the beneficiary organization."
-  transparency_note: "VRTon does not collect money directly: donations are made through the beneficiary organization's official channels."
-  photo_caption: "A community meeting in VR and working for real-world causes."
   about_kicker: "About VRTon"
   about_title: "VRTon in a nutshell"
   about_carousel_roledescription: "carousel"
@@ -259,8 +229,6 @@ home_v2:
       text: "VRTon is a volunteer-driven initiative that brings together people and communities from different parts of the world around a shared passion: technology, virtual reality, and its ability to connect people.<br><br>We use virtual reality, primarily through VRChat, as a space to promote solidarity, educate and raise awareness about different realities, strengthen connections between communities, and raise funds to create a positive and tangible impact."
       image: "/assets/Eventos/2025/event-2025-1.webp"
       image_alt: "Group photo of VRTon 2025 participants in VRChat"
-      cta_label: "Attend"
-      cta_attend: true
     - title: "In support of Teletón Chile"
       text: "For the fourth consecutive year, VRTon supports <b>Teletón Chile</b>, a nonprofit institution that provides free comprehensive rehabilitation to children and young people with motor disabilities and promotes their social inclusion. Donations are made only through Teletón's official channels."
       image: "/assets/Eventos/2024/event-2024-2.webp"
@@ -280,9 +248,7 @@ home_v2:
   communities: "Participating communities"
   view_event: "View edition"
   view_all: "View all editions"
-  participants_kicker: "Built by community"
   participants_title: "VRTon 2026 communities"
-  participants_intro: "Organizations and communities confirmed for the 2026 edition."
   schedule_kicker: "2026 schedule"
   schedule_title: "Two days to come together"
   schedule_text: "This year you can enjoy live shows, DJ sets, talks, community activities, workshops, and much more across the main and party instances."
@@ -352,22 +318,13 @@ event_page:
   back: "Back to editions"
 
 schedule:
-  eyebrow: "VRTon 2026"
   title: "Schedule"
   intro: "Times are automatically converted to your local time zone."
   subject_to_change: "The schedule is still subject to change."
   local_timezone: "Your time zone"
   official_timezone: "Official time zone"
-  not_confirmed: "Not yet confirmed"
-  main_track: "Main instance"
-  party_track: "Party instance"
-  pending_title: "The schedule is being prepared"
-  pending_text: "Activities, hosts, and times will be published here once confirmed."
-  back_home: "Back to home"
   time: "Time"
-  activity: "Activity"
   track: "Instance"
-  details: "Details"
   activity_details: "Activity details"
   open_details: "Open details"
   no_activity: "No activity in this instance"
@@ -391,7 +348,6 @@ accessibility:
   underline_links: "Underline links"
   reset: "Reset preferences"
   skip: "Skip to content"
-  preferences_saved: "Preferences saved"
   read_page: "Read page"
   pause_reading: "Pause"
   resume_reading: "Resume"
@@ -402,7 +358,6 @@ footer_v2:
   navigate: "Explore"
   legal: "Legal information"
   connect: "Community"
-  privacy_preferences: "Privacy preferences"
   accessibility_preferences: "Accessibility preferences"
   copyright: "VRTon. All rights reserved."
 

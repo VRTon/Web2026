@@ -10,9 +10,6 @@
   {% when 'home' %}
     {% assign meta_title = t.seo.home_title %}
     {% assign meta_description = t.seo.home_description %}
-  {% when 'schedule' %}
-    {% assign meta_title = t.seo.schedule_title | append: ' ' | append: page.schedule_year %}
-    {% assign meta_description = t.seo.schedule_description %}
   {% when 'editions' %}
     {% assign meta_title = t.seo.editions_title %}
     {% assign meta_description = t.seo.editions_description %}
@@ -35,6 +32,10 @@
     {% assign meta_title = t.legal.volunteering.title %}
     {% assign meta_description = t.legal.volunteering.subtitle %}
 {% endcase %}
+{% if page.schedule_year %}
+  {% assign meta_title = t.seo.schedule_title | append: ' ' | append: page.schedule_year %}
+  {% assign meta_description = t.seo.schedule_description %}
+{% endif %}
 {% if page.event_year %}
   {% assign meta_title = 'VRTon ' | append: page.event_year %}
   {% assign meta_description = t.seo.event_description %}
@@ -43,10 +44,14 @@
   {% assign meta_title = meta_title | append: ' | VRTon' %}
 {% endunless %}
 {% assign meta_image = page.image | default: site.logo %}
-{% assign canonical_url = site.url | append: page.url %}
+{% assign canonical_path = page.url %}
+{% if active_lang != site.default_lang %}
+  {% assign canonical_path = '/' | append: active_lang | append: page.url %}
+{% endif %}
+{% assign canonical_url = site.url | append: canonical_path %}
 <title>{{ meta_title | escape }}</title>
 <meta name="description" content="{{ meta_description | escape }}">
-<link rel="canonical" href="{{ canonical_url }}">
+<link rel="canonical" {% static_href %}href="{{ canonical_url }}"{% endstatic_href %}>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VRTon">
 <meta property="og:title" content="{{ meta_title | escape }}">
