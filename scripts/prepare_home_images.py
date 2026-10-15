@@ -22,12 +22,24 @@ def resize(source, destination, size, *, by_width=False, lossless=True):
 
 if __name__ == "__main__":
     resize("assets/logo.webp", "assets/thumbnails/logo-128.webp", 128)
-    resize("assets/2026/vrton-cielos-de-cristal.webp",
-           "assets/thumbnails/vrton-cielos-de-cristal-800.webp", 800)
-    for year, numbers in ((2023, (1, 2)), (2024, (1, 2)), (2025, (1, 2))):
-        for number in numbers:
-            name = f"event-{year}-{number}.webp"
-            resize(f"assets/Eventos/{year}/{name}", f"assets/thumbnails/{name}", 320)
+    with Image.open(ROOT / "assets/2026/cielos-de-cristal-hero-background.webp") as background:
+        background.save(ROOT / "assets/thumbnails/2026/hero-background.avif", format="AVIF", quality=65, speed=6)
+    for name, widths in (("vrton-cielos-de-cristal", (800, 1100, 1600)),
+                         ("itinerario-listo", (480, 960, 1440)),
+                         ("cielos-de-cristal-faq-mascot", (400, 800))):
+        for width in widths:
+            resize(f"assets/2026/{name}.webp", f"assets/thumbnails/2026/{name}-{width}.webp",
+                   width, by_width=True, lossless=False)
+
+    # This CSS mask consumes only alpha; discard RGB without changing its silhouette.
+    with Image.open(ROOT / "assets/2026/cielos-de-cristal-participation-city.webp") as original:
+        mask = Image.new("RGBA", original.size, "white")
+        mask.putalpha(original.getchannel("A"))
+        mask_path = ROOT / "assets/thumbnails/2026/participation-mask.webp"
+        mask.save(mask_path, format="WEBP", lossless=True, method=6)
+        with Image.open(mask_path) as saved:
+            assert saved.getchannel("A").tobytes() == original.getchannel("A").tobytes()
+        print(f"{mask_path.relative_to(ROOT)}: {mask_path.stat().st_size} bytes")
 
     # Paths mirror the originals so identical filenames in different folders do not collide.
     for source in sorted((ROOT / "assets/Eventos").glob("*/*.webp")):
