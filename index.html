@@ -74,7 +74,7 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
            aria-label="{{ t.home_v2.about_carousel_label }}">
         <div class="about-carousel-viewport">
           {% for slide in t.home_v2.about_slides %}
-            <article class="about-slide about-slide-{% cycle 'red', 'blue', 'purple', 'green' %}{% if forloop.first %} is-active{% endif %}"
+            <div class="about-slide about-slide-{% cycle 'red', 'blue', 'purple', 'green' %}{% if forloop.first %} is-active{% endif %}"
                      data-carousel-slide
                      data-carousel-title="{{ slide.title | escape }}"
                      role="group"
@@ -114,7 +114,7 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
                   </div>
                 {% endif %}
               </div>
-            </article>
+            </div>
           {% endfor %}
         </div>
 

@@ -260,6 +260,11 @@ p {
   text-transform: uppercase;
 }
 
+.section-tinted .eyebrow,
+.schedule-preview .eyebrow {
+  color: var(--primary-hover);
+}
+
 .eyebrow > span {
   width: 1.4rem;
   height: 0.16rem;
