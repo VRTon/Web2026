@@ -261,7 +261,8 @@ p {
 }
 
 .section-tinted .eyebrow,
-.schedule-preview .eyebrow {
+.schedule-preview .eyebrow,
+.page-hero .eyebrow {
   color: var(--primary-hover);
 }
 
@@ -1938,7 +1939,7 @@ p {
 
 .schedule-table thead .schedule-main-heading {
   background: color-mix(in srgb, var(--primary) 8%, var(--surface));
-  color: var(--primary);
+  color: var(--primary-hover);
 }
 
 .schedule-table thead .schedule-party-heading {
