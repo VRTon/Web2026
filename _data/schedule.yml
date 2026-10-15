@@ -75,7 +75,7 @@ editions:
       - { hour: 21, track: "main", title: { es: "Arena Mágica" }, description: { es: "" } }
       - { hour: 22, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 23, track: "main", title: { es: "Fawn & Blueminescent" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
-      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "¿Cómo se hicieron esta y las anteriores ediciones de VRTon? Conocé al equipo de detrás, las tecnologías usadas y los desafíos superados." } }
+      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "¿Cómo se hicieron esta y las anteriores ediciones de VRTon? Conoce al equipo que las hizo posibles, las tecnologías utilizadas y los desafíos superados." } }
       - { hour: 25, track: "main", title: { es: "Sra Adela" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
       - { hour: 26, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
       - { hour: 27, track: "main", title: { es: "Subasta Solidaria" }, description: { es: "Hosted by Jugando con Lag" } }
