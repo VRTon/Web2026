@@ -5,7 +5,7 @@ avatars:
     alt:
       es: "Avatar VRTon Fem Opti creado por Shadowofthygods"
       en: "VRTon Fem Opti avatar created by Shadowofthygods"
-    thumbnail: "/assets/avatars/vrton-fem-opti.png"
+    thumbnail: "/assets/avatars/vrton-fem-opti.webp"
     featured: true
     url: "https://vrchat.com/home/avatar/avtr_6bb461de-049c-45d6-a071-57e3541fa873"
   - name:
@@ -14,7 +14,7 @@ avatars:
     alt:
       es: "Avatar VRTon Masc Opti creado por Shadowofthygods"
       en: "VRTon Masc Opti avatar created by Shadowofthygods"
-    thumbnail: "/assets/avatars/vrton-masc-opti.png"
+    thumbnail: "/assets/avatars/vrton-masc-opti.webp"
     featured: true
     url: "https://vrchat.com/home/avatar/avtr_68a8851a-cb72-47c7-9e9a-1774db382946"
   - name:
@@ -23,7 +23,7 @@ avatars:
     alt:
       es: "Avatar público Aiden de VRTon"
       en: "VRTon public avatar Aiden"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_46d1653f-3557-43dc-a089-262787b73987"
   - name:
@@ -32,7 +32,7 @@ avatars:
     alt:
       es: "Avatar público Adonis de VRTon"
       en: "VRTon public avatar Adonis"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_0089f514-62dc-4546-ac9f-515687cc1d1d"
   - name:
@@ -41,7 +41,7 @@ avatars:
     alt:
       es: "Avatar público Ari de VRTon"
       en: "VRTon public avatar Ari"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_e3d63d24-e8a9-4955-956f-fc7379cef9dd"
   - name:
@@ -50,7 +50,7 @@ avatars:
     alt:
       es: "Avatar público Madi de VRTon"
       en: "VRTon public avatar Madi"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_decf262a-7ca5-48ec-9e81-28ba04eaa910"
   - name:
@@ -59,7 +59,7 @@ avatars:
     alt:
       es: "Avatar público Lilith de VRTon"
       en: "VRTon public avatar Lilith"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_1c126f43-5143-45d6-9a8f-5356d1b4763b"
   - name:
@@ -68,7 +68,7 @@ avatars:
     alt:
       es: "Avatar público Ali de VRTon"
       en: "VRTon public avatar Ali"
-    thumbnail: "/assets/logo.png"
+    thumbnail: "/assets/logo.webp"
     is_placeholder: true
     url: "https://vrchat.com/home/avatar/avtr_776a39ce-f9d2-4677-9c2b-5ad5eb69a669"
 

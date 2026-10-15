@@ -22,7 +22,7 @@ exclude_from_localization:
 title: "VRTon"
 tagline: "Using Technology to Change Lives"
 description: "VRTon is a voluntary initiative bringing together VR communities to achieve charitable goals through virtual reality events."
-logo: "/assets/logo.png"
+logo: "/assets/logo.webp"
 
 author:
   name: "VRTon"
