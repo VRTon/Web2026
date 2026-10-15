@@ -26,9 +26,12 @@ class Page(HTMLParser):
             self.canonical = attrs.get("href")
         if tag == "meta" and attrs.get("property") == "og:url":
             self.open_graph = attrs.get("content")
-        for key in ("href", "src"):
+        for key in ("href", "src", "data-gallery-image"):
             if attrs.get(key):
                 self.links.append(attrs[key])
+        for candidate in attrs.get("srcset", "").split(","):
+            if candidate.strip():
+                self.links.append(candidate.strip().split()[0])
 
 
 def check(root):

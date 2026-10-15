@@ -3,11 +3,7 @@
 {% assign event_url = lang_root | append: 'events/' | append: card_event.slug | append: '/' %}
 <article class="event-card">
   <a class="event-image" href="{{ event_url | relative_url }}" aria-label="{{ t.home_v2.view_event }} VRTon {{ card_event.year }}">
-    <img src="{{ card_event.images.first.path | relative_url }}"
-         alt="{{ event_alt }}"
-         width="1920"
-         height="1080"
-         loading="lazy">
+    {% include responsive-image.html src=card_event.images.first.path alt=event_alt width=1920 height=1080 widths="480,960" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 46vw, 400px" %}
     <span class="event-year">{{ card_event.year }}</span>
   </a>
   <div class="event-card-body">

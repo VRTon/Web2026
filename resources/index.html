@@ -45,7 +45,11 @@ description: "Avatares públicos, assets para creadores y kit de marca de VRTon.
             {% assign avatar_alt = avatar.alt[active_lang] | default: avatar.alt.es | default: avatar_name %}
             <article class="avatar-resource-card{% if avatar.featured %} avatar-resource-card-featured{% endif %}">
               <a href="{{ avatar.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.resources_page.open_avatar }} {{ avatar_name }}">
-                <img{% if avatar.is_placeholder %} class="avatar-placeholder-image"{% endif %} src="{{ avatar.thumbnail | relative_url }}" alt="{{ avatar_alt }}" {% if avatar.featured %}width="800" height="600"{% else %}width="720" height="900"{% endif %} loading="lazy">
+                {% if avatar.is_placeholder %}
+                  {% include responsive-image.html src=avatar.thumbnail alt=avatar_alt class="avatar-placeholder-image" width=720 height=900 widths="280,560" sizes="(max-width: 820px) 30vw, 130px" %}
+                {% else %}
+                  <img src="{{ avatar.thumbnail | relative_url }}" alt="{{ avatar_alt }}" width="800" height="600" loading="lazy" decoding="async">
+                {% endif %}
                 <span class="avatar-resource-overlay">
                   <span class="resource-type-pill">VRChat</span>
                   <strong>{{ avatar_name }}</strong>
@@ -146,7 +150,7 @@ description: "Avatares públicos, assets para creadores y kit de marca de VRTon.
         <div class="brand-kit-preview" aria-hidden="true">
           <span class="brand-kit-stamp">VRTon</span>
           <div class="brand-kit-logo-card">
-            <img src="{{ resources.brand_kit.preview | relative_url }}" alt="" width="260" height="260" loading="lazy">
+            {% include responsive-image.html src=resources.brand_kit.preview width=260 height=260 widths="280,560" sizes="260px" %}
           </div>
           <div class="brand-kit-swatches">
             <i></i><i></i><i></i><i></i><i></i>

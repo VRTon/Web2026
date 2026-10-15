@@ -13,7 +13,7 @@ layout: default
 
 <main id="main-content" tabindex="-1" class="event-page">
   <header class="event-hero">
-    <img src="{{ hero_image.path | relative_url }}" alt="{{ hero_alt }}" width="1920" height="1080" fetchpriority="high">
+    {% include responsive-image.html src=hero_image.path alt=hero_alt width=1920 height=1080 widths="960,1920" sizes="(max-width: 960px) 960px, 100vw" loading="eager" fetchpriority="high" %}
     <div class="event-hero-overlay"></div>
     <div class="content-shell event-hero-content">
       <p class="eyebrow eyebrow-light">{{ t.event_page.archive_kicker }}</p>
@@ -51,7 +51,7 @@ layout: default
         {% for image in event.images %}
           {% assign image_alt = image.alt[active_lang] | default: image.alt.es %}
           <button class="gallery-item" type="button" data-gallery-image="{{ image.path | relative_url }}" data-gallery-alt="{{ image_alt | escape }}">
-            <img src="{{ image.path | relative_url }}" alt="{{ image_alt }}" width="1920" height="1080" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            {% include responsive-image.html src=image.path alt=image_alt width=1920 height=1080 widths="480,960" sizes="(max-width: 820px) calc(100vw - 40px), 50vw" %}
             <span aria-hidden="true">↗</span>
           </button>
         {% endfor %}
@@ -67,7 +67,8 @@ layout: default
       <ul class="event-community-grid" aria-label="{{ t.event_page.participants }}">
         {% for community in event.communities %}
           <li>
-            <img src="{{ community.logo | relative_url }}" alt="" width="120" height="120" loading="lazy">
+            {% assign community_thumbnail = community.logo | replace_first: '/assets/', '/assets/thumbnails/' %}
+            <img src="{{ community_thumbnail | relative_url }}" alt="" width="120" height="120" loading="lazy" decoding="async">
             <span>{{ community.name }}</span>
           </li>
         {% endfor %}
