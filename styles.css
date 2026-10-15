@@ -2124,6 +2124,7 @@ p {
 
 .event-page-actions .back-link {
   margin-top: 0;
+  color: var(--primary-hover);
 }
 
 .empty-state {
