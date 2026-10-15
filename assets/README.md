@@ -40,3 +40,17 @@ that directory as `/assets/downloads/VRTon-brand-kit-2026.zip`; the unpacked
 directory is excluded from the published site. The poster originals are likewise
 available in the existing promotional ZIP. `shapes/` contains the four unchanged
 SVG exports used as CSS masks by the homepage.
+
+`thumbnails/` contains display variants for the homepage, event archive, galleries,
+community logos, Resources, and Links. Responsive photographs have 480/960px
+variants, plus 1920px versions for event headers. `_includes/responsive-image.html`
+provides their shared `srcset` markup. Community logos retain enough resolution
+for the circular homepage crops and contained archive logos.
+
+The full-size originals remain available when opening gallery photos and in the
+download kits. Metadata also retains the original image URLs. Regenerate variants
+with `python scripts/prepare_home_images.py` (requires Pillow locally; no new build
+or browser dependency). Event photos and community logos use WebP quality 85;
+the homepage edition logo, decorative heart photos, and brand/logo variants use
+lossless WebP encoding after resizing. Run the generated-site check after adding
+images: it also validates every `srcset` URL and gallery original.

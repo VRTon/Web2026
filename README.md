@@ -22,6 +22,12 @@ ZIP is generated from `assets/2026/Manual de Marca/` after both language builds.
 The original brand and poster folders stay in the repository; their downloadable
 archives are published instead of duplicating all source files in the site.
 
-The generated-site check validates local links, fragments, IDs and CSS resources.
+The generated-site check validates local links, fragments, IDs, CSS resources,
+responsive image candidates and original gallery images.
 The schedule check covers timezone conversion and Chilean daylight saving.
 Browser checks and a deployed Lighthouse run are separate from these checks.
+
+Display image variants are committed under `assets/thumbnails/`. After changing
+event photos, community logos or brand previews, install Pillow locally and run
+`python scripts/prepare_home_images.py`. Jekyll does not need Pillow. Keep gallery
+`data-gallery-image` paths and downloadable archives pointed at the originals.

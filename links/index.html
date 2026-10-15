@@ -15,7 +15,7 @@ description: "Find all VRTon social media and community links in one place."
     <div class="content-shell">
         <div class="links-card">
             <a href="{{ lang_root | relative_url }}">
-                <img src="{{ '/assets/logo.webp' | relative_url }}" alt="VRTon" class="logo" width="140" height="140">
+                {% include responsive-image.html src="/assets/logo.webp" alt="VRTon" class="logo" width=140 height=140 widths="280,560" sizes="140px" loading="eager" %}
             </a>
             <h1 class="hero-title">VRTon</h1>
             <p>{{ t.footer_v2.description }}</p>

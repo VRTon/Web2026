@@ -27,12 +27,12 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
       <span class="hero-brand-shape hero-brand-lines"></span>
     </div>
     <div class="hero-memory-hearts" aria-hidden="true">
-      <span class="memory-heart memory-heart-left memory-heart-1" style="--heart-photo: url('{{ '/assets/Eventos/2025/event-2025-1.webp' | relative_url }}')"></span>
-      <span class="memory-heart memory-heart-left memory-heart-2" style="--heart-photo: url('{{ '/assets/Eventos/2024/event-2024-2.webp' | relative_url }}')"></span>
-      <span class="memory-heart memory-heart-left memory-heart-3" style="--heart-photo: url('{{ '/assets/Eventos/2023/event-2023-1.webp' | relative_url }}')"></span>
-      <span class="memory-heart memory-heart-right memory-heart-4" style="--heart-photo: url('{{ '/assets/Eventos/2025/event-2025-2.webp' | relative_url }}')"></span>
-      <span class="memory-heart memory-heart-right memory-heart-5" style="--heart-photo: url('{{ '/assets/Eventos/2024/event-2024-1.webp' | relative_url }}')"></span>
-      <span class="memory-heart memory-heart-right memory-heart-6" style="--heart-photo: url('{{ '/assets/Eventos/2023/event-2023-2.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-left memory-heart-1" style="--heart-photo: url('{{ '/assets/thumbnails/event-2025-1.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-left memory-heart-2" style="--heart-photo: url('{{ '/assets/thumbnails/event-2024-2.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-left memory-heart-3" style="--heart-photo: url('{{ '/assets/thumbnails/event-2023-1.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-right memory-heart-4" style="--heart-photo: url('{{ '/assets/thumbnails/event-2025-2.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-right memory-heart-5" style="--heart-photo: url('{{ '/assets/thumbnails/event-2024-1.webp' | relative_url }}')"></span>
+      <span class="memory-heart memory-heart-right memory-heart-6" style="--heart-photo: url('{{ '/assets/thumbnails/event-2023-2.webp' | relative_url }}')"></span>
     </div>
     <div class="content-shell hero-grid">
       <div class="hero-copy">
@@ -40,7 +40,9 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
         <h1 class="hero-edition-title" id="hero-title">
           <span class="sr-only">{{ t.home.hero.title }}</span>
           <span class="hero-edition-logo" aria-hidden="true">
-            <img src="{{ '/assets/2026/vrton-cielos-de-cristal.webp' | relative_url }}"
+            <img src="{{ '/assets/thumbnails/vrton-cielos-de-cristal-800.webp' | relative_url }}"
+                 srcset="{{ '/assets/thumbnails/vrton-cielos-de-cristal-800.webp' | relative_url }} 800w, {{ '/assets/2026/vrton-cielos-de-cristal.webp' | relative_url }} 1600w"
+                 sizes="(max-width: 600px) 134vw, 731px"
                  alt=""
                  width="1600"
                  height="1600"
@@ -81,11 +83,7 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
                      aria-label="{{ forloop.index }} {{ t.home_v2.about_of }} {{ forloop.length }}: {{ slide.title }}"
                      {% unless forloop.first %}hidden{% endunless %}>
               <figure class="about-slide-media">
-                  <img src="{{ slide.image | relative_url }}"
-                       alt="{{ slide.image_alt }}"
-                       width="1920"
-                       height="1080"
-                       loading="lazy">
+                  {% include responsive-image.html src=slide.image alt=slide.image_alt width=1920 height=1080 widths="480,960" sizes="(max-width: 820px) calc(100vw - 20px), 50vw" %}
               </figure>
               <div class="about-slide-copy">
                 <h3>{{ slide.title }}</h3>
@@ -217,7 +215,8 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
           <ul class="community-wing community-wing-left" aria-label="{{ t.home_v2.participants_title }}" data-community-wing="left">
             {% for community in current_communities limit: 6 %}
               <li data-community-item>
-                <img src="{{ community.logo | relative_url }}" alt="{{ community.name }}" width="120" height="120" loading="lazy">
+                {% assign community_thumbnail = community.logo | replace_first: '/assets/', '/assets/thumbnails/' %}
+                <img src="{{ community_thumbnail | relative_url }}" alt="{{ community.name }}" width="120" height="120" loading="lazy" decoding="async">
               </li>
             {% endfor %}
           </ul>
@@ -227,7 +226,8 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
           <ul class="community-wing community-wing-right" aria-label="{{ t.home_v2.participants_title }}" data-community-wing="right"{% unless current_communities.size > 6 %} hidden{% endunless %}>
             {% for community in current_communities offset: 6 limit: 6 %}
               <li data-community-item>
-                <img src="{{ community.logo | relative_url }}" alt="{{ community.name }}" width="120" height="120" loading="lazy">
+                {% assign community_thumbnail = community.logo | replace_first: '/assets/', '/assets/thumbnails/' %}
+                <img src="{{ community_thumbnail | relative_url }}" alt="{{ community.name }}" width="120" height="120" loading="lazy" decoding="async">
               </li>
             {% endfor %}
           </ul>
