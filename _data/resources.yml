@@ -79,7 +79,7 @@ world_assets:
       es: "Pósters promocionales de VRTon 2026"
       en: "VRTon 2026 promotional posters"
     format: "ZIP · 6 PNG · ES/EN"
-    file: "/assets/2026/VRTon-2026-posters-promocionales.zip"
+    file: "/assets/downloads/VRTon-2026-posters-promocionales.zip"
 
 brand_kit:
   version: "2026"

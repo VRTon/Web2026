@@ -7,7 +7,7 @@ RUN bundle install
 
 # Stage 2: dev server (gems copied, source bind-mounted at runtime)
 FROM ruby:4.0-alpine AS dev
-RUN apk add --no-cache nodejs zip
+RUN apk add --no-cache nodejs
 COPY --from=deps /usr/local/bundle /usr/local/bundle
 WORKDIR /site
 EXPOSE 4000 35729
