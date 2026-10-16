@@ -14,6 +14,7 @@ exclude_from_localization:
   - discord.html
   - site.webmanifest
   - robots.txt
+  - sitemap.xml
   - styles.css
   - script.js
   - styles.scss
@@ -50,6 +51,9 @@ plugins:
   - jekyll-minifier
 
 jekyll-minifier:
+  exclude:
+    - robots.txt
+    - sitemap.xml
   compress_css: false
   compress_javascript: true
   compress_html: true
