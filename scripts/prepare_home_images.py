@@ -57,7 +57,7 @@ if __name__ == "__main__":
     for source in sorted(logos):
         # Enough pixels for both contained archive logos and circular homepage crops.
         with Image.open(ROOT / source.lstrip("/")) as image:
-            width = round(240 * image.width / min(image.size))
+            width = min(image.width, round(240 * image.width / min(image.size)))
         resize(source.lstrip("/"), source.lstrip("/").replace("assets/", "assets/thumbnails/", 1),
                width, by_width=True, lossless=False)
 
