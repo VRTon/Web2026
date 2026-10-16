@@ -5,6 +5,7 @@ layout: default
 {% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
 {% assign schedule_data = site.data.schedule %}
 {% assign schedule = schedule_data.editions | where: "year", page.schedule_year | first %}
+{% assign official_timezone = schedule.official_timezone | default: schedule_data.official_timezone %}
 {% assign lang_root = '/' %}
 {% if active_lang != site.default_lang %}
   {% assign lang_root = '/' | append: active_lang | append: '/' %}
@@ -28,7 +29,7 @@ layout: default
         </div>
         <div>
           <dt>{{ t.schedule.official_timezone }}</dt>
-          <dd>{{ schedule_data.official_timezone.label }}</dd>
+          <dd>{{ official_timezone.label }}</dd>
         </div>
       </dl>
     </div>
@@ -39,7 +40,7 @@ layout: default
       {% if schedule.activities.size > 0 %}
         <h2 class="sr-only" id="schedule-table-title">{{ t.schedule.title }} {{ schedule.year }}</h2>
 
-        <div class="schedule-table-wrap" data-schedule-grid data-official-timezone="{{ schedule_data.official_timezone.id }}">
+        <div class="schedule-table-wrap" data-schedule-grid data-official-timezone="{{ official_timezone.id }}">
           <table class="schedule-table">
             {% assign schedule_column_count = schedule.tracks.size | plus: 1 %}
             <thead>

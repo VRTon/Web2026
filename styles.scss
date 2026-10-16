@@ -1656,10 +1656,13 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.event-stats .unconfirmed {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  letter-spacing: 0;
+.event-page .section {
+  padding-block: clamp(2rem, 4.5vw, 3.5rem);
+}
+
+.event-page .section-heading {
+  max-width: none;
+  margin-bottom: 1.75rem;
 }
 
 .event-community-grid {
@@ -1695,6 +1698,15 @@ p {
   font-size: 0.78rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.event-volunteer-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 0.75rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  list-style: none;
 }
 
 .gallery-grid {
