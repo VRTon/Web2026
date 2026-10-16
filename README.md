@@ -14,11 +14,13 @@ node scripts/check-schedule.cjs
 ```
 
 Docker and CI use Ruby 4.0. A local build requires Bundler, Node.js (for the
-JavaScript minifier) and `zip` (for the brand kit). `Gemfile.lock` records the
+JavaScript minifier). `Gemfile.lock` records the
 dependency versions for Linux and Alpine.
 
-Images and downloads are shared between languages at `/assets/`. The brand kit
-ZIP is generated from `assets/2026/Manual de Marca/` after both language builds.
+Images and downloads are shared between languages at `/assets/`. The ready-made
+brand kit and promotional poster ZIPs are stored in `assets/downloads/` and served
+directly. Replace those ZIPs when updating the packs; the build copies them without
+generating archives. Their links are configured in `_data/resources.yml`.
 The original brand and poster folders stay in the repository; their downloadable
 archives are published instead of duplicating all source files in the site.
 

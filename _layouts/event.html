@@ -35,7 +35,7 @@ layout: default
         </div>
         <div>
           <dt>{{ t.event_page.beneficiary }}</dt>
-          <dd class="unconfirmed">{{ t.event_page.unconfirmed }}</dd>
+          <dd>{{ event.beneficiary | default: t.event_page.unconfirmed | escape }}</dd>
         </div>
       </dl>
     </div>
@@ -73,6 +73,22 @@ layout: default
           </li>
         {% endfor %}
       </ul>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="volunteer-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide">
+        <h2 id="volunteer-title">{{ t.event_page.volunteers }}</h2>
+      </div>
+      {% if event.volunteers and event.volunteers.size > 0 %}
+        <ul class="event-volunteer-list">
+          {% for volunteer in event.volunteers %}
+            <li>{{ volunteer | escape }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ t.event_page.no_volunteers }}</p>
+      {% endif %}
       <div class="event-page-actions">
         <a class="button button-secondary" href="{{ lang_root | append: 'schedule/' | append: event.year | append: '/' | relative_url }}">{{ t.event_page.view_schedule }}</a>
         <a class="text-link back-link" href="{{ lang_root | append: 'ediciones/' | relative_url }}"><span aria-hidden="true">←</span> {{ t.event_page.back }}</a>

@@ -321,6 +321,8 @@ event_page:
   gallery: "Fotos y videos"
   gallery_intro: "Registro fotográfico disponible de la edición."
   participants: "Comunidades participantes"
+  volunteers: "Voluntarios de esta edición"
+  no_volunteers: "Aún no se han proporcionado nombres de voluntarios para esta edición."
   view_schedule: "Ver itinerario de esta edición"
   back: "Volver a ediciones"
 

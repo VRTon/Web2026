@@ -35,10 +35,12 @@ This directory contains all the assets for the VRTon website.
 Page images use WebP where available. The hero logo and itinerary illustration
 were converted losslessly, preserving their original dimensions and RGBA pixels.
 
-`2026/Manual de Marca/` contains the editable brand sources. The build packages
-that directory as `/assets/downloads/VRTon-brand-kit-2026.zip`; the unpacked
-directory is excluded from the published site. The poster originals are likewise
-available in the existing promotional ZIP. `shapes/` contains the four unchanged
+`2026/Manual de Marca/` contains the editable brand sources. The ready-made ZIPs
+`downloads/VRTon-brand-kit-2026.zip` and
+`downloads/VRTon-2026-posters-promocionales.zip` are served directly from
+`/assets/downloads/`. Replace these files when updating the downloadable packs;
+the build does not generate archives. The unpacked brand and poster source
+directories are excluded from the published site. `shapes/` contains the four unchanged
 SVG exports used as CSS masks by the homepage.
 
 `thumbnails/` contains display variants for the homepage, event archive, galleries,
