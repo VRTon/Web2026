@@ -314,6 +314,8 @@ event_page:
   gallery: "Photos and videos"
   gallery_intro: "Available photographic record of the edition."
   participants: "Participating communities"
+  volunteers: "Volunteers for this edition"
+  no_volunteers: "No volunteer names have been provided for this edition yet."
   view_schedule: "View this edition's schedule"
   back: "Back to editions"
 

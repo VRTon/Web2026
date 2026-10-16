@@ -116,6 +116,7 @@ editions:
       - { hour: 6, group_day: "2025-11-28", start_at: "2025-11-29T03:00:00", end_at: "2025-11-29T04:00:00", start: "03:00", end: "04:00" }
       - { hour: 7, group_day: "2025-11-28", start_at: "2025-11-29T04:00:00", end_at: "2025-11-29T05:00:00", start: "04:00", end: "05:00" }
       - { hour: 8, group_day: "2025-11-28", start_at: "2025-11-29T05:00:00", end_at: "2025-11-29T06:00:00", start: "05:00", end: "06:00" }
+      - { hour: 19, group_day: "2025-11-28", start_at: "2025-11-29T06:00:00", end_at: "2025-11-29T07:00:00", start: "06:00", end: "07:00" }
       - { hour: 9, group_day: "2025-11-29", start_at: "2025-11-29T10:00:00", end_at: "2025-11-29T11:00:00", start: "10:00", end: "11:00" }
       - { hour: 10, group_day: "2025-11-29", start_at: "2025-11-29T11:00:00", end_at: "2025-11-29T12:00:00", start: "11:00", end: "12:00" }
       - { hour: 11, group_day: "2025-11-29", start_at: "2025-11-29T13:00:00", end_at: "2025-11-29T14:00:00", start: "13:00", end: "14:00" }
@@ -135,7 +136,7 @@ editions:
       - { hour: 6, track: "main", title: { es: "DJ SET - Ramses0418" }, description: { es: "" } }
       - { hour: 7, track: "main", title: { es: "DJ SET - JamirDG" }, description: { es: "" } }
       - { hour: 8, track: "main", title: { es: "DJ SET - Alvarozzzz" }, description: { es: "" } }
-      - { hour: 8, track: "main", title: { es: "DJ SET - DannyLasagna" }, description: { es: "" } }
+      - { hour: 19, track: "main", title: { es: "DJ SET - DannyLasagna" }, description: { es: "" } }
       - { hour: 9, track: "main", title: { es: "Charla Médica" }, description: { es: "" } }
       - { hour: 10, track: "main", title: { es: "Show de Cantantes" }, description: { es: "" } }
       - { hour: 11, track: "main", title: { es: "Visita Guiada" }, description: { es: "" } }
@@ -149,9 +150,54 @@ editions:
 
   - year: 2024
     event: "VRTon 2024"
-    days: []
-    slots: []
-    activities: []
+    start_date: "2024-11-08"
+    end_date: "2024-11-09"
+    official_timezone:
+      id: "Etc/GMT+6"
+      label: "CST (UTC−6)"
+    days:
+      - date: "2024-11-08"
+        label: { es: "Viernes 8 de noviembre", en: "Friday, November 8" }
+      - date: "2024-11-09"
+        label: { es: "Sábado 9 de noviembre", en: "Saturday, November 9" }
+    show_end_times: true
+    tracks:
+      - id: "main"
+        label: { es: "Instancia", en: "Instance" }
+    slots:
+      - { hour: 1, group_day: "2024-11-08", start_at: "2024-11-08T15:00:00", end_at: "2024-11-08T17:00:00", start: "15:00", end: "17:00" }
+      - { hour: 2, group_day: "2024-11-08", start_at: "2024-11-08T17:00:00", end_at: "2024-11-08T19:00:00", start: "17:00", end: "19:00" }
+      - { hour: 3, group_day: "2024-11-08", start_at: "2024-11-08T19:00:00", end_at: "2024-11-08T20:00:00", start: "19:00", end: "20:00" }
+      - { hour: 4, group_day: "2024-11-08", start_at: "2024-11-08T20:00:00", end_at: "2024-11-08T22:00:00", start: "20:00", end: "22:00" }
+      - { hour: 5, group_day: "2024-11-08", start_at: "2024-11-08T22:00:00", end_at: "2024-11-08T23:00:00", start: "22:00", end: "23:00" }
+      - { hour: 6, group_day: "2024-11-08", start_at: "2024-11-08T23:00:00", end_at: "2024-11-09T00:00:00", start: "23:00", end: "00:00" }
+      - { hour: 7, group_day: "2024-11-09", start_at: "2024-11-09T07:00:00", end_at: "2024-11-09T09:00:00", start: "07:00", end: "09:00" }
+      - { hour: 8, group_day: "2024-11-09", start_at: "2024-11-09T09:00:00", end_at: "2024-11-09T10:00:00", start: "09:00", end: "10:00" }
+      - { hour: 9, group_day: "2024-11-09", start_at: "2024-11-09T10:00:00", end_at: "2024-11-09T11:00:00", start: "10:00", end: "11:00" }
+      - { hour: 10, group_day: "2024-11-09", start_at: "2024-11-09T11:00:00", end_at: "2024-11-09T13:00:00", start: "11:00", end: "13:00" }
+      - { hour: 11, group_day: "2024-11-09", start_at: "2024-11-09T13:00:00", end_at: "2024-11-09T15:00:00", start: "13:00", end: "15:00" }
+      - { hour: 12, group_day: "2024-11-09", start_at: "2024-11-09T15:00:00", end_at: "2024-11-09T17:00:00", start: "15:00", end: "17:00" }
+      - { hour: 13, group_day: "2024-11-09", start_at: "2024-11-09T17:00:00", end_at: "2024-11-09T18:00:00", start: "17:00", end: "18:00" }
+      - { hour: 14, group_day: "2024-11-09", start_at: "2024-11-09T18:00:00", end_at: "2024-11-09T20:00:00", start: "18:00", end: "20:00" }
+      - { hour: 15, group_day: "2024-11-09", start_at: "2024-11-09T20:00:00", end_at: "2024-11-09T21:00:00", start: "20:00", end: "21:00" }
+      - { hour: 16, group_day: "2024-11-09", start_at: "2024-11-09T21:00:00", end_at: "2024-11-09T22:00:00", start: "21:00", end: "22:00" }
+    activities:
+      - { hour: 1, track: "main", title: { es: "Inicio Europa VRTon", en: "VRTon Europe Start" }, description: { es: "", en: "" } }
+      - { hour: 2, track: "main", featured: true, title: { es: "Apertura VRTon", en: "Opening VRTon" }, description: { es: "", en: "" } }
+      - { hour: 3, track: "main", featured: true, title: { es: "Apertura Teletón Chile", en: "Opening Teletón Chile" }, description: { es: "Se abren las donaciones.", en: "Donations are opened." } }
+      - { hour: 4, track: "main", title: { es: "Gaming Night", en: "Gaming Night" }, description: { es: "", en: "" } }
+      - { hour: 5, track: "main", featured: true, title: { es: "Actualización cómputo", en: "Donations update" }, description: { es: "", en: "" } }
+      - { hour: 6, track: "main", title: { es: "Rumbatón", en: "Rumbatón" }, description: { es: "", en: "" } }
+      - { hour: 7, track: "main", title: { es: "Chilling Europa, Amaneciendo con VRTon", en: "Chilling Europe, Dawn with VRTon" }, description: { es: "", en: "" } }
+      - { hour: 8, track: "main", featured: true, title: { es: "Actualización cómputo", en: "Donations update" }, description: { es: "", en: "" } }
+      - { hour: 9, track: "main", title: { es: "SCP - Gaming", en: "SCP - Gaming" }, description: { es: "", en: "" } }
+      - { hour: 10, track: "main", title: { es: "Coliseo VRToniano", en: "VRTonian Coliseum" }, description: { es: "", en: "" } }
+      - { hour: 11, track: "main", title: { es: "World hopping", en: "World hopping" }, description: { es: "", en: "" } }
+      - { hour: 12, track: "main", title: { es: "Helldive Solidario", en: "Solidarity Helldive" }, description: { es: "", en: "" } }
+      - { hour: 13, track: "main", title: { es: "Café maid & Roleo", en: "Maid Cafe & Roleplay" }, description: { es: "Actualización cómputo.", en: "Donations update." } }
+      - { hour: 14, track: "main", title: { es: "Aportes finales (Mapa Teletón)", en: "Final contributions (Teletón’s Map)" }, description: { es: "", en: "" } }
+      - { hour: 15, track: "main", featured: true, title: { es: "Cierre", en: "Closure" }, description: { es: "Cómputo final.", en: "Donations final calculation." } }
+      - { hour: 16, track: "main", title: { es: "Celebración cierre VRTon x Teletón Chile 2024", en: "VRTon x Teletón Chile 2024 closing celebration" }, description: { es: "", en: "" } }
 
   - year: 2023
     event: "VRTon 2023"
