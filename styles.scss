@@ -523,6 +523,7 @@ p {
   position: relative;
   min-height: 0;
   overflow: hidden;
+  contain: paint;
   padding-block: clamp(1.75rem, 2.5vw, 2.5rem);
   background: #f4f7ff url("/assets/2026/cielos-de-cristal-hero-background.webp") center bottom / cover no-repeat;
   background-image: image-set(url("/assets/thumbnails/2026/hero-background.avif") type("image/avif"), url("/assets/2026/cielos-de-cristal-hero-background.webp") type("image/webp"));
@@ -712,22 +713,24 @@ p {
 }
 
 .hero-grid {
-  display: flex;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
   min-height: clamp(18rem, 22vw, 21rem);
   align-items: center;
-  justify-content: center;
 }
 
 .hero-copy {
   position: relative;
   z-index: 1;
-  width: min(100%, 58rem);
   min-width: 0;
   text-align: center;
 }
 
 .hero-eyebrow {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
   color: #b52b3d;
   font-size: clamp(0.72rem, 1vw, 0.86rem);
   font-weight: 850;
@@ -735,14 +738,83 @@ p {
   text-transform: uppercase;
 }
 
-.hero-edition-title {
+.hero-countdown {
+  display: flex;
+  min-height: clamp(5rem, 10vw, 7rem);
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
+  color: #17212b;
+}
+
+.hero-countdown-units {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.35rem, 1vw, 0.75rem);
+}
+
+.hero-countdown-units[hidden] {
+  display: none;
+}
+
+.hero-countdown-unit {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: clamp(0.6rem, 1.5vw, 1rem) 0.25rem;
+  border: 1px solid #aeb7c0;
+  border-radius: 0.8rem;
+  background: rgb(255 255 255 / 78%);
+}
+
+.hero-countdown-number {
+  font-size: clamp(1.8rem, 4.3vw, 3.5rem);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.hero-countdown-unit-label {
+  font-family: var(--font-sans);
+  font-size: clamp(0.6rem, 1.1vw, 0.8rem);
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero-countdown-label {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.hero-countdown.is-live .hero-countdown-label {
+  align-self: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.8rem;
+  background: #d92f45;
+  color: #fff;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+.hero-countdown.is-live .hero-countdown-label::before {
+  display: inline-block;
+  width: 0.18em;
+  height: 0.18em;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+  content: "";
 }
 
 .hero-edition-logo {
   position: relative;
   display: block;
-  width: min(100%, 34rem);
+  width: 100%;
   aspect-ratio: 1193 / 796;
   margin-inline: auto;
   overflow: hidden;
@@ -770,14 +842,22 @@ p {
   text-wrap: balance;
 }
 
-.hero-actions {
+.hero-date[hidden],
+.hero-stream-actions[hidden] {
+  display: none;
+}
+
+.hero-actions,
+.hero-stream-actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: clamp(1.1rem, 2vw, 1.5rem) auto 0;
   gap: 0.75rem;
 }
 
-.hero-actions .button {
+.hero-actions .button,
+.hero-stream-actions .button {
   min-width: 12.5rem;
   min-height: 3.2rem;
   border-color: #aeb7c0;
@@ -2947,10 +3027,15 @@ p {
 
   .hero-grid {
     min-height: auto;
+    gap: 0.75rem;
+  }
+
+  .hero-edition-logo {
+    width: min(100%, 22rem);
   }
 
   .hero-copy {
-    width: min(100%, 50rem);
+    width: 100%;
     margin-inline: auto;
   }
 
@@ -3122,7 +3207,8 @@ p {
     padding: 1.25rem;
   }
 
-  .hero-actions .button {
+  .hero-actions .button,
+  .hero-stream-actions .button {
     width: 100%;
     min-width: 0;
   }
@@ -3131,7 +3217,8 @@ p {
     font-size: clamp(1.4rem, 7vw, 1.85rem);
   }
 
-  .hero-actions {
+  .hero-actions,
+  .hero-stream-actions {
     width: min(100%, 20rem);
     flex-direction: column;
   }
