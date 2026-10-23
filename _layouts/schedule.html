@@ -61,7 +61,8 @@ layout: default
                   {% assign slot_activities = schedule.activities | where: "hour", slot.hour %}
                   <tr class="schedule-entry" data-day="{{ day.date }}" data-hour="{{ slot.hour }}">
                     <th scope="row">
-                      <time data-schedule-time data-start-at="{{ slot.start_at }}" data-end-at="{{ slot.end_at }}" data-show-end="{% if schedule.show_end_times == false %}false{% else %}true{% endif %}">{{ slot.start }}{% unless schedule.show_end_times == false %}–{{ slot.end }}{% endunless %}</time>
+                      <time class="schedule-time-full" data-schedule-time data-start-at="{{ slot.start_at }}" data-end-at="{{ slot.end_at }}" data-show-end="{% if schedule.show_end_times == false %}false{% else %}true{% endif %}">{{ slot.start }}{% unless schedule.show_end_times == false %}–{{ slot.end }}{% endunless %}</time>
+                      <time class="schedule-time-start" data-schedule-time data-start-at="{{ slot.start_at }}" data-end-at="{{ slot.end_at }}" data-show-end="false">{{ slot.start }}</time>
                     </th>
                     {% for track in schedule.tracks %}
                       {% assign track_activities = slot_activities | where: "track", track.id %}

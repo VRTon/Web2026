@@ -2011,6 +2011,10 @@ p {
   font-weight: 850;
 }
 
+.schedule-time-start {
+  display: none;
+}
+
 .schedule-instance-cell {
   height: 5.6rem;
 }
@@ -2974,6 +2978,59 @@ p {
 @media (max-width: 820px) {
   :root {
     --nav-height: 4.25rem;
+  }
+
+  .schedule-table {
+    min-width: 0;
+  }
+
+  .schedule-table tr > :first-child {
+    width: 4rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.4rem;
+  }
+
+  .schedule-table thead th {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .schedule-table tbody th[scope="row"] {
+    padding-top: 0.4rem;
+    vertical-align: middle;
+    font-size: 0.8rem;
+  }
+
+  .schedule-time-full {
+    display: none;
+  }
+
+  .schedule-time-start {
+    display: inline;
+  }
+
+  .schedule-instance-cell {
+    height: auto;
+  }
+
+  .schedule-activity-card {
+    display: block;
+    min-height: 2.75rem;
+    padding: 0.45rem;
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+  }
+
+  .schedule-activity-marker {
+    display: none;
+  }
+
+  .schedule-empty {
+    min-height: 2.75rem;
   }
 
   .hero {
