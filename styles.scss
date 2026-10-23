@@ -1932,6 +1932,47 @@ p {
   min-height: 34rem;
 }
 
+.schedule-party-promo {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--purple) 45%, var(--border));
+  border-left: 3px solid var(--purple);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--purple) 7%, var(--surface));
+  overflow-wrap: anywhere;
+}
+
+.schedule-party-promo h2 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.schedule-party-host {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.schedule-activity-card.schedule-activity-english {
+  position: relative;
+  padding-top: 1rem;
+  border-top: 3px solid var(--purple);
+}
+
+.schedule-party-badge {
+  position: absolute;
+  top: -1px;
+  right: 0.4rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background: color-mix(in srgb, var(--purple) 18%, var(--surface));
+  color: var(--text);
+  font-size: 0.55rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
 .schedule-table-wrap {
   position: relative;
   overflow-x: auto;
