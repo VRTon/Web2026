@@ -29,6 +29,23 @@ responsive image candidates and original gallery images.
 The schedule check covers timezone conversion and Chilean daylight saving.
 Browser checks and a deployed Lighthouse run are separate from these checks.
 
+## Team page
+
+The team page lives at `/equipo/` and `/en/equipo/`. Edit `_data/team.yml` to
+add directors, team leaders, artists, and affiliated creators/sellers. Each person
+has a public `name`, a translated `role` (`es` / `en`), and a `photo` path. Use
+square photos, ideally 480 × 480 px; a missing photo displays the person's initial.
+For logos, set `logo: true` to display the complete image on a dark background,
+preserving transparent white artwork and avoiding cropping.
+The `volunteers` list contains names only. Empty categories show a translated
+pending message; historical rosters are not reused as the current team.
+
+Collaborating groups reuse `_data/communities_2026.yml`. At the next edition,
+update the year in `team.yml` and the community data source in `equipo/index.html`.
+Use `thumbnail` for an existing smaller logo, or `logo` for the original. Leave
+`logo` empty when no file is available. Avoid checking `site.static_files` in
+localized templates: Polyglot excludes shared assets while processing English.
+
 Display image variants are committed under `assets/thumbnails/`. After changing
 event photos, community logos or brand previews, install Pillow locally and run
 `python scripts/prepare_home_images.py`. Jekyll does not need Pillow. Keep gallery

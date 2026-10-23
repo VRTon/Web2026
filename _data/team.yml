@@ -1,0 +1,111 @@
+# Current team only. Historical volunteers remain in events.yml.
+# Each person has name, translated role (es/en), and photo.
+# Use square photos, ideally 480 x 480 px, at /assets/team/.
+# An empty photo displays the person's initial until a photo is provided.
+# Set logo: true to show the full image on a dark background without cropping.
+year: "2026"
+directors:
+  - name: "3D Master"
+    role: { es: "Director", en: "Director" }
+    photo: "/assets/team/3DMaster.webp"
+  - name: "ValenVRC"
+    role: { es: "Director", en: "Director" }
+    photo: "/assets/team/ValenVRC.webp"
+  - name: "DantalionNight"
+    role: { es: "Director", en: "Director" }
+    photo: "/assets/team/Dantalion.webp"
+leaders:
+  - name: "Lian"
+    role: { es: "Líder de Marketing", en: "Marketing Lead" }
+    photo: ""
+  - name: "YuanX"
+    role: { es: "Líder de Moderación", en: "Moderation Lead" }
+    photo: ""
+  - name: "MileChan"
+    role: { es: "Coordinadora de Creadores", en: "Creator Coordinator" }
+    photo: ""
+  - name: "FoxyCTG32"
+    role: { es: "Líder de Audiovisuales", en: "Audiovisual Lead" }
+    photo: ""
+  - name: "DannySmile"
+    role: { es: "Consultor", en: "Consultant" }
+    photo: ""
+artists:
+  - name: "Sperto"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/Sperto.webp"
+    logo: true
+  - name: "Karamaty"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/Karamaty.webp"
+    logo: true
+  - name: "Yuan X"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/YuanX.webp"
+    logo: true
+  - name: "Ramses0418"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/Ramses0418.webp"
+    logo: true
+  - name: "DannyLasagna"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/DannyLasagna.webp"
+    logo: true
+  - name: "NebularSoul"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/NebularSoul.webp"
+    logo: true
+  - name: "JayJefferson"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/JayJefferson.webp"
+    logo: true
+  - name: "JamirDG"
+    role: { es: "DJ", en: "DJ" }
+    photo: "/assets/team/JamirDG.webp"
+    logo: true
+  - name: "FAWN"
+    role: { es: "Cantante", en: "Singer" }
+    photo: ""
+  - name: "Blueminicent"
+    role: { es: "Cantante", en: "Singer" }
+    photo: ""
+  - name: "Sr Adela"
+    role: { es: "Cantante", en: "Singer" }
+    photo: ""
+affiliates:
+  - name: "Iza42"
+    role: { es: "Creador afiliado", en: "Affiliated creator" }
+    photo: ""
+  - name: "Yeusepe"
+    role: { es: "Creador afiliado", en: "Affiliated creator" }
+    photo: ""
+  - name: "MadKodin"
+    role: { es: "Creador afiliado", en: "Affiliated creator" }
+    photo: ""
+  - name: "ViaVR"
+    role: { es: "Creador afiliado", en: "Affiliated creator" }
+    photo: ""
+  - name: "TakiroKatsukawa"
+    role: { es: "Creador afiliado", en: "Affiliated creator" }
+    photo: ""
+# Volunteers are public names only: ["Name", "Another name"].
+volunteers:
+  - "AnaGoat"
+  - "ZorroCL"
+  - "Surprise"
+  - "Artask"
+  - "Haze"
+  - "Iza32"
+  - "JamirDG"
+  - "KariwiVT"
+  - "RukasuOverClock"
+  - "Winet"
+  - "ZeroSkill"
+  - "DannyLasagna"
+  - "BlueWind"
+  - "JackerBun"
+  - "Lexter"
+  - "MadKoding"
+  - "Mok0"
+  - "not-a-skinwalker"
+  - "Pipe"
