@@ -35,15 +35,28 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
       <span class="memory-heart memory-heart-right memory-heart-6"><img src="{{ '/assets/thumbnails/Eventos/2023/event-2023-2-480.webp' | relative_url }}" alt="" width="480" height="270" loading="lazy" decoding="async" fetchpriority="low"></span>
     </div>
     <div class="content-shell hero-grid">
+      <div class="hero-edition-logo" aria-hidden="true">
+        {% include responsive-image.html src="/assets/2026/vrton-cielos-de-cristal.webp" width=1600 height=1600 widths="800,1100,1600" sizes="(max-width: 384px) calc(134.2vw - 43px), (max-width: 820px) 473px, (max-width: 1212px) calc(67.1vw - 43px), 770px" loading="eager" fetchpriority="high" %}
+      </div>
       <div class="hero-copy">
         <p class="hero-eyebrow">{{ t.home_v2.eyebrow }}</p>
-        <h1 class="hero-edition-title" id="hero-title">
-          <span class="sr-only">{{ t.home.hero.title }}</span>
-          <span class="hero-edition-logo" aria-hidden="true">
-            {% include responsive-image.html src="/assets/2026/vrton-cielos-de-cristal.webp" width=1600 height=1600 widths="800,1100,1600" sizes="(max-width: 600px) 134vw, 731px" loading="eager" fetchpriority="high" %}
+        <h1 class="hero-countdown" id="hero-title" aria-label="{{ t.home.hero.title | escape }}"
+            data-countdown-date="{{ current_event.start_date }}"
+            data-live-label="{{ t.home_v2.countdown_live | escape }}">
+          <span class="hero-countdown-units" data-countdown-units role="timer" aria-live="off" hidden>
+            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_days }}</span></span>
+            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_hours }}</span></span>
+            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_minutes }}</span></span>
+            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_seconds }}</span></span>
           </span>
+          <span class="hero-countdown-label" data-countdown-label aria-live="polite">{{ t.home.hero.title }}</span>
         </h1>
         <time class="hero-date" datetime="{{ current_event.start_date }}">{{ t.home_v2.date_compact }}</time>
+
+        <div class="hero-stream-actions" data-stream-links hidden role="group" aria-label="{{ t.home_v2.live_stream_label }}">
+          <a class="button button-secondary" href="{{ current_event.streaming.youtube_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.watch_youtube }}</a>
+          <a class="button button-secondary" href="{{ current_event.streaming.twitch_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.watch_twitch }}</a>
+        </div>
 
         <div class="hero-actions" aria-label="{{ t.home_v2.event_label }}">
           <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ t.home_v2.attend }}</a>

@@ -6,6 +6,48 @@
   var statusMessage = document.getElementById("status-message");
   var preferenceKey = "vrton-preferences";
   var languageKey = "vrton-language";
+
+  function setupCountdown() {
+    var countdown = document.querySelector("[data-countdown-date]");
+    if (!countdown) return;
+    var target = Date.parse(countdown.dataset.countdownDate);
+    if (!Number.isFinite(target)) return;
+    var units = countdown.querySelector("[data-countdown-units]");
+    var numbers = countdown.querySelectorAll("[data-countdown-value]");
+    var label = countdown.querySelector("[data-countdown-label]");
+    var heroCopy = countdown.closest(".hero-copy");
+    var date = heroCopy.querySelector(".hero-date");
+    var streamLinks = heroCopy.querySelector("[data-stream-links]");
+    var timer;
+
+    function update() {
+      window.clearTimeout(timer);
+      if (document.hidden) return;
+      var remaining = Math.max(0, Math.ceil((target - Date.now()) / 1000));
+      var live = remaining === 0;
+      units.hidden = live;
+      date.hidden = live;
+      streamLinks.hidden = !live;
+      countdown.classList.toggle("is-live", live);
+      var values = [Math.floor(remaining / 86400), Math.floor(remaining / 3600) % 24,
+        Math.floor(remaining / 60) % 60, remaining % 60];
+      numbers.forEach(function (number, index) {
+        var value = String(values[index]).padStart(2, "0");
+        if (number.textContent !== value) number.textContent = value;
+      });
+      label.hidden = !live;
+      if (live) label.textContent = countdown.dataset.liveLabel;
+      if (remaining > 0) {
+        timer = window.setTimeout(update, 1000);
+      }
+    }
+
+    update();
+    document.addEventListener("visibilitychange", update);
+  }
+
+  setupCountdown();
+
   var defaults = {
     theme: "system",
     textSize: "normal",

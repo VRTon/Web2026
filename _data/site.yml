@@ -1,9 +1,13 @@
 current_event:
   name: "VRTon 2026"
   year: "2026"
-  start_date: "2026-11-06"
+  # Hero countdown target: ISO 8601 with UTC offset (20:00 in Chile, first schedule slot).
+  start_date: "2026-11-06T20:00:00-03:00"
   end_date: "2026-11-07"
   attend_url: "https://vrc.group/VRTON.0659"
+  streaming:
+    youtube_url: "https://www.youtube.com/@VRTonOficial/live"
+    twitch_url: "https://www.twitch.tv/vrtonof"
   volunteer_form:
     es: "https://forms.gle/ubg5U2t4eMCuu9k18"
     en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
