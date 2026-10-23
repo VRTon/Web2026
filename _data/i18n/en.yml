@@ -175,6 +175,7 @@ errors:
     back_home: "Back to Home"
 
 nav_v2:
+  team: "Team"
   home: "Home"
   about: "About VRTon"
   events: "Editions"
@@ -269,6 +270,19 @@ home_v2:
   participate_text: "Join VRTon 2026: experience the event, volunteer, or take part alongside your community."
   participate_attend: "Register for the event"
   participate_volunteer: "Register as a volunteer"
+
+team_page:
+  title: "Our team"
+  intro: "The people and communities who bring their talent, time, and energy together to make VRTon possible."
+  directors: "Directive Team"
+  leaders: "Team leaders"
+  artists: "Artists"
+  affiliates: "Partner Creators"
+  volunteers: "Volunteers"
+  collaborators: "Collaborating groups"
+  collaborators_intro: "The communities joining us for this edition."
+  people_pending: "The names, photos, and roles of this team's members will be shared soon."
+  volunteers_pending: "The names of this edition's volunteers will be shared soon."
 
 editions_page:
   eyebrow: "Our story"
@@ -372,6 +386,8 @@ footer_v2:
   copyright: "VRTon. All rights reserved."
 
 seo:
+  team_title: "VRTon Team"
+  team_description: "Meet VRTon's directors, team leaders, artists, creators, and volunteers, along with this edition's collaborating groups."
   home_title: "VRTon 2026 — Virtual communities, real impact"
   home_description: "VRTon 2026 takes place November 6 and 7. A free charity event bringing virtual reality communities together."
   schedule_title: "VRTon Schedule"
