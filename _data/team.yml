@@ -15,21 +15,21 @@ directors:
     role: { es: "Director", en: "Director" }
     photo: "/assets/team/Dantalion.webp"
 leaders:
-  - name: "Lian"
+  - name: "LianRo"
     role: { es: "Líder de Marketing", en: "Marketing Lead" }
-    photo: ""
+    photo: "/assets/team/LianRo.webp"
   - name: "YuanX"
     role: { es: "Líder de Moderación", en: "Moderation Lead" }
-    photo: ""
-  - name: "MileChan"
+    photo: "/assets/team/YuanX.webp"
+  - name: "MilleChan"
     role: { es: "Coordinadora de Creadores", en: "Creator Coordinator" }
-    photo: ""
-  - name: "FoxyCTG32"
+    photo: "/assets/team/MilleChan.webp"
+  - name: "FoxyCTG21"
     role: { es: "Líder de Audiovisuales", en: "Audiovisual Lead" }
-    photo: ""
+    photo: "/assets/team/FoxyCTG21.webp"
   - name: "DannySmile"
     role: { es: "Consultor", en: "Consultant" }
-    photo: ""
+    photo: "/assets/team/DannySmile.webp"
 artists:
   - name: "Sperto"
     role: { es: "DJ", en: "DJ" }
@@ -75,19 +75,19 @@ artists:
 affiliates:
   - name: "Iza42"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: ""
+    photo: "/assets/team/Iza42.webp"
   - name: "Yeusepe"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: ""
+    photo: "/assets/team/Yeusepe.webp"
   - name: "MadKodin"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: ""
+    photo: "/assets/team/MadKodin.webp"
   - name: "ViaVR"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: ""
+    photo: "/assets/team/ViaVR.webp"
   - name: "TakiroKatsukawa"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: ""
+    photo: "/assets/team/TakiroKatsukawa.webp"
 # Volunteers are public names only: ["Name", "Another name"].
 volunteers:
   - "AnaGoat"
@@ -109,3 +109,4 @@ volunteers:
   - "Mok0"
   - "not-a-skinwalker"
   - "Pipe"
+  - "Le_Fifi"
