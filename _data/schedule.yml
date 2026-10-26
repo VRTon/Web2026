@@ -87,12 +87,13 @@ editions:
       - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura", en: "Closing Ceremony" }, description: { es: "" } }
       - { hour: 5, track: "party", title: { es: "Sperto" }, description: { es: "" } }
       - { hour: 6, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
-      - { hour: 7, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 7, track: "party", title: { es: "Penagos" }, description: { es: "" } }
       - { hour: 8, track: "party", title: { es: "Ramses" }, description: { es: "" } }
       - { hour: 9, track: "party", title: { es: "DannyLasagna" }, description: { es: "" } }
       - { hour: 10, track: "party", title: { es: "NebularSoul" }, description: { es: "" } }
       - { hour: 11, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
       - { hour: 12, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
+      - { hour: 13, track: "party", title: { es: "YuanX" }, description: { es: "" } }
 
   - year: 2025
     event: "VRTon 2025"
