@@ -341,6 +341,9 @@ schedule:
   archive_empty_title: "Schedule not published"
   archive_empty_text: "There are no documented activities for this edition yet. This page is ready for the archive once the information is confirmed."
   back_editions: "Back to editions"
+  party_promo:
+    title: "Extra English Speaking Instance"
+    host: "Hosted by %host%"
 
 accessibility:
   panel_title: "Accessibility preferences"

@@ -348,6 +348,9 @@ schedule:
   archive_empty_title: "Itinerario no publicado"
   archive_empty_text: "Todavía no hay actividades documentadas para esta edición. La página queda disponible para incorporar el archivo cuando se confirme la información."
   back_editions: "Volver a ediciones"
+  party_promo:
+    title: "Instancia Extra Angloparlante"
+    host: "Presentada por %host%"
 
 accessibility:
   panel_title: "Preferencias de accesibilidad"

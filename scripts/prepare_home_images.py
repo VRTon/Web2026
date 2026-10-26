@@ -1,5 +1,4 @@
 """Regenerate site image variants: install Pillow, then run this script."""
-import re
 from pathlib import Path
 from PIL import Image
 
@@ -48,12 +47,8 @@ if __name__ == "__main__":
             destination = Path("assets/thumbnails") / relative.parent / f"{source.stem}-{width}.webp"
             resize(source.relative_to(ROOT), destination, width, by_width=True, lossless=False)
 
-    # Only logos referenced by current or archived event data need display variants.
-    logos = set()
-    for name, limit in (("events.yml", None), ("communities_2026.yml", 12)):
-        data = "\n".join(line for line in (ROOT / "_data" / name).read_text(encoding="utf-8").splitlines()
-                         if not line.lstrip().startswith("#"))
-        logos.update(re.findall(r'logo:\s*"(/assets/Comunidades/[^\"]+)"', data)[:limit])
+    # Include every community logo, including groups outside the homepage selection.
+    logos = (path.relative_to(ROOT).as_posix() for path in (ROOT / "assets/Comunidades").glob("*.webp"))
     for source in sorted(logos):
         # Enough pixels for both contained archive logos and circular homepage crops.
         with Image.open(ROOT / source.lstrip("/")) as image:
