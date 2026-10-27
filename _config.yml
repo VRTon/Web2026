@@ -85,3 +85,4 @@ exclude:
   - assets/2026/Manual de Marca/
   - assets/2026/Posters/
   - scripts/
+  - workers/
