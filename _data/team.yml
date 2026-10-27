@@ -1,7 +1,7 @@
 # Current team only. Historical volunteers remain in events.yml.
 # Each person has name, translated role (es/en), and photo.
 # Use square photos, ideally 480 x 480 px, at /assets/team/.
-# An empty photo displays the person's initial until a photo is provided.
+# An empty photo displays the VRTon logo until a photo is provided.
 # Set logo: true to show the full image on a dark background without cropping.
 year: "2026"
 directors:
@@ -15,6 +15,9 @@ directors:
     role: { es: "Director", en: "Director" }
     photo: "/assets/team/Dantalion.webp"
 leaders:
+  - name: "FoxyCTG21"
+    role: { es: "Líder de Audiovisuales", en: "Audiovisual Lead" }
+    photo: "/assets/team/FoxyCTG21.webp"
   - name: "LianRo"
     role: { es: "Líder de Marketing", en: "Marketing Lead" }
     photo: "/assets/team/LianRo.webp"
@@ -24,9 +27,6 @@ leaders:
   - name: "MilleChan"
     role: { es: "Coordinadora de Creadores", en: "Creator Coordinator" }
     photo: "/assets/team/MilleChan.webp"
-  - name: "FoxyCTG21"
-    role: { es: "Líder de Audiovisuales", en: "Audiovisual Lead" }
-    photo: "/assets/team/FoxyCTG21.webp"
   - name: "DannySmile"
     role: { es: "Consultor", en: "Consultant" }
     photo: "/assets/team/DannySmile.webp"
@@ -63,6 +63,10 @@ artists:
     role: { es: "DJ", en: "DJ" }
     photo: "/assets/team/JamirDG.webp"
     logo: true
+  - name: "Penagos"
+    role: { es: "DJ", en: "DJ" }
+    photo: ""
+    logo: true
   - name: "FAWN"
     role: { es: "Cantante", en: "Singer" }
     photo: ""
@@ -82,12 +86,12 @@ affiliates:
   - name: "MadKodin"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
     photo: "/assets/team/MadKodin.webp"
-  - name: "ViaVR"
-    role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: "/assets/team/ViaVR.webp"
-  - name: "TakiroKatsukawa"
-    role: { es: "Creador afiliado", en: "Affiliated creator" }
-    photo: "/assets/team/TakiroKatsukawa.webp"
+#  - name: "ViaVR"
+#    role: { es: "Creador afiliado", en: "Affiliated creator" }
+#    photo: "/assets/team/ViaVR.webp"
+#  - name: "TakiroKatsukawa"
+#    role: { es: "Creador afiliado", en: "Affiliated creator" }
+#    photo: "/assets/team/TakiroKatsukawa.webp"
 # Volunteers are public names only: ["Name", "Another name"].
 volunteers:
   - "AnaGoat"

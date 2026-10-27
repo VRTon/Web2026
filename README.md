@@ -43,7 +43,7 @@ Browser checks and a deployed Lighthouse run are separate from these checks.
 The team page lives at `/equipo/` and `/en/equipo/`. Edit `_data/team.yml` to
 add directors, team leaders, artists, and affiliated creators/sellers. Each person
 has a public `name`, a translated `role` (`es` / `en`), and a `photo` path. Use
-square photos, ideally 480 × 480 px; a missing photo displays the person's initial.
+square photos, ideally 480 × 480 px; a missing photo displays the VRTon logo.
 For logos, set `logo: true` to display the complete image on a dark background,
 preserving transparent white artwork and avoiding cropping.
 The `volunteers` list contains names only. Empty categories show a translated

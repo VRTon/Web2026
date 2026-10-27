@@ -9,7 +9,7 @@
           {% if person.photo and person.photo != '' %}
             <img class="team-photo{% if person.logo %} team-photo-logo{% endif %}" src="{{ person.photo | relative_url | escape }}" alt="" width="480" height="480" loading="lazy" decoding="async">
           {% else %}
-            <div class="team-photo team-photo-placeholder" aria-hidden="true">{{ person.name | slice: 0 | upcase | escape }}</div>
+            <img class="team-photo team-photo-logo" src="{{ '/assets/thumbnails/logo-280.webp' | relative_url }}" alt="" width="280" height="280" loading="lazy" decoding="async">
           {% endif %}
           <div class="team-card-body">
             <h3>{{ person.name | escape }}</h3>

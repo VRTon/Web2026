@@ -55,12 +55,8 @@ description: "Las personas y comunidades que hacen posible VRTon."
       <ul class="event-community-grid">
         {% for community in collaborators.communities %}
           <li>
-            {% assign community_image = community.thumbnail | default: community.logo %}
-            {% if community_image and community_image != '' %}
-              <img src="{{ community_image | relative_url }}" alt="" width="120" height="120" loading="lazy" decoding="async">
-            {% else %}
-              <span class="team-community-placeholder" aria-hidden="true">{{ community.name | slice: 0 | upcase | escape }}</span>
-            {% endif %}
+            {% assign community_image = community.thumbnail | default: community.logo | default: '/assets/thumbnails/logo-128.webp' %}
+            <img src="{{ community_image | relative_url }}" alt="" width="120" height="120" loading="lazy" decoding="async">
             <span>{{ community.name | escape }}</span>
           </li>
         {% endfor %}
