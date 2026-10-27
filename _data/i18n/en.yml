@@ -202,6 +202,14 @@ home_v2:
   lead: "VRTon brings virtual reality communities together to share, celebrate, and support charitable causes through a free and open event."
   event_label: "Next edition"
   date_compact: "November 6 — 7"
+  countdown_days: "Days"
+  countdown_hours: "Hours"
+  countdown_minutes: "Minutes"
+  countdown_seconds: "Seconds"
+  countdown_live: "LIVE"
+  live_stream_label: "Watch the livestream"
+  watch_youtube: "Watch on YouTube"
+  watch_twitch: "Watch on Twitch"
   attend: "Attend the event"
   attendance_title: "Attend VRTon 2026"
   attendance_register: "Register on"
@@ -347,6 +355,9 @@ schedule:
   archive_empty_title: "Schedule not published"
   archive_empty_text: "There are no documented activities for this edition yet. This page is ready for the archive once the information is confirmed."
   back_editions: "Back to editions"
+  party_promo:
+    title: "Extra English Speaking Instance"
+    host: "Hosted by %host%"
 
 accessibility:
   panel_title: "Accessibility preferences"

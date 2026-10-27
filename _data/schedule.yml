@@ -18,6 +18,10 @@ editions:
           es: "7 de noviembre"
           en: "November 7"
     show_end_times: true
+    party_promo:
+      host: "NoxVitae"
+      start_hour: 5
+      end_hour: 9
     tracks:
       - id: "main"
         label: { es: "Instancia principal", en: "Main instance" }
@@ -54,41 +58,42 @@ editions:
       - { hour: 28, group_day: "2026-11-07", start_at: "2026-11-07T23:00:00", end_at: "2026-11-08T00:00:00", start: "23:00", end: "00:00" }
       - { hour: 29, group_day: "2026-11-07", start_at: "2026-11-08T00:00:00", end_at: "2026-11-08T01:00:00", start: "00:00", end: "01:00" }
     activities:
-      - { hour: 1, track: "main", title: { es: "Previa" }, description: { es: "" } }
-      - { hour: 2, track: "main", title: { es: "Previa" }, description: { es: "" } }
-      - { hour: 3, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
-      - { hour: 4, track: "main", featured: true, title: { es: "Ceremonia de Apertura" }, description: { es: "" } }
-      - { hour: 5, track: "main", featured: false, title: { es: "Show de Dancer" }, description: { es: "Hosted by The Secret Society" } }
-      - { hour: 6, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
-      - { hour: 7, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 8, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 9, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 13, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
-      - { hour: 14, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
-      - { hour: 15, track: "main", title: { es: "Instancia Española" }, description: { es: "" } }
-      - { hour: 16, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
-      - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teletón" }, description: { es: "" } }
-      - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales" }, description: { es: "" } }
-      - { hour: 21, track: "main", title: { es: "Arena Mágica" }, description: { es: "" } }
-      - { hour: 22, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
-      - { hour: 23, track: "main", title: { es: "Fawn & Blueminescent" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
-      - { hour: 24, track: "main", title: { es: "Meet VRTon Staff" }, description: { es: "¿Cómo se hicieron esta y las anteriores ediciones de VRTon? Conoce al equipo que las hizo posibles, las tecnologías utilizadas y los desafíos superados." } }
-      - { hour: 25, track: "main", title: { es: "Sra Adela" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
-      - { hour: 26, track: "main", featured: true, title: { es: "Cómputo" }, description: { es: "" } }
-      - { hour: 27, track: "main", title: { es: "Subasta Solidaria" }, description: { es: "Hosted by Jugando con Lag" } }
-      - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
-      - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura" }, description: { es: "" } }
+      - { hour: 1, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 2, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 3, track: "main", featured: true, title: { es: "Ceremonia de Apertura", en: "Opening Ceremony" }, description: { es: "" } }
+      - { hour: 4, track: "main", featured: true, title: { es: "Ceremonia de Apertura", en: "Opening Ceremony" }, description: { es: "" } }
+      - { hour: 5, track: "main", featured: false, title: { es: "Show de Dancer", en: "Dancer Show" }, description: { es: "Hosted by The Secret Society" } }
+      - { hour: 6, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
+#      - { hour: 7, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+#      - { hour: 8, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+#      - { hour: 9, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+#      - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+#      - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+#      - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
+      - { hour: 13, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 14, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 15, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 16, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
+      - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teletón", en: "Interview with the Teletón Staff" }, description: { es: "" } }
+      - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales", en: "Spacecraft Racing" }, description: { es: "" } }
+      - { hour: 21, track: "main", title: { es: "Arena Mágica", en: "Magic Arena" }, description: { es: "" } }
+      - { hour: 22, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
+      - { hour: 23, track: "main", title: { es: "Fawn & Blueminescent", en: "Fawn & Blueminescent" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
+      - { hour: 24, track: "main", title: { es: "VRTon Detras de Escena", en: "VRTon Behind the Scenes" }, description: { es: "¿Cómo se hicieron esta y las anteriores ediciones de VRTon? Conoce al equipo que las hizo posibles, las tecnologías utilizadas y los desafíos superados." } }
+      - { hour: 25, track: "main", title: { es: "Sra Adela", en: "Mrs. Adela" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
+      - { hour: 26, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
+      - { hour: 27, track: "main", title: { es: "Rifa Solidaria", en: "Solidarity Raffle" }, description: { es: "Hosted by Jugando con Lag" } }
+      - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura", en: "Closing Ceremony" }, description: { es: "" } }
+      - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura", en: "Closing Ceremony" }, description: { es: "" } }
       - { hour: 5, track: "party", title: { es: "Sperto" }, description: { es: "" } }
       - { hour: 6, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
-      - { hour: 7, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 7, track: "party", title: { es: "Penagos" }, description: { es: "" } }
       - { hour: 8, track: "party", title: { es: "Ramses" }, description: { es: "" } }
       - { hour: 9, track: "party", title: { es: "DannyLasagna" }, description: { es: "" } }
       - { hour: 10, track: "party", title: { es: "NebularSoul" }, description: { es: "" } }
       - { hour: 11, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
       - { hour: 12, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
+      - { hour: 13, track: "party", title: { es: "YuanX" }, description: { es: "" } }
 
   - year: 2025
     event: "VRTon 2025"
