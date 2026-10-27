@@ -1,0 +1,66 @@
+---
+layout: default
+lang: es
+permalink: /equipo/
+page_id: team
+title: "Equipo VRTon"
+description: "Las personas y comunidades que hacen posible VRTon."
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign team = site.data.team %}
+{% assign collaborators = site.data.communities_2026 %}
+
+<main id="main-content" tabindex="-1" class="team-page">
+  <header class="page-hero">
+    <div class="content-shell">
+      <p class="eyebrow">VRTon {{ team.year }}</p>
+      <h1>{{ t.team_page.title }}</h1>
+      <p>{{ t.team_page.intro }}</p>
+    </div>
+  </header>
+
+  <div class="content-shell team-sections">
+    {% include team-group.html id='directors' title=t.team_page.directors members=team.directors %}
+    {% include team-group.html id='leaders' title=t.team_page.leaders members=team.leaders %}
+
+    <div class="team-columns">
+      {% include team-group.html id='artists' title=t.team_page.artists members=team.artists %}
+      {% include team-group.html id='affiliates' title=t.team_page.affiliates members=team.affiliates %}
+    </div>
+
+    <section class="team-group" aria-labelledby="volunteers-title">
+      <div class="section-heading section-heading-wide">
+        <h2 id="volunteers-title">{{ t.team_page.volunteers }}</h2>
+      </div>
+      {% if team.volunteers and team.volunteers.size > 0 %}
+        <ul class="event-volunteer-list">
+          {% for volunteer in team.volunteers %}
+            <li>{{ volunteer | escape }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="team-pending">{{ t.team_page.volunteers_pending }}</p>
+      {% endif %}
+    </section>
+  </div>
+
+  <section class="section section-tinted" aria-labelledby="collaborators-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide">
+        <p class="eyebrow">VRTon {{ collaborators.year }}</p>
+        <h2 id="collaborators-title">{{ t.team_page.collaborators }}</h2>
+        <p>{{ t.team_page.collaborators_intro }}</p>
+      </div>
+      <ul class="event-community-grid">
+        {% for community in collaborators.communities %}
+          <li>
+            {% assign community_image = community.thumbnail | default: community.logo | default: '/assets/thumbnails/logo-128.webp' %}
+            <img src="{{ community_image | relative_url }}" alt="" width="120" height="120" loading="lazy" decoding="async">
+            <span>{{ community.name | escape }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</main>

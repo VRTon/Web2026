@@ -1,0 +1,24 @@
+<section class="team-group" aria-labelledby="{{ include.id }}-title">
+  <div class="section-heading section-heading-wide">
+    <h2 id="{{ include.id }}-title">{{ include.title }}</h2>
+  </div>
+  {% if include.members and include.members.size > 0 %}
+    <ul class="team-grid">
+      {% for person in include.members %}
+        <li class="team-card">
+          {% if person.photo and person.photo != '' %}
+            <img class="team-photo{% if person.logo %} team-photo-logo{% endif %}" src="{{ person.photo | relative_url | escape }}" alt="" width="480" height="480" loading="lazy" decoding="async">
+          {% else %}
+            <img class="team-photo team-photo-logo" src="{{ '/assets/thumbnails/logo-280.webp' | relative_url }}" alt="" width="280" height="280" loading="lazy" decoding="async">
+          {% endif %}
+          <div class="team-card-body">
+            <h3>{{ person.name | escape }}</h3>
+            <p>{{ person.role[active_lang] | default: person.role.es | escape }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="team-pending">{{ t.team_page.people_pending }}</p>
+  {% endif %}
+</section>
