@@ -76,6 +76,8 @@ editions:
       - { hour: 16, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
       - { hour: 17, track: "main", title: { es: "Entrevista con el Staff de Teletón", en: "Interview with the Teletón Staff" }, description: { es: "" } }
       - { hour: 18, track: "main", title: { es: "Carrera de Naves Espaciales", en: "Spacecraft Racing" }, description: { es: "" } }
+      - { hour: 19, track: "main", title: { es: "Equipo de Limpieza", en: "Cleaning Team" }, description: { es: "" } }
+      - { hour: 20, track: "main", title: { es: "PEAK", en: "PEAK" }, description: { es: "" } }
       - { hour: 21, track: "main", title: { es: "Arena Mágica", en: "Magic Arena" }, description: { es: "" } }
       - { hour: 22, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
       - { hour: 23, track: "main", title: { es: "Fawn & Blueminescent", en: "Fawn & Blueminescent" }, description: { es: "Singer Performance Hosted by Copa Cabana" } }
