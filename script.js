@@ -680,37 +680,10 @@
 
     var language = body.dataset.language === "en" ? "en" : "es";
     var labels = language === "es" ? {
-      contents: "Contenido",
       print: "Imprimir"
     } : {
-      contents: "Contents",
       print: "Print"
     };
-
-    var headings = Array.prototype.slice.call(legalContainer.querySelectorAll(".legal-section h2, .legal-section h3"));
-    if (headings.length) {
-      var toc = document.createElement("nav");
-      toc.className = "legal-toc";
-      toc.setAttribute("aria-label", labels.contents);
-      var tocTitle = document.createElement("h2");
-      tocTitle.textContent = labels.contents;
-      var list = document.createElement("ol");
-
-      headings.forEach(function (heading, index) {
-        if (!heading.id) heading.id = "section-" + (index + 1);
-        var item = document.createElement("li");
-        var link = document.createElement("a");
-        link.href = "#" + heading.id;
-        link.textContent = heading.textContent;
-        item.appendChild(link);
-        list.appendChild(item);
-      });
-
-      toc.appendChild(tocTitle);
-      toc.appendChild(list);
-      var firstSection = legalContainer.querySelector(".legal-section");
-      legalContainer.insertBefore(toc, firstSection);
-    }
 
     var toolbar = document.createElement("div");
     toolbar.className = "reading-tools";
@@ -743,9 +716,7 @@
     toolbar.appendChild(stopButton);
     toolbar.appendChild(printButton);
 
-    var documentHeader = legalContainer.querySelector(".legal-document-header");
-    if (documentHeader && documentHeader.nextSibling) legalContainer.insertBefore(toolbar, documentHeader.nextSibling);
-    else legalContainer.insertBefore(toolbar, legalContainer.firstChild);
+    legalContainer.insertBefore(toolbar, legalContainer.firstChild);
 
     var synth = window.speechSynthesis;
     var utterance = null;
@@ -765,7 +736,7 @@
       }
 
       stopReading();
-      var readableSections = Array.prototype.slice.call(legalContainer.querySelectorAll(".legal-section"));
+      var readableSections = Array.prototype.slice.call(legalContainer.querySelectorAll(".legal-content > :not(.legal-toc)"));
       var text = readableSections.map(function (section) {
         return section.innerText;
       }).join(". ");

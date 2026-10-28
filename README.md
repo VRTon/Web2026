@@ -4,6 +4,14 @@ Bilingual Jekyll site. Edit shared styles in `styles.scss`; Jekyll compiles them
 to compressed `/styles.css` using Dart Sass. Page behavior lives in `script.js`,
 and translations live in `_data/i18n/{es,en}.yml`.
 
+Legal documents are complete Markdown pages in `legal/<document>/index.es.md`
+and `index.en.md`, rendered at build time by `_layouts/legal.html`. Keep each
+translation's `page_id`, `permalink`, version, revision date, and article anchors
+aligned. Use `/legal/<document>/#<article-id>` for cross-references; Polyglot
+localizes those links. Short legal navigation labels remain in the i18n YAML.
+The shared `legal-toc.md` include produces a collapsible contents list that works
+without JavaScript. Update both languages together when revising a policy.
+
 The homepage countdown uses `current_event.start_date` in `_data/site.yml`
 (ISO 8601 including time and UTC offset, e.g. `2026-11-06T20:00:00-03:00`).
 It shows days, hours, minutes and seconds to the same instant worldwide, updating

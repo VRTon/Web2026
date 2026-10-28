@@ -11,11 +11,18 @@
       <a href="{{ lang_root | append: 'legal/volunteering/' | relative_url }}"{% if page.page_id == 'legal-volunteering' %} aria-current="page"{% endif %}>
         {{ t.footer.volunteering }}
       </a>
+      <a href="{{ lang_root | append: 'legal/performer-guidelines/' | relative_url }}"{% if page.page_id == 'legal-performer-guidelines' %} aria-current="page"{% endif %}>
+        {{ t.footer.performer_guidelines }}
+      </a>
+      <a href="{{ lang_root | append: 'legal/privacy-policy/' | relative_url }}"{% if page.page_id == 'legal-privacy-policy' %} aria-current="page"{% endif %}>
+        {{ t.footer.privacy_policy }}
+      </a>
     </nav>
 
     <div class="legal-support-card">
-      <span aria-hidden="true">♡</span>
+      <h3>{{ t.legal_ui.help }}</h3>
       <p>{{ t.legal_ui.support }}</p>
+      <a href="mailto:support@vrton.org">support@vrton.org</a>
     </div>
   </div>
 </aside>

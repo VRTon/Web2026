@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] %}
+{% assign lang_root = '/' %}
+{% if active_lang != site.default_lang %}
+  {% assign lang_root = '/' | append: active_lang | append: '/' %}
+{% endif %}
+<main class="legal-page" id="main-content" tabindex="-1">
+  <header class="page-hero">
+    <div class="content-shell">
+      <p class="eyebrow">{{ t.legal_ui.eyebrow }}</p>
+      <h1 id="legal-title">{{ page.title | escape }}</h1>
+      <p>{{ page.description | escape }}</p>
+      <div class="legal-meta">
+        <span>{{ t.legal_ui.version }} {{ page.version | escape }}</span>
+        <span>{{ t.legal_ui.revised }} <time datetime="{{ page.revision_date }}">{{ page.revision_label }}</time></span>
+      </div>
+    </div>
+  </header>
+  <div class="content-shell legal-layout">
+    {% include legal-sidebar.html %}
+    <article class="legal-document" aria-labelledby="legal-title">
+      <div class="legal-content">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>

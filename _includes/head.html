@@ -25,15 +25,6 @@
   {% when 'not-found' %}
     {% assign meta_title = t.seo.not_found_title %}
     {% assign meta_description = t.seo.not_found_description %}
-  {% when 'legal-terms' %}
-    {% assign meta_title = t.legal.terms.title %}
-    {% assign meta_description = t.legal.terms.subtitle %}
-  {% when 'legal-code-of-conduct' %}
-    {% assign meta_title = t.legal.code_of_conduct.title %}
-    {% assign meta_description = t.legal.code_of_conduct.subtitle %}
-  {% when 'legal-volunteering' %}
-    {% assign meta_title = t.legal.volunteering.title %}
-    {% assign meta_description = t.legal.volunteering.subtitle %}
 {% endcase %}
 {% if page.schedule_year %}
   {% assign meta_title = t.seo.schedule_title | append: ' ' | append: page.schedule_year %}
