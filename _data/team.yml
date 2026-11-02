@@ -24,7 +24,7 @@ leaders:
   - name: "YuanX"
     role: { es: "Líder de Moderación", en: "Moderation Lead" }
     photo: "/assets/team/YuanX.webp"
-  - name: "MilleChan"
+  - name: "MiiileChan"
     role: { es: "Coordinadora de Creadores", en: "Creator Coordinator" }
     photo: "/assets/team/MilleChan.webp"
   - name: "DannySmile"
@@ -65,17 +65,17 @@ artists:
     logo: true
   - name: "Penagos"
     role: { es: "DJ", en: "DJ" }
-    photo: ""
+    photo: "/assets/team/Penagos.webp"
     logo: true
   - name: "FAWN"
     role: { es: "Cantante", en: "Singer" }
-    photo: ""
-  - name: "Blueminicent"
+    photo: "/assets/team/FAWN.webp"
+  - name: "Blueminescent"
     role: { es: "Cantante", en: "Singer" }
-    photo: ""
+    photo: "/assets/team/Blueminescent.webp"
   - name: "Sr Adela"
     role: { es: "Cantante", en: "Singer" }
-    photo: ""
+    photo: "/assets/team/Adela.webp"
 affiliates:
   - name: "Iza42"
     role: { es: "Creador afiliado", en: "Affiliated creator" }
