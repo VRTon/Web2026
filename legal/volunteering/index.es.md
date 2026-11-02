@@ -5,50 +5,46 @@ permalink: /legal/volunteering/
 page_id: legal-volunteering
 title: "Voluntariado y colaboración comunitaria"
 description: "Cómo colaboran con VRTon los voluntarios, creadores y comunidades."
-version: "2.0"
-revision_date: "2026-10-27"
-revision_label: "27 de octubre de 2026"
+version: "2.1"
+revision_date: "2026-10-29"
+revision_label: "29 de octubre de 2026"
 ---
 **Aplicable a:** Todas las ediciones y actividades oficiales de VRTon  
 **Contacto general:** [contact@vrton.org](mailto:contact@vrton.org)
 
 {% include legal-toc.md %}
 
-VRTon se construye con voluntarios que aportan arte, ingeniería, producción, moderación, comunicación y apoyo comunitario. Esta guía describe cómo colaboramos; no sustituye a los [Términos de servicio](/legal/terms/) detallados.
+Esta guía resume los requisitos de colaboración. Los [Términos de servicio](/legal/terms/) rigen la participación, los roles, las contribuciones y los permisos.
 
 ## Incorporación y trabajo en equipo
 
-- **El voluntariado no es remunerado**, salvo que se haya acordado por separado una colaboración remunerada por escrito.
-- Elige responsabilidades que se ajusten a tu disponibilidad y tus capacidades. Mantén informado a tu líder de los avances importantes, los retrasos y las ausencias.
-- Normalmente, participa en **un máximo de dos equipos**. Los líderes son designados por el Equipo Organizador y cada persona puede liderar **un solo equipo a la vez**.
-- Los canales de trabajo de Discord son el principal espacio de coordinación. Algunas sesiones de trabajo o reuniones pueden grabarse con el aviso adecuado.
-- Puedes retirarte; cuando sea posible, avisa a tu líder y organiza una entrega razonable de tus tareas. Respeta la información confidencial, a los demás miembros y los permisos oficiales del personal.
-- Si tienes una inquietud relacionada con tu líder u otro organizador, contacta a un organizador autorizado diferente o a **[support@vrton.org](mailto:support@vrton.org)**.
+- Los roles ordinarios de voluntariado son para **mayores de 18 años y no remunerados**, salvo que se acuerde por separado y por escrito una colaboración remunerada. Las protecciones laborales imperativas siguen siendo aplicables.
+- La organización determina la estructura de equipos, los nombramientos, las responsabilidades y los accesos. Acepta compromisos que puedas cumplir y avisa con prontitud de retrasos o ausencias a tu contacto designado.
+- Sigue las instrucciones autorizadas y protege los materiales confidenciales y los datos personales. Las sesiones de trabajo pueden grabarse con el aviso correspondiente.
+- Puedes retirarte; VRTon puede reasignar o finalizar roles conforme a los Términos. Coordina un traspaso razonable cuando sea posible.
+- Si una inquietud afecta a tu contacto, acude a otro organizador autorizado o a **[support@vrton.org](mailto:support@vrton.org)**.
 
-[Artículos 5 y 13–14 de los Términos](/legal/terms/#article-13-volunteers-status-and-participation)
+[Artículo 13 de los Términos — Participación](/legal/terms/#article-13-volunteers-status-and-participation) · [Artículo 14 — Compromisos de actividades](/legal/terms/#article-14-teams-leadership-and-activity-commitments)
 
 ## Trabajo creativo y reconocimiento
 
-- **Conservas la autoría original** del trabajo original que creas, salvo que un acuerdo escrito separado establezca otra cosa.
-- Cuando se acepta tu contribución para VRTon, los organizadores autorizados reciben la licencia amplia y duradera descrita en los Términos. Pueden conservarla, editarla, mantenerla y reutilizarla en distintas ediciones de VRTon después de que te retires.
-- **No vendas, redistribuyas ni concedas nuevas licencias de assets con la marca VRTon** para proyectos independientes sin permiso escrito, aunque hayas creado la ilustración o el modelo original. Los componentes reutilizables sin marca pueden tener un tratamiento diferente, con sujeción a los derechos de terceros y a cualquier acuerdo separado.
-- Se fomenta el uso aprobado en portafolios y una atribución justa. Respeta el material aún no publicado, los archivos confidenciales y las licencias de assets comprados o de terceros. Puedes solicitar que se corrija u omita tu crédito público.
+Conservas la titularidad de tus obras originales salvo acuerdo en contrario. Las contribuciones aceptadas conceden la **licencia duradera del artículo 15**, incluida su reutilización y adaptación entre ediciones después de tu salida. Informa de las licencias y restricciones de terceros antes de presentar una obra.
 
-[Artículo 15 de los Términos: contribuciones](/legal/terms/#article-15-contributions-creator-attribution-and-licenses) · [Artículo 16: marca](/legal/terms/#article-16-vrton-and-partner-trademarks-identities-and-publicity)
+No vendas, redistribuyas ni licencies por tu cuenta recursos con identidad de VRTon sin los permisos escritos correspondientes. El uso en portafolios debe respetar la confidencialidad, los calendarios de publicación, las marcas y los derechos de terceros. El formato y la ubicación de los créditos son discrecionales salvo obligación legal o contractual; puedes solicitar su corrección u omisión.
+
+[Artículo 15 de los Términos — Contribuciones](/legal/terms/#article-15-contributions-creator-attribution-and-licenses) · [Artículo 16 — Marcas](/legal/terms/#article-16-vrton-and-partner-trademarks-identities-and-publicity)
 
 ## Comunidades colaboradoras
 
-Las comunidades participantes pueden aportar actividades, difusión o premios, y organizar recaudaciones independientes. Se coordinan mediante un representante acordado y utilizan la identidad de VRTon **únicamente para promocionar la iniciativa y la edición o actividad en la que participan**.
+Coordina la actividad acordada y el uso de identidades con la organización autorizada. Una colaboración no concede autorización general para representar a VRTon ni implica un aval de actividades ajenas.
 
-**VRTon nunca maneja los fondos donados.** Los colaboradores independientes controlan sus propias colectas y son responsables de ellas; nunca deben afirmar que recaudan *en nombre de VRTon*. VRTon solo respalda los enlaces de donación que identifica expresamente como canales oficiales de la organización beneficiaria.
+**VRTon no maneja fondos donados.** Los colaboradores responden de sus colectas independientes y no deben afirmar que recaudan en nombre de VRTon. Para donar al beneficiario, usa únicamente los canales expresamente identificados como oficiales. Toda rifa o actividad con premios requiere sus propias bases lícitas y publicadas.
 
-VRTon puede utilizar el logo propio del colaborador en materiales relacionados con la edición o actividad en la que participa, pero no en publicidad de futuras ediciones ajenas a esa colaboración sin un nuevo permiso.
-
-[Artículos 11 y 16 de los Términos](/legal/terms/#article-11-partner-fundraising-official-channels-and-non-endorsement)
+[Artículo 11 de los Términos — Recaudación de colaboradores](/legal/terms/#article-11-partner-fundraising-official-channels-and-non-endorsement) · [Artículo 12 — Premios](/legal/terms/#article-12-solidarity-raffle-and-donated-prizes)
 
 ## Actuaciones en VRTon
 
-Los artistas y DJ con un turno programado deben leer la [Guía para artistas](/legal/performer-guidelines/). Ser artista invitado no convierte automáticamente a una persona en voluntaria permanente del equipo. Todas las personas siguen sujetas al [Código de conducta](/legal/code-of-conduct/).
+Los artistas programados también deben seguir la [Guía para artistas](/legal/performer-guidelines/). Una actuación como invitado no crea un rol permanente de voluntariado. El [Código de conducta](/legal/code-of-conduct/) se aplica a todos.
 
 ---
 

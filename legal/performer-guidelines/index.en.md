@@ -5,85 +5,64 @@ permalink: /legal/performer-guidelines/
 page_id: legal-performer-guidelines
 title: "Performer Guidelines"
 description: "Scheduling, transmission, and content requirements for invited artists."
-version: "1.0"
-revision_date: "2026-10-27"
-revision_label: "October 27, 2026"
+version: "1.1"
+revision_date: "2026-10-29"
+revision_label: "October 29, 2026"
 ---
 **For:** DJs, singers, musicians, live performers, and other invited artists  
-**Applies to:** All VRTon editions, subject to each edition's confirmed schedule and technical brief  
-**Booking and general inquiries:** [contact@vrton.org](mailto:contact@vrton.org)  
-**Support and policy concerns:** [support@vrton.org](mailto:support@vrton.org)
+**Booking:** [contact@vrton.org](mailto:contact@vrton.org) · **Support:** [support@vrton.org](mailto:support@vrton.org)
 
 {% include legal-toc.md %}
 
-Thank you for helping make VRTon possible. We aim to feature performances throughout the event, which requires dependable scheduling and a stable, professional-quality signal. This guide sets out the expectations for performers, whether you join **live** or provide a **prerecorded** set.
+These requirements apply to live and prerecorded appearances alongside the [Terms of Service](/legal/terms/), [Code of Conduct](/legal/code-of-conduct/), and the confirmed brief for your performance. A separate written agreement governs its specific subject matter.
 
-The [Terms of Service](/legal/terms/) are authoritative; this guide explains the practical requirements for scheduled acts. The [Code of Conduct](/legal/code-of-conduct/) applies to performers as well.
+## 1. Participation and scheduling
 
-## 1. Participation and set duration
+Participation is voluntary and unpaid unless otherwise agreed in writing. Confirm the duration, format, availability, delivery deadlines, and technical requirements with your event contact before accepting a slot. Music sets normally last **45–55 minutes**; the confirmed brief determines the actual duration.
 
-- Participation is **voluntary and unpaid** unless a separate written arrangement expressly provides otherwise.
-- Standard music-performance slots last **at least 45 minutes and at most 55 minutes**. Other artistic formats may use a different duration if expressly agreed with VRTon in advance.
-- You can perform **live** or submit a **prerecorded** performance, subject to prior coordination and acceptance of the format.
-- You **do not need to be physically present in the VRChat instance** while your set plays, although attendance is welcome.
-- Scheduling is negotiated between the performer and the organizers. We try to prioritize performers with **less flexible availability**, but the final lineup, order, and start times may change or be canceled for operational reasons.
+A submission or tentative slot does not guarantee acceptance. VRTon controls the lineup, order, and scheduling, subject to separate commitments. Physical presence in the VRChat instance is not required unless agreed for the particular performance.
 
 [Terms Article 14 — Activity commitments](/legal/terms/#article-14-teams-leadership-and-activity-commitments)
 
-## 2. Live transmission
+## 2. Transmission and delivery
 
-If your set is live:
+For a **live set**, be available at least **15 minutes before** your scheduled start unless your brief specifies otherwise. Supply suitable equipment, a stable connection, and the ability to operate the approved transmission setup. Use only approved links, services, and methods; public-stream links and simulcasts need prior approval.
 
-- Be **available at least 15 minutes before** the scheduled start for transmission and sound checks.
-- Have a suitable **computer, stable internet connection, audio equipment, and technical knowledge** to deliver a reliable signal (for example, using **OBS or another VRTon-approved transmission setup**). VRTon cannot guarantee technical support for every individual setup.
-- Use **only the transmission links, services, and methods designated or approved by VRTon**. Do not substitute your own Twitch, YouTube, or other public-stream link unless VRTon has approved that setup beforehand. If you wish to arrange a simulcast, discuss it with staff in advance.
-- Follow any required technical specifications communicated by VRTon, which may include **bitrate, resolution, encoding, audio levels, formats, or related constraints**.
-- Be ready for necessary adjustments during testing or the performance to maintain the event's technical standards.
+For a **prerecorded set**, deliver a complete, playable file in the agreed format, through the approved method, by the deadline. Submission alone does not establish acceptance.
 
-You do not need to control VRTon's on-stream visuals or camera production; follow the technical instructions provided by the production team.
+Follow the communicated audio, video, encoding, and delivery specifications; attend required checks and cooperate with production adjustments. Individual technical support or a particular number of rehearsals is not guaranteed. Report problems promptly.
 
-## 3. Prerecorded performances
+## 3. Changes, cancellation, and replacements
 
-If you choose the prerecorded format, coordinate the accepted media format, delivery method, and submission deadline with the production team before sending files. The recording should meet VRTon's technical and content requirements and be ready for scheduled playback.
+Notify organizers promptly if you cannot fulfill a commitment. You may suggest a replacement, subject to approval; this does not guarantee future selection or priority.
 
-A prerecorded file is not automatically accepted merely because it was submitted. A missing, corrupted, late, incompatible, or unsuitable file may result in rescheduling or cancellation when the issue cannot reasonably be resolved.
+VRTon may decline, change, interrupt, replace, or cancel a performance for technical, content, rights, safety, platform, or production reasons, including after tentative scheduling, subject to any separate agreement.
 
-## 4. Sound checks and production standards
+## 4. Content, avatars, and promotion
 
-VRTon schedules **multiple opportunities for audio, connectivity, and transmission tests in the weeks before the event**. Performers are expected to attend at least the tests required for their setup and to respond reasonably to production coordination.
-
-If the team has **reasonable technical grounds** to believe that the minimum sound, transmission, or reliability standards cannot be met, VRTon may decline, reschedule, replace, or cancel the performance. This may occur even after a slot was tentatively assigned.
-
-Please notify staff as early as possible if you discover a problem that may affect your scheduled set.
-
-## 5. Cancellation and replacements
-
-If you can no longer cover your time slot, **notify organizers promptly** so a replacement can be arranged. When possible, you may recommend an available and suitable replacement artist. VRTon may give favorable consideration to performers who help arrange coverage, but participation or future scheduling priority is not guaranteed.
-
-VRTon may modify or cancel any slot because of schedule changes, technical problems, safety concerns, platform restrictions, or other reasonable event needs.
-
-## 6. Content, avatars, and public promotion
-
-- Performances must be appropriate for VRTon's **SFW event environment**. There is no additional blanket ban on particular musical genres or artistic styles, but **excessively explicit content**, unlawful material, hate, or conduct contrary to the Code of Conduct may be refused or interrupted.
-- Performer avatars must comply with the same **content, safety, and non-disruption rules** as attendee avatars. **Less-optimized avatars may be permitted for scheduled performers**, subject to production approval and technical practicality.
-- During your slot, you may promote **your own artist name, artistic profile, and social media accounts**.
-- Promotion of **paid products, businesses, outside communities, third-party fundraisers, or unrelated commercial offers** requires prior authorization from VRTon.
-- Send your **artist name and logo** when requested. Additional useful material, such as artwork, biography, and promotional images, can help the team create better publicity. VRTon does not guarantee the same volume or style of promotion for every performer.
+- Keep performances suitable for the **SFW event environment** and follow the Code of Conduct and production directions.
+- Avatars must meet content, safety, and performance requirements. Technical exceptions need production approval.
+- You may promote your artist name, artistic profile, and social accounts during your slot. Advertising products, businesses, outside communities, third-party fundraisers, or unrelated offers needs prior approval.
+- Provide requested artist names, logos, and promotional materials with the rights needed for their intended use. Placement, volume, and style of publicity are not guaranteed.
 
 [Terms Article 6 — Content](/legal/terms/#article-6-respect-safety-and-prohibited-content) · [Article 7 — Avatars](/legal/terms/#article-7-avatars-accessibility-and-media-selection)
 
-## 7. Broadcasts and recordings
+## 5. Rights, broadcasts, and recordings
 
-By accepting a scheduled appearance after receiving appropriate notice, you acknowledge that **the event is broadcast and may be recorded, edited, archived, or promoted** as described in the [Terms of Service, Article 5](/legal/terms/#article-5-event-broadcasts-recording-and-media-use). No VRChat event location is guaranteed to be off-camera.
+**The event may be broadcast, recorded, edited, archived, and promoted** as described in [Terms Article 5](/legal/terms/#article-5-event-broadcasts-recording-and-media-use). No event area is guaranteed to be off-camera. Additional permissions may be required for a particular production.
 
-You may share or publish recordings of your own performance, subject to applicable rights of others, VRTon's branding permissions, and platform rules. VRTon may also use authorized VRTon event footage in its official media. A separate agreement may apply where a particular production needs additional permissions.
+You must hold the rights necessary for the intended performance, transmission, recording, and republication of your materials. Permission to play music in VRChat may not cover broadcast or archive use. VRTon may mute, edit, omit, or remove material for rights or platform concerns; continued availability is not guaranteed.
 
-## 8. Questions and acceptance
+You may share recordings of your own performance subject to the rights of others, branding permissions, and platform rules.
 
-For scheduling, promotional assets, and technical coordination, contact your designated event representative or **[contact@vrton.org](mailto:contact@vrton.org)**. For privacy, moderation, or policy concerns, contact **[support@vrton.org](mailto:support@vrton.org)**. Moderation appeals follow the [Terms, Article 8](/legal/terms/#article-8-moderation-measures-and-appeals).
+[Terms Article 17 — Third-party materials](/legal/terms/#article-17-performances-music-and-third-party-materials) · [Privacy Policy](/legal/privacy-policy/)
 
-When accepting a slot, artists may be asked to confirm that they have read these requirements, understand them, and agree to comply. Any additional edition-specific technical brief or performance agreement should be supplied before confirmation.
+## 6. Contact and acceptance
+
+Use your designated event contact or **[contact@vrton.org](mailto:contact@vrton.org)** for scheduling and production. Send privacy, moderation, and policy concerns to **[support@vrton.org](mailto:support@vrton.org)**. Review requests follow [Terms Article 8](/legal/terms/#article-8-moderation-measures-and-appeals).
+
+Artists may be asked to confirm acceptance of these requirements. Additional material conditions must be communicated before acceptance.
 
 ---
 
-**Related policies:** [Terms of Service](/legal/terms/) · [Code of Conduct](/legal/code-of-conduct/) · [Volunteering](/legal/volunteering/) · [Privacy Policy](/legal/privacy-policy/)
+[Terms of Service](/legal/terms/) · [Code of Conduct](/legal/code-of-conduct/) · [Volunteering](/legal/volunteering/) · [Privacy Policy](/legal/privacy-policy/)

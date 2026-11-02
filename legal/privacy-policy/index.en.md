@@ -5,155 +5,136 @@ permalink: /legal/privacy-policy/
 page_id: legal-privacy-policy
 title: "Privacy Policy"
 description: "How VRTon handles personal information, recordings, and donation vouchers."
-version: "2.0"
-revision_date: "2026-10-27"
-revision_label: "October 27, 2026"
+version: "2.1"
+revision_date: "2026-10-29"
+revision_label: "October 29, 2026"
 ---
 **Applies to:** All VRTon editions and official activities  
 **Privacy contact:** [support@vrton.org](mailto:support@vrton.org)
 
 {% include legal-toc.md %}
 
-VRTon values the trust of its participants, donors, volunteers, collaborators, and viewers. This Privacy Policy describes what information the VRTon Organizing Team handles, why it is used, who can access it, and the requests individuals may make. It also explains the particular privacy implications of our **livestreamed virtual events** and **voucher-based fundraising counts**.
-
-This document supplements the [Terms of Service](/legal/terms/), especially [Article 5](/legal/terms/#article-5-event-broadcasts-recording-and-media-use), [Article 9](/legal/terms/#article-9-reporting-safety-concerns-and-privacy-of-reports), [Article 10](/legal/terms/#article-10-donations-proof-and-published-totals), and [Article 18](/legal/terms/#article-18-privacy-personal-data-and-information-requests). Applicable mandatory data-protection law takes precedence over conflicting language in either document.
+This Policy explains VRTon's handling of personal information for events, collaboration, donation reporting, and safety. It supplements the [Terms of Service](/legal/terms/). Mandatory data-protection rights remain applicable.
 
 ## 1. Who operates VRTon?
 
-VRTon is an **independent community-driven charitable event operating under a trademark registered in Chile**, coordinated by its authorized Organizing Team. VRTon collaborates officially with Teletón Chile while remaining organizationally distinct from the beneficiary. References to VRTon in this Policy mean the organizers and the legally responsible rights holder(s) as applicable. Requests for legally required information about the responsible data controller may be sent to **[support@vrton.org](mailto:support@vrton.org)**.
+VRTon is an independent community initiative coordinated by its authorized organizers, separate from its beneficiaries and partner communities. References to VRTon in this Policy mean the organizers responsible for the relevant processing. Contact them about privacy at **[support@vrton.org](mailto:support@vrton.org)**.
 
 ## 2. What information may we process?
 
-We process the following categories to the extent people use the related services:
+The information depends on the activity you use:
 
 Donation vouchers and fundraising records
-: **Examples:** Submitted voucher image; amount; currency; donation date/time; submission date/time; the Discord identity of the submitting user; anonymity preference; staff count/review notes  
-  **How we receive it:** Through the designated Discord donation bot/channel and manual review
+: **Examples:** Voucher image, amount, currency, donation and submission dates, submitting account, anonymity preference, and review notes<br>
+  **Source:** Submissions through the designated donation-reporting channel and their review
 
-Event photos, video, and audio
-: **Examples:** Avatars, visible display names, voices, text captured in the event scene or on an official stream, performances, interviews, screenshots, VODs, clips, and promotional media  
-  **How we receive it:** Through official event production and public event interactions
+Event media
+: **Examples:** Avatars, display names, voices, visible messages, performances, interviews, photographs, recordings, and clips<br>
+  **Source:** Official production and interactions captured in event spaces or official stream chats
 
-Contact, registration, and volunteer applications
-: **Examples:** Contact details, usernames, application answers, skills, availability, proposed work, and communications voluntarily submitted  
-  **How we receive it:** Through relevant contact, signup, or team coordination processes
+Contact and applications
+: **Examples:** Contact details, usernames, application answers, skills, availability, proposals, and correspondence<br>
+  **Source:** Contact, registration, and collaboration submissions
 
-Moderation and safety information
-: **Examples:** Reports, user identifiers, dates/times, incident descriptions, evidence, measures, and appeals  
-  **How we receive it:** Through private reports, moderation records, and participant submissions
+Moderation and safety
+: **Examples:** Reports, account identifiers, incident descriptions, dates, evidence, measures, and review requests<br>
+  **Source:** Participant reports, observed incidents, and moderation records
 
-Volunteer work sessions
-: **Examples:** Contributions, messages within relevant work channels, attendance/coordination information, and recordings of work sessions or meetings when noticed  
-  **How we receive it:** Through event collaboration and official workspaces
+Volunteer collaboration
+: **Examples:** Contributions, work messages, coordination information, and recordings of meetings with appropriate notice<br>
+  **Source:** Official workspaces and work sessions
 
-Limited website/service technical data
-: **Examples:** Technical request information or service logs that may be received by website/network and third-party platform providers, such as IP-related or device/browser information  
-  **How we receive it:** Automatically when using the relevant external service, subject to that provider's practices
+Website and service technical data
+: **Examples:** Request or service logs, including IP-related and device/browser information, depending on the provider<br>
+  **Source:** Website, network, and platform services used to deliver the activity
 
-VRTon's public website is principally an informational landing page. We do not use the website as a payment checkout, and **we do not receive payment-processor transaction feeds or directly process donations**. We do not claim that every piece of information handled separately by a hosting provider, Discord, VRChat, Twitch, or YouTube is collected or controlled by VRTon.
+VRTon does not operate a donation checkout or receive payment-processor transaction feeds. Providers may separately collect information under their own policies.
 
-**Sensitive attachments:** A donation voucher may incidentally display financial or identifying details beyond the fields we request. Please obscure irrelevant account numbers, addresses, document identifiers, and other sensitive information **before uploading**. Redaction is recommended, not a mandatory condition for submission. We may ask for a replacement image or limit further sharing of excessively sensitive material.
+The website stores your language and accessibility preferences in your browser so it can remember your choices. You can change them through the site controls or remove them by clearing the site's browser storage.
+
+Before uploading a voucher or other evidence, obscure unrelated account numbers, addresses, document identifiers, and sensitive details. We may request a replacement or restrict use of excessive information. Required information is identified in the relevant process; without it, an application, submission, or request may be impossible to complete.
 
 ## 3. Why do we use information?
 
-We use relevant information for the following purposes:
+Relevant information is used to:
 
-1. **Coordinating events and volunteers:** Organizing schedules, reviewing applications, assigning roles, contacting volunteers, and supporting production operations.
-2. **Reporting fundraising progress:** Reviewing submitted vouchers for apparent plausibility and duplicates, calculating provisional totals, reconciling later corrections, and supplying event-related transparency when appropriate.
-3. **Broadcasting and documenting VRTon:** Producing livestreams, VODs where rights allow, photographs, highlights, archives, event retrospectives, and VRTon-branded promotional material.
-4. **Community safety:** Receiving misconduct reports, investigating credible concerns, applying moderation measures, and reviewing appeals.
-5. **Protecting the initiative and complying with obligations:** Handling legal claims, intellectual-property complaints, security incidents, platform requirements, and lawful requests from authorities.
+- Coordinate activities, select and contact participants, manage roles, and support production.
+- Review vouchers, identify duplicates, calculate provisional totals, correct records, and provide appropriate fundraising accountability.
+- Broadcast, document, archive, and promote VRTon.
+- Address misconduct, fraud, security concerns, and requests for review.
+- Handle rights requests, legal claims, platform requirements, and legal obligations.
 
-VRTon does not use vouchers to withdraw, receive, or transfer donated funds, and cannot independently verify that the payment provider settled a donation.
+A lawful basis must support each use under the applicable law. Where consent or a specific notice is required, it must be obtained or provided for that use; agreeing to the Terms does not replace it.
 
-## 4. Privacy, recording, and participation notices
+## 4. Recording and participation notices
 
-Official VRTon event spaces may be livestreamed or recorded at any time, and **no camera-free area inside an official VRChat event instance is guaranteed**. Your avatar, display name, voice, or other visible event interactions may appear in live or subsequent media. Contributions in official Twitch/YouTube event chats may also be displayed, quoted, or captured.
+**Official event instances may be broadcast or recorded at any time, with no guaranteed camera-free area.** Avatars, names, voices, performances, and visible interactions, including official stream chats, may appear in live or later media.
 
-**Volunteer work channels, work sessions, and meetings** may be recorded when appropriate notice is given. **Discord direct messages and ordinary general/social channels are not part of VRTon's routine broadcast recording scope.** If a participant lawfully submits part of a private conversation as evidence of a safety incident, that material may still be reviewed and retained for the specific reporting purpose.
+Work sessions and meetings may be recorded with appropriate notice. Ordinary social channels and private messages are outside routine event recording, although lawfully submitted incident evidence may be processed for safety purposes.
 
-Event notices and the Terms explain expected recording. Participation following appropriate notice acknowledges these practices and may constitute a license or consent **only to the extent recognized by applicable law**. Where a separate, explicit consent or other lawful basis is required, VRTon must obtain or establish it. VRTon cannot promise to retrieve copies of a live recording already saved or redistributed by third parties.
+[Terms Article 5](/legal/terms/#article-5-event-broadcasts-recording-and-media-use) describes media permissions. VRTon cannot retrieve all independently saved or redistributed copies of a live broadcast. This does not remove obligations concerning copies or uses within its control.
 
-Read [Terms Article 5](/legal/terms/#article-5-event-broadcasts-recording-and-media-use) for the scope of VRTon media production and permitted uses.
+## 5. Donation submissions and anonymity
 
-## 5. How donation submission and anonymity work
+**Public anonymity hides your identity from public donor recognition; it does not remove your submitting account from the internal record.** Individual recognition is limited to submissions without an anonymity request and the disclosures communicated or authorized during submission. Aggregate totals may be published regardless of individual anonymity.
 
-A donor or participating community submits a donation voucher using the **designated Discord bot in the specified channel**. The record includes **amount, currency, date/time, voucher image, and identity of the account that submits the voucher**. The bot permits the submitter to choose **public anonymity**.
+Totals reflect submitted vouchers and are provisional; VRTon cannot independently verify payment settlement. Partner collections and underlying donor lists are controlled by those partners.
 
-- **Choosing anonymity hides the person's identity from public donor recognition**; it does not erase the submitter's Discord identity from the internal voucher record.
-- Publicly identifying individual donors or their contributions is limited to submissions **without an anonymity request** and to the disclosures communicated or authorized in the donation process. Aggregate fundraising totals may be public regardless of individual anonymity.
-- The **Directive/Organizing Team responsible for fundraising counts is the only ordinary internal group authorized to view donation vouchers** and their associated review information. Other users, moderators, or partner communities are not given access as part of standard operations.
-- Submitted vouchers are manually inspected. **Live totals are provisional and presume submitted vouchers are valid**; they may later be corrected. VRTon has no direct payment-processor verification or transaction feed.
-- Independent partner fundraising is handled by those partners, subject to their own privacy practices. VRTon sees the submitted community/group voucher but does not control the partner's underlying donor lists or payment system.
-- The **Solidarity Raffle** excludes anonymous submissions and community/group donations; eligible individual entries require enough internal identification to allocate tickets and contact winners. The specific raffle rules must be published before it opens.
-
-For the full distinction between official charity channels, partner fundraising, and raffle participation, consult [Terms Articles 10–12](/legal/terms/#article-10-donations-proof-and-published-totals).
+Any separately offered raffle or prize activity must explain its eligibility and identification requirements before entry, including information needed to contact winners or deliver prizes. See [Terms Articles 10–12](/legal/terms/#article-10-donations-proof-and-published-totals).
 
 ## 6. Who can access or receive data?
 
-**Within VRTon:** Access is limited by purpose and role. Donation vouchers are reserved for the **Directive/Organizing Team** responsible for counting. **Moderation reports and supporting evidence** are handled by the **Moderation Team**, with additional sharing only where reasonably necessary to resolve a case. Volunteer applications and team data are accessed by organizers or authorized team personnel with a legitimate operational need.
+Access within VRTon is limited to authorized people who need the information for the relevant duties. This includes donation reporting, collaboration, moderation, and handling legal or privacy matters. Partner communities do not receive routine access to individual donation vouchers.
 
-**Outside VRTon:** Data may be processed by the platforms and providers needed to run our activities (for example, Discord, VRChat, streaming services, website service providers, and technical processing/storage providers), under their applicable privacy terms and responsibilities. We may provide limited information to authorized collaborators who need it to run an agreed activity, but **not grant partner communities routine access to individual vouchers**.
+Information may be processed by providers of communications, virtual-world access, streaming, website delivery, and technical storage or processing, including Discord, VRChat, and the streaming services used. Authorized production collaborators may receive information needed for an agreed activity.
 
-Information may also be shared where legally required; to investigate fraud, harassment, or technical abuse; to respond to valid rights claims; or with authorized advisers who are appropriately bound to confidentiality. We do not assert control over data third parties collect independently through their own services.
+Relevant information may also be shared with confidential advisers, platforms, affected parties, or authorities as reasonably necessary and lawful to address incidents, fraud, rights claims, or legal obligations. Confidentiality is subject to these lawful disclosures. Providers and partners may also process information independently under their own policies.
 
 ## 7. Storage, retention, and deletion
 
-**Current practice:** VRTon does **not currently use a single fixed deletion period or automatic purge schedule**. Certain records, such as fundraising evidence, event archives, applications, and moderation documentation, may therefore be **retained without a predetermined end date** to support continuing operations, historical accountability, transparency requests, and legitimate safety or legal needs.
+There is no single fixed retention period for all records. Duration depends on the purpose, ongoing activity, unresolved issues, applicable legal obligations, and relevant claim periods:
 
-**Important limitation:** Retention is **not unconditional**. Applicable privacy laws may require personal data to be removed or de-identified once no longer relevant or necessary for its purpose, and may grant enforceable rights to request access, correction, or deletion. VRTon will evaluate requests and delete, restrict, correct, or de-identify records where required by applicable law. Requests may be limited by lawful retention duties, legitimate claims or investigations, the rights of others, and the practical inability to remove independent copies of published media.
+- Applications and collaboration records: while needed to assess or coordinate participation and resolve related matters.
+- Donation records: while needed to reconcile totals, address discrepancies, or meet applicable accountability and legal requirements.
+- Moderation evidence: while relevant to safety, enforcement, review requests, or legal claims.
+- Event media: for ongoing publication, archives, and authorized reuse, subject to applicable rights and lawful retention limits.
 
-Some third-party platforms maintain their own storage, backups, and deletion schedules. Removing something from VRTon's files will not necessarily remove it from those platforms or from copies already distributed online.
+These criteria do not authorize unconditional or indefinite retention of every record. Data must be deleted or de-identified when no longer necessary and where required by law. Providers' own backups, retention, and independently distributed copies may be outside VRTon's control.
 
-## 8. Security measures
+## 8. Security
 
-VRTon uses **role-limited access** to donation records, reports, and internal application information. Organizers and moderators are expected to avoid unnecessary disclosure, use official collaboration channels responsibly, and limit access to information required for their duties. No online platform or human process is guaranteed to be perfectly secure.
+Access to internal records is limited by role and purpose. Authorized personnel must protect personal information and avoid unnecessary disclosure. No online service or security measure can guarantee absolute protection.
 
-Please do not publish other people's private details, account credentials, or complete sensitive financial records in public channels. If you believe personal data has been exposed or misused, contact **support@vrton.org** with sufficient details to investigate.
+Report suspected exposure or misuse to **[support@vrton.org](mailto:support@vrton.org)**. Do not publish credentials or private financial records in public channels.
 
-## 9. Your privacy choices and rights
+## 9. Your choices and rights
 
-Depending on the applicable law and the type of information, you may be entitled to:
+Depending on the applicable law and processing, you may request access, correction, deletion, restriction, or portability of your information, and review of public attribution, donation recognition, or identifiable media.
 
-- Request **access** to personal information VRTon holds about you.
-- Request **correction or updating** of inaccurate information.
-- Request **deletion**, de-identification, or restriction when legally applicable.
-- **Object to certain uses** or withdraw consent where consent is the relevant legal basis; withdrawal does not retroactively invalidate past lawful processing.
-- Request review of public attribution, identifiable recordings, or donation recognition.
+**You may object to processing where the law grants that right. Where processing relies on consent, you may withdraw it at any time**, without affecting the lawfulness of earlier processing.
 
-To submit a request, write to **[support@vrton.org](mailto:support@vrton.org)**. We may ask for information reasonably necessary to confirm that the requester is authorized to act for the affected person, while avoiding unnecessary collection of identity documents. We will consider and respond to requests **within deadlines imposed by applicable law**.
+Send requests to **[support@vrton.org](mailto:support@vrton.org)**. We may seek proportionate information to verify your identity or authority and must respond within applicable legal deadlines. Rights may be limited by lawful retention duties, legal claims, or the rights of others. Any required reasons for refusing or limiting a request must be provided. VRTon cannot alter independent platform accounts or erase copies held only by unrelated third parties.
 
-**Deletion is not guaranteed in every case.** For example, VRTon may need to retain certain incident evidence, resolve disputed fundraising records, honor another person's rights, or comply with law. We cannot delete material held only by independent third parties or reliably erase all copies of previously broadcast public media. Where a request is refused or partly fulfilled, we aim to explain the applicable reason to the extent lawful and appropriate.
-
-You may also be entitled to bring a complaint to a competent data-protection authority or pursue another legal remedy, depending on your jurisdiction.
+You may complain to a competent data-protection authority or seek another available legal remedy.
 
 ## 10. International participation and external platforms
 
-VRTon involves participants in multiple countries, and the technologies used for Discord collaboration, VRChat activities, media publication, and web delivery may process or store information internationally. Their providers may apply separate terms and data-transfer mechanisms. Applicable law may impose additional safeguards for particular international transfers; this Policy does not waive those duties.
+Communications, virtual events, media, and website services may involve processing or storage in other countries. Provider terms describe their independent practices. Where applicable law requires a transfer mechanism, safeguards, or specific disclosures for VRTon's processing, those requirements remain applicable; using an external provider does not waive them.
 
-Users should review the relevant provider privacy policies for information processed **independently by those services**. VRTon cannot grant access to, modify, or delete a third-party platform account or its independent records.
+## 11. Age and supervised institutional visits
 
-## 11. Age restrictions and supervised institutional visits
+Official VRChat events, the main Discord community, and ordinary volunteer roles are **18+**. Public viewing follows the relevant platform's rules.
 
-Official VRTon VRChat events, volunteering, and membership in the main Discord community are **generally intended for ages 18 and older**. Public streams and the public website remain subject to their own platform rules.
-
-For a **preapproved institutional activity only**, VRTon may allow participants **aged 13–17** to visit a designated, **non-age-gated main VRChat instance** during a scheduled supervised period, subject to [Terms Article 3](/legal/terms/#article-3-access-age-and-participation). The responsible institution must arrange appropriate parental or guardian permissions, continuous in-person supervision, and safeguarding measures; VRTon provides in-instance moderation. Platform age and **individual-account** rules continue to apply. Sharing a physical headset does not automatically permit sharing the VRChat account.
-
-If a supervised minor may be identifiable in a recording through their avatar, voice, display name, or other context, the institution must coordinate appropriate information and permissions before the visit. **An ordinary entry notice is not a substitute for any legally required guardian permission or other lawful basis.** VRTon aims to limit unnecessary exposure of minors' personal details in broadcasts, footage, volunteer workspaces, and donation records, and will review requests involving minors with special care.
-
-VRTon does not solicit volunteer applications from minors for ordinary roles and does not use the institutional exception to admit minors into the official adult Discord community or other adult-only services.
+A preapproved institutional visit for ages **13–17** is limited to the designated supervised session under [Terms Article 3](/legal/terms/#article-3-access-age-and-participation). The institution must arrange guardian permissions, continuous in-person supervision, and any recording permissions required before the visit. Platform age and individual-account rules continue to apply. Entry notices do not replace legally required permission or another lawful basis for recording identifiable minors.
 
 ## 12. Changes to this Policy
 
-This Policy is intended to apply to successive VRTon editions. We may update it when data practices, services, or legal obligations change. Material updates should be identified by a new revision/effective date and publicized through reasonable official channels. New uses that require specific consent will not be justified solely by a silent policy change.
+VRTon may update this Policy as practices, services, or legal requirements change. Revisions carry a date; material changes require appropriate notice. Any required consent for a new use must be obtained separately.
 
 ## 13. Contact
 
-For privacy concerns, media-review requests, donor anonymity corrections, access requests, or reports of exposure of personal information, write to:
-
-**[support@vrton.org](mailto:support@vrton.org)**
+For privacy, media, donor anonymity, or personal-data requests, contact **[support@vrton.org](mailto:support@vrton.org)**.
 
 ---
 
-**Related documents:** [Terms of Service](/legal/terms/) · [Code of Conduct](/legal/code-of-conduct/) · [Volunteering Guide](/legal/volunteering/) · [Performer Guidelines](/legal/performer-guidelines/)
-
+[Terms of Service](/legal/terms/) · [Code of Conduct](/legal/code-of-conduct/) · [Volunteering](/legal/volunteering/) · [Performer Guidelines](/legal/performer-guidelines/)

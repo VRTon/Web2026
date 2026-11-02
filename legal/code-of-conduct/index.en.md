@@ -5,9 +5,9 @@ permalink: /legal/code-of-conduct/
 page_id: legal-code-of-conduct
 title: "Code of Conduct"
 description: "Practical rules for a safe, respectful, and welcoming event."
-version: "2.0"
-revision_date: "2026-10-27"
-revision_label: "October 27, 2026"
+version: "2.1"
+revision_date: "2026-10-29"
+revision_label: "October 29, 2026"
 ---
 **Applies to:** All VRTon editions and official activities  
 **Help and appeals:** [support@vrton.org](mailto:support@vrton.org)
@@ -31,7 +31,7 @@ This is a practical guide. The [Terms of Service](/legal/terms/) contain the com
 
 - No explicit nudity, erotic roleplay, sexual activity, extreme gore, or deliberately disturbing content.
 - No mic spam, crashers, malicious clients, invasive shaders, disruptive particles, exploit abuse, or intentional interference with streams and activities.
-- **Optimized avatars are strongly recommended.** VRTon provides public optimized avatars. An unoptimized avatar may be hidden from streams, photos, or recordings, even if permitted in the event.
+- **Use an optimized avatar suitable for the activity.** Staff may require changes or apply limits for safety, accessibility, performance, or production needs.
 - Follow reasonable staff instructions, including requests to adjust avatars, audio, or behavior.
 
 [Content rules: Article 6](/legal/terms/#article-6-respect-safety-and-prohibited-content) · [Avatars: Article 7](/legal/terms/#article-7-avatars-accessibility-and-media-selection)
@@ -54,7 +54,7 @@ VRTon event access is **generally 18+**. A narrow exception may apply to a **pre
 
 ## If something goes wrong
 
-Staff may warn, mute, remove, or ban a participant. Serious safety issues may require immediate action. **Every VRTon moderation action may be appealed** through the official Discord server. If you are banned from Discord, appeal via **[support@vrton.org](mailto:support@vrton.org)**. **Do not message individual moderators in DMs.** Use the official private reporting route for incident reports.
+Staff may restrict access, remove content, or take other measures under Article 8, including immediate action without prior warnings. To report an incident or request review, use the designated Discord route or **[support@vrton.org](mailto:support@vrton.org)** if Discord is unavailable. Review does not suspend a measure or guarantee reversal; repetitive or abusive requests without new material information may be closed, subject to applicable law. **Do not message individual moderators in DMs.**
 
 [Moderation and appeals: Article 8](/legal/terms/#article-8-moderation-measures-and-appeals) · [Reporting: Article 9](/legal/terms/#article-9-reporting-safety-concerns-and-privacy-of-reports)
 

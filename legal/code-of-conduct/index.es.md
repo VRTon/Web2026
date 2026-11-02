@@ -5,9 +5,9 @@ permalink: /legal/code-of-conduct/
 page_id: legal-code-of-conduct
 title: "Código de conducta"
 description: "Normas prácticas para un evento seguro, respetuoso y acogedor."
-version: "2.0"
-revision_date: "2026-10-27"
-revision_label: "27 de octubre de 2026"
+version: "2.1"
+revision_date: "2026-10-29"
+revision_label: "29 de octubre de 2026"
 ---
 **Aplicable a:** Todas las ediciones y actividades oficiales de VRTon  
 **Ayuda y apelaciones:** [support@vrton.org](mailto:support@vrton.org)
@@ -27,11 +27,11 @@ Esta es una guía práctica. Los [Términos de servicio](/legal/terms/) contiene
 
 [Normas detalladas: artículo 6 de los Términos](/legal/terms/#article-6-respect-safety-and-prohibited-content)
 
-## Mantén el evento apto para todo público y accesible
+## Mantén el evento SFW y accesible
 
 - No se permite la desnudez explícita, el juego de rol erótico, la actividad sexual, el gore extremo ni el contenido deliberadamente perturbador.
 - No se permite el spam de micrófono, los avatares diseñados para bloquear clientes, los clientes maliciosos, los shaders invasivos, las partículas disruptivas, el abuso de vulnerabilidades ni la interferencia intencionada con las transmisiones y actividades.
-- **Se recomienda encarecidamente usar avatares optimizados.** VRTon ofrece avatares públicos optimizados. Un avatar sin optimizar puede ocultarse en transmisiones, fotos o grabaciones, aunque esté permitido en el evento.
+- **Usa un avatar optimizado y adecuado para la actividad.** El Personal puede exigir cambios o aplicar límites por razones de seguridad, accesibilidad, rendimiento o producción.
 - Sigue las instrucciones razonables del personal, incluidas las solicitudes de ajustar el avatar, el audio o el comportamiento.
 
 [Normas de contenido: artículo 6](/legal/terms/#article-6-respect-safety-and-prohibited-content) · [Avatares: artículo 7](/legal/terms/#article-7-avatars-accessibility-and-media-selection)
@@ -54,7 +54,7 @@ El acceso a los eventos de VRTon es **generalmente para mayores de 18 años**. P
 
 ## Si algo sale mal
 
-El personal puede advertir, silenciar, expulsar o bloquear a un participante. Los problemas graves de seguridad pueden exigir medidas inmediatas. **Toda medida de moderación de VRTon puede apelarse** a través del servidor oficial de Discord. Si tienes bloqueado el acceso a Discord, apela mediante **[support@vrton.org](mailto:support@vrton.org)**. **No envíes mensajes directos a moderadores individuales.** Utiliza la vía oficial de reportes privados para informar incidentes.
+El Personal puede restringir el acceso, retirar contenido o adoptar otras medidas conforme al artículo 8, incluida la actuación inmediata sin advertencias previas. Para reportar un incidente o solicitar una revisión, usa la vía designada en Discord o **[support@vrton.org](mailto:support@vrton.org)** si no tienes acceso a Discord. La revisión no suspende una medida ni garantiza su revocación; las solicitudes reiterativas o abusivas sin información sustancial nueva pueden cerrarse, conforme a la ley aplicable. **No envíes mensajes directos a moderadores individuales.**
 
 [Moderación y apelaciones: artículo 8](/legal/terms/#article-8-moderation-measures-and-appeals) · [Reportes: artículo 9](/legal/terms/#article-9-reporting-safety-concerns-and-privacy-of-reports)
 
