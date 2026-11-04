@@ -13,6 +13,25 @@ When the countdown ends, a LIVE banner replaces the counter and date, with links
 configured in `current_event.streaming.youtube_url` and `twitch_url` in the same
 data file. These links open the stream channels without loading video players.
 
+## Donations
+
+The donation guide lives at `/donar/` and `/en/donar/`. In `_data/site.yml`, set
+`current_event.donation_url` to the confirmed official donation URL, and set
+`donation_start_date` and `donation_end_date` to ISO 8601 timestamps including
+the UTC offset. These dates are independent of the event dates. The start is
+inclusive; the end is exclusive. Leave unknown values empty. The current dates
+are provisional placeholders matching the event schedule (November 6 at 20:00
+through November 8 at 01:00, Chile time). Replace them when the donation window
+is confirmed.
+
+The page shows a countdown before opening, the official donation button while
+open (only when its URL is configured), and a closed notice afterward. Receipt
+submission through the shared `community.discord` link remains available.
+Missing or invalid dates show a pending notice with no donation button. The
+browser checks the period on load, every second and when returning to the tab;
+JavaScript is required for current availability. ES/EN copy is in `donate_page`
+in the translation files.
+
 ## Build and check
 
 ```powershell

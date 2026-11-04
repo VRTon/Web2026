@@ -12,6 +12,11 @@ current_event:
     es: "https://forms.gle/ubg5U2t4eMCuu9k18"
     en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
   donation_url: ""
+  # Donation window, independent of event dates. Use ISO 8601 with UTC offset.
+  # Provisional: first event slot through the end of the closing ceremony (schedule.yml).
+  # Donations open at start and close at end (exclusive). Replace when confirmed.
+  donation_start_date: "2026-11-06T20:00:00-03:00"
+  donation_end_date: "2026-11-08T01:00:00-03:00"
 
 community:
   vrchat: "https://vrc.group/VRTON.0659"
