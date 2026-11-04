@@ -48,6 +48,53 @@
 
   setupCountdown();
 
+  function setupDonationPeriod() {
+    var period = document.querySelector("[data-donation-period]");
+    if (!period) return;
+    var start = Date.parse(period.dataset.start);
+    var end = Date.parse(period.dataset.end);
+    if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return;
+    var states = period.querySelectorAll("[data-donation-state]");
+    var countdown = period.querySelector("[data-donation-countdown]");
+    var numbers = countdown.querySelectorAll("[data-donation-value]");
+    var formatter = new Intl.DateTimeFormat(body.dataset.language, {
+      dateStyle: "long", timeStyle: "short"
+    });
+    period.querySelectorAll("[data-donation-date]").forEach(function (date) {
+      var value = date.dataset.donationDate === "start" ? start : end;
+      date.dateTime = new Date(value).toISOString();
+      date.textContent = formatter.format(value);
+    });
+    period.querySelector("[data-donation-timezone]").hidden = false;
+    var timer;
+
+    function update() {
+      window.clearTimeout(timer);
+      if (document.hidden) return;
+      var now = Date.now();
+      var state = now < start ? "before" : now < end ? "open" : "closed";
+      states.forEach(function (panel) {
+        panel.hidden = panel.dataset.donationState !== state;
+      });
+      countdown.hidden = state !== "before";
+      if (state === "before") {
+        var remaining = Math.ceil((start - now) / 1000);
+        var values = [Math.floor(remaining / 86400), Math.floor(remaining / 3600) % 24,
+          Math.floor(remaining / 60) % 60, remaining % 60];
+        numbers.forEach(function (number, index) {
+          var value = String(values[index]).padStart(2, "0");
+          if (number.textContent !== value) number.textContent = value;
+        });
+      }
+      if (state !== "closed") timer = window.setTimeout(update, 1000);
+    }
+
+    update();
+    document.addEventListener("visibilitychange", update);
+  }
+
+  setupDonationPeriod();
+
   var defaults = {
     theme: "system",
     textSize: "normal",

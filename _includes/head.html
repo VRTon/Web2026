@@ -19,6 +19,9 @@
   {% when 'team' %}
     {% assign meta_title = t.seo.team_title %}
     {% assign meta_description = t.seo.team_description %}
+  {% when 'donate' %}
+    {% assign meta_title = t.donate_page.title %}
+    {% assign meta_description = t.donate_page.intro %}
   {% when 'links' %}
     {% assign meta_title = t.seo.links_title %}
     {% assign meta_description = t.seo.links_description %}
