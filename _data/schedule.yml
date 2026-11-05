@@ -57,20 +57,13 @@ editions:
       - { hour: 27, group_day: "2026-11-07", start_at: "2026-11-07T22:00:00", end_at: "2026-11-07T23:00:00", start: "22:00", end: "23:00" }
       - { hour: 28, group_day: "2026-11-07", start_at: "2026-11-07T23:00:00", end_at: "2026-11-08T00:00:00", start: "23:00", end: "00:00" }
       - { hour: 29, group_day: "2026-11-07", start_at: "2026-11-08T00:00:00", end_at: "2026-11-08T01:00:00", start: "00:00", end: "01:00" }
+      - { hour: 30, group_day: "2026-11-07", start_at: "2026-11-08T01:00:00", end_at: "2026-11-08T02:00:00", start: "01:00", end: "02:00" }
     activities:
       - { hour: 1, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
       - { hour: 2, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
       - { hour: 3, track: "main", featured: true, title: { es: "Ceremonia de Apertura", en: "Opening Ceremony" }, description: { es: "" } }
       - { hour: 4, track: "main", featured: true, title: { es: "Ceremonia de Apertura", en: "Opening Ceremony" }, description: { es: "" } }
-      - { hour: 5, track: "main", featured: false, title: { es: "Show de Dancer", en: "Dancer Show" }, description: { es: "Hosted by The Secret Society" } }
-      - { hour: 6, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
-#      - { hour: 7, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-#      - { hour: 8, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-#      - { hour: 9, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-#      - { hour: 10, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-#      - { hour: 11, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-#      - { hour: 12, track: "main", title: { es: "Sleepy time" }, description: { es: "" } }
-      - { hour: 13, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
+      - { hour: 5, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
       - { hour: 14, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
       - { hour: 15, track: "main", title: { es: "Previa", en: "Pre-Show" }, description: { es: "Instancia Chill para socializar en lo que esperamos que el evento principal comience!", en: "Chill instance to socialize while we wait for the main event to begin!" } }
       - { hour: 16, track: "main", featured: true, title: { es: "Cómputo", en: "Fundraising Update" }, description: { es: "Ve como sube la recaudación", en: "See how the fundraising is progressing" } }
@@ -96,6 +89,7 @@ editions:
       - { hour: 11, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
       - { hour: 12, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
       - { hour: 13, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 30, track: "party", featured: true, title: { es: "After Party" }, description: { es: "La fiesta sigue!" } }
 
   - year: 2025
     event: "VRTon 2025"

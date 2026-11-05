@@ -2127,19 +2127,6 @@ p {
   background: var(--page-alt);
 }
 
-.schedule-warning {
-  display: flex;
-  gap: 0.55rem;
-  margin-block: 1rem 0;
-  padding: 0.75rem 1rem;
-  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--warning) 10%, var(--page));
-  color: var(--warning);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .page-hero-grid {
   display: grid;
   align-items: end;
@@ -2343,14 +2330,17 @@ p {
   background: var(--surface);
   color: var(--text);
   box-shadow: var(--shadow-sm);
-  cursor: pointer;
   font: inherit;
   font-weight: 850;
   text-align: left;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-.schedule-activity-card:hover {
+button.schedule-activity-card {
+  cursor: pointer;
+}
+
+button.schedule-activity-card:hover {
   border-color: var(--border-strong);
   box-shadow: var(--shadow-lg);
   transform: translateY(-1px);
