@@ -2342,6 +2342,35 @@ p {
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
+.schedule-activity-card.schedule-activity-with-communities {
+  display: flex;
+}
+
+.schedule-activity-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.schedule-community-logos {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  max-width: 4.25rem;
+  margin-left: auto;
+}
+
+.schedule-community-logos img {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.1rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  object-fit: contain;
+}
+
 button.schedule-activity-card {
   cursor: pointer;
 }
@@ -3323,6 +3352,24 @@ button.schedule-activity-card:hover {
 
   .schedule-activity-marker {
     display: none;
+  }
+
+  .schedule-activity-with-communities {
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .schedule-activity-with-communities .schedule-activity-title {
+    flex: 1 1 4rem;
+  }
+
+  .schedule-community-logos {
+    max-width: 1.5rem;
+  }
+
+  .schedule-community-logos img {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .schedule-empty {

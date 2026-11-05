@@ -88,7 +88,7 @@ layout: default
                       <td class="schedule-instance-cell schedule-{{ track.id }}-cell">
                         {% if track_activities.size > 0 %}
                           {% for activity in track_activities %}
-                            <button class="schedule-activity-card schedule-activity-{{ track.id }}{% if activity.featured %} schedule-activity-featured{% endif %}{% if english_instance %} schedule-activity-english{% endif %}{% if cafe_instance %} schedule-activity-cafe{% endif %}" type="button" aria-haspopup="dialog"{% if english_instance %} aria-describedby="schedule-party-promo"{% elsif cafe_instance %} aria-describedby="schedule-cafe-promo"{% endif %}
+                            <button class="schedule-activity-card schedule-activity-{{ track.id }}{% if activity.communities.size > 0 %} schedule-activity-with-communities{% endif %}{% if activity.featured %} schedule-activity-featured{% endif %}{% if english_instance %} schedule-activity-english{% endif %}{% if cafe_instance %} schedule-activity-cafe{% endif %}" type="button" aria-haspopup="dialog"{% if english_instance %} aria-describedby="schedule-party-promo"{% elsif cafe_instance %} aria-describedby="schedule-cafe-promo"{% endif %}
                                     data-schedule-activity
                                     data-activity-title="{{ activity.title[active_lang] | default: activity.title.es | escape }}"
                                     data-activity-description="{{ activity.description[active_lang] | default: activity.description.es | escape }}"
@@ -99,7 +99,18 @@ layout: default
                               <span class="schedule-activity-marker" aria-hidden="true"></span>
                               {% if english_instance %}<span class="schedule-party-badge" lang="en" aria-hidden="true">EN</span>{% endif %}
                               {% if cafe_instance %}<span class="schedule-party-badge" aria-hidden="true">CAFE</span>{% endif %}
-                              <span>{{ activity.title[active_lang] | default: activity.title.es }}</span>
+                              <span class="schedule-activity-title">{{ activity.title[active_lang] | default: activity.title.es }}</span>
+                              {% if activity.communities.size > 0 %}
+                                <span class="schedule-community-logos">
+                                  {% for community_name in activity.communities %}
+                                    {% assign community = site.data.communities_2026.communities | where: 'name', community_name | first %}
+                                    {% if community %}
+                                      {% assign community_image = community.thumbnail | default: community.logo %}
+                                      <img src="{{ community_image | relative_url }}" alt="{{ community.name | escape }}" width="32" height="32" loading="lazy" decoding="async">
+                                    {% endif %}
+                                  {% endfor %}
+                                </span>
+                              {% endif %}
                               <span class="sr-only">— {{ t.schedule.open_details }}</span>
                             </button>
                           {% endfor %}
