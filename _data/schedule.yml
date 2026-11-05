@@ -84,15 +84,15 @@ editions:
       - { hour: 27, track: "main", communities: ["JugandoConL4g"], title: { es: "Rifa Solidaria", en: "Solidarity Raffle" }, description: { es: "Hosted by Jugando con Lag" } }
       - { hour: 28, track: "main", featured: true, title: { es: "Ceremonia de Clausura", en: "Closing Ceremony" }, description: { es: "" } }
       - { hour: 29, track: "main", featured: true, title: { es: "Ceremonia de Clausura", en: "Closing Ceremony" }, description: { es: "" } }
-      - { hour: 5, track: "party", title: { es: "Sperto" }, description: { es: "" } }
-      - { hour: 6, track: "party", title: { es: "Karamaty" }, description: { es: "" } }
-      - { hour: 7, track: "party", title: { es: "Penagos" }, description: { es: "" } }
-      - { hour: 8, track: "party", title: { es: "Ramses" }, description: { es: "" } }
-      - { hour: 9, track: "party", title: { es: "DannyLasagna" }, description: { es: "" } }
-      - { hour: 10, track: "party", title: { es: "NebularSoul" }, description: { es: "" } }
-      - { hour: 11, track: "party", title: { es: "Jay Jefferson" }, description: { es: "" } }
-      - { hour: 12, track: "party", title: { es: "JamirDG" }, description: { es: "" } }
-      - { hour: 13, track: "party", title: { es: "YuanX" }, description: { es: "" } }
+      - { hour: 5, track: "party", communities: ["BlackOut", "Side V"], title: { es: "Sperto" }, description: { es: "" } }
+      - { hour: 6, track: "party", communities: ["Drinking Cloud", "BlackOut"], title: { es: "Karamaty" }, description: { es: "" } }
+      - { hour: 7, track: "party", communities: ["La Fondue", "Drinking Cloud"], title: { es: "Penagos" }, description: { es: "" } }
+      - { hour: 8, track: "party", communities: ["ElPecado", "La Fondue"], title: { es: "Ramses" }, description: { es: "" } }
+      - { hour: 9, track: "party", communities: ["ElPecado", "El Parche"], title: { es: "DannyLasagna" }, description: { es: "" } }
+      - { hour: 10, track: "party", communities: ["AfterHours", "El Parche"], title: { es: "NebularSoul" }, description: { es: "" } }
+      - { hour: 11, track: "party", communities: ["Copa Cabana", "AfterHours"], title: { es: "Jay Jefferson" }, description: { es: "" } }
+      - { hour: 12, track: "party", communities: ["Copa Cabana", "Club Strange"], title: { es: "JamirDG" }, description: { es: "" } }
+      - { hour: 13, track: "party", communities: ["Club Strange"], title: { es: "YuanX" }, description: { es: "" } }
       - { hour: 30, track: "party", featured: true, title: { es: "After Party" }, description: { es: "La fiesta sigue!" } }
 
   - year: 2025

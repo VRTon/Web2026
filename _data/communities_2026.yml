@@ -71,3 +71,5 @@ communities:
   - name: "Club Strange"
     logo: "/assets/Comunidades/ClubStrange.webp"
     thumbnail: "/assets/thumbnails/Comunidades/ClubStrange.webp"
+  - name: "El Parche"
+    logo: "/assets/Comunidades/ElParche.webp"

@@ -106,7 +106,9 @@ layout: default
                                     {% assign community = site.data.communities_2026.communities | where: 'name', community_name | first %}
                                     {% if community %}
                                       {% assign community_image = community.thumbnail | default: community.logo %}
-                                      <img src="{{ community_image | relative_url }}" alt="{{ community.name | escape }}" width="32" height="32" loading="lazy" decoding="async">
+                                      {% if community_image and community_image != '' %}
+                                        <img src="{{ community_image | relative_url }}" alt="{{ community.name | escape }}" width="32" height="32" loading="lazy" decoding="async">
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                 </span>
