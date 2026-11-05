@@ -398,6 +398,9 @@ schedule:
   party_promo:
     title: "Extra English Speaking Instance"
     host: "Hosted by %host%"
+  cafe_promo:
+    title: "Maid Cafe"
+    host: "Hosted by %host%"
 
 accessibility:
   panel_title: "Accessibility preferences"

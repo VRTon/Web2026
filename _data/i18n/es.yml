@@ -405,6 +405,9 @@ schedule:
   party_promo:
     title: "Instancia Extra Angloparlante"
     host: "Presentada por %host%"
+  cafe_promo:
+    title: "Maid Cafe"
+    host: "Presentado por %host%"
 
 accessibility:
   panel_title: "Preferencias de accesibilidad"

@@ -18,6 +18,10 @@ editions:
           es: "7 de noviembre"
           en: "November 7"
     show_end_times: true
+    cafe_promo:
+      host: "ElALBA"
+      start_hour: 25
+      end_hour: 26
     party_promo:
       host: "NoxVitae"
       start_hour: 5

@@ -6,6 +6,7 @@ layout: default
 {% assign schedule_data = site.data.schedule %}
 {% assign schedule = schedule_data.editions | where: "year", page.schedule_year | first %}
 {% assign party_promo = schedule.party_promo %}
+{% assign cafe_promo = schedule.cafe_promo %}
 {% assign official_timezone = schedule.official_timezone | default: schedule_data.official_timezone %}
 {% assign lang_root = '/' %}
 {% if active_lang != site.default_lang %}
@@ -44,6 +45,12 @@ layout: default
           </aside>
         {% endif %}
 
+        {% if cafe_promo %}
+          <aside class="schedule-party-promo schedule-cafe-promo" id="schedule-cafe-promo" aria-labelledby="schedule-cafe-promo-title" tabindex="-1">
+            <h2 id="schedule-cafe-promo-title">{{ t.schedule.cafe_promo.title }} <span aria-hidden="true">|</span> <span class="schedule-party-host">{{ t.schedule.cafe_promo.host | replace: '%host%', cafe_promo.host | escape }}</span></h2>
+          </aside>
+        {% endif %}
+
         <div class="schedule-table-wrap" data-schedule-grid data-official-timezone="{{ official_timezone.id }}">
           <table class="schedule-table">
             {% assign schedule_column_count = schedule.tracks.size | plus: 1 %}
@@ -71,13 +78,17 @@ layout: default
                     {% for track in schedule.tracks %}
                       {% assign track_activities = slot_activities | where: "track", track.id %}
                       {% assign english_instance = false %}
+                      {% assign cafe_instance = false %}
+                      {% if cafe_promo and track.id == 'main' and slot.hour >= cafe_promo.start_hour and slot.hour <= cafe_promo.end_hour %}
+                        {% assign cafe_instance = true %}
+                      {% endif %}
                       {% if party_promo and track.id == 'party' and slot.hour >= party_promo.start_hour and slot.hour <= party_promo.end_hour %}
                         {% assign english_instance = true %}
                       {% endif %}
                       <td class="schedule-instance-cell schedule-{{ track.id }}-cell">
                         {% if track_activities.size > 0 %}
                           {% for activity in track_activities %}
-                            <button class="schedule-activity-card schedule-activity-{{ track.id }}{% if activity.featured %} schedule-activity-featured{% endif %}{% if english_instance %} schedule-activity-english{% endif %}" type="button" aria-haspopup="dialog"{% if english_instance %} aria-describedby="schedule-party-promo"{% endif %}
+                            <button class="schedule-activity-card schedule-activity-{{ track.id }}{% if activity.featured %} schedule-activity-featured{% endif %}{% if english_instance %} schedule-activity-english{% endif %}{% if cafe_instance %} schedule-activity-cafe{% endif %}" type="button" aria-haspopup="dialog"{% if english_instance %} aria-describedby="schedule-party-promo"{% elsif cafe_instance %} aria-describedby="schedule-cafe-promo"{% endif %}
                                     data-schedule-activity
                                     data-activity-title="{{ activity.title[active_lang] | default: activity.title.es | escape }}"
                                     data-activity-description="{{ activity.description[active_lang] | default: activity.description.es | escape }}"
@@ -87,6 +98,7 @@ layout: default
                                     data-show-end="{% if schedule.show_end_times == false %}false{% else %}true{% endif %}">
                               <span class="schedule-activity-marker" aria-hidden="true"></span>
                               {% if english_instance %}<span class="schedule-party-badge" lang="en" aria-hidden="true">EN</span>{% endif %}
+                              {% if cafe_instance %}<span class="schedule-party-badge" aria-hidden="true">CAFE</span>{% endif %}
                               <span>{{ activity.title[active_lang] | default: activity.title.es }}</span>
                               <span class="sr-only">— {{ t.schedule.open_details }}</span>
                             </button>
