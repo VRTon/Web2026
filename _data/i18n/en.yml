@@ -385,7 +385,6 @@ event_page:
 schedule:
   title: "Schedule"
   intro: "Times are automatically converted to your local time zone."
-  subject_to_change: "The schedule is still subject to change."
   local_timezone: "Your time zone"
   official_timezone: "Official time zone"
   time: "Time"
@@ -398,6 +397,9 @@ schedule:
   back_editions: "Back to editions"
   party_promo:
     title: "Extra English Speaking Instance"
+    host: "Hosted by %host%"
+  cafe_promo:
+    title: "Maid Cafe"
     host: "Hosted by %host%"
 
 accessibility:

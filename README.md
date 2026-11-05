@@ -78,3 +78,10 @@ Display image variants are committed under `assets/thumbnails/`. After changing
 event photos, community logos or brand previews, install Pillow locally and run
 `python scripts/prepare_home_images.py`. Jekyll does not need Pillow. Keep gallery
 `data-gallery-image` paths and downloadable archives pointed at the originals.
+
+Schedule activities in `_data/schedule.yml` can optionally include
+`communities: ["Copa Cabana", "JugandoConL4g"]`. Use exact names from
+`_data/communities_2026.yml`; each matching community appears as a circular logo
+on the right of the card, using its `thumbnail` or falling back to `logo`.
+Omit `communities` for cards without logos. Update the community data source in
+`_layouts/schedule.html` when moving to a new edition.

@@ -2127,19 +2127,6 @@ p {
   background: var(--page-alt);
 }
 
-.schedule-warning {
-  display: flex;
-  gap: 0.55rem;
-  margin-block: 1rem 0;
-  padding: 0.75rem 1rem;
-  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--warning) 10%, var(--page));
-  color: var(--warning);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .page-hero-grid {
   display: grid;
   align-items: end;
@@ -2191,13 +2178,18 @@ p {
   min-height: 34rem;
 }
 
+.schedule-cafe-promo,
+.schedule-activity-cafe {
+  --schedule-promo-color: var(--green);
+}
+
 .schedule-party-promo {
   margin-bottom: 0.75rem;
   padding: 0.5rem 0.7rem;
-  border: 1px solid color-mix(in srgb, var(--purple) 45%, var(--border));
-  border-left: 3px solid var(--purple);
+  border: 1px solid color-mix(in srgb, var(--schedule-promo-color, var(--purple)) 45%, var(--border));
+  border-left: 3px solid var(--schedule-promo-color, var(--purple));
   border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--purple) 7%, var(--surface));
+  background: color-mix(in srgb, var(--schedule-promo-color, var(--purple)) 7%, var(--surface));
   overflow-wrap: anywhere;
 }
 
@@ -2213,10 +2205,11 @@ p {
   white-space: nowrap;
 }
 
-.schedule-activity-card.schedule-activity-english {
+.schedule-activity-card.schedule-activity-english,
+.schedule-activity-card.schedule-activity-cafe {
   position: relative;
   padding-top: 1rem;
-  border-top: 3px solid var(--purple);
+  border-top: 3px solid var(--schedule-promo-color, var(--purple));
 }
 
 .schedule-party-badge {
@@ -2225,7 +2218,7 @@ p {
   right: 0.4rem;
   padding: 0.1rem 0.3rem;
   border-radius: 0 0 0.25rem 0.25rem;
-  background: color-mix(in srgb, var(--purple) 18%, var(--surface));
+  background: color-mix(in srgb, var(--schedule-promo-color, var(--purple)) 18%, var(--surface));
   color: var(--text);
   font-size: 0.55rem;
   font-weight: 850;
@@ -2343,14 +2336,46 @@ p {
   background: var(--surface);
   color: var(--text);
   box-shadow: var(--shadow-sm);
-  cursor: pointer;
   font: inherit;
   font-weight: 850;
   text-align: left;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-.schedule-activity-card:hover {
+.schedule-activity-card.schedule-activity-with-communities {
+  display: flex;
+}
+
+.schedule-activity-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.schedule-community-logos {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  max-width: 4.25rem;
+  margin-left: auto;
+}
+
+.schedule-community-logos img {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.1rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  object-fit: contain;
+}
+
+button.schedule-activity-card {
+  cursor: pointer;
+}
+
+button.schedule-activity-card:hover {
   border-color: var(--border-strong);
   box-shadow: var(--shadow-lg);
   transform: translateY(-1px);
@@ -2376,6 +2401,10 @@ p {
 .schedule-activity-featured {
   border-color: var(--primary);
   background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+}
+
+.schedule-activity-party.schedule-activity-featured {
+  border-color: var(--purple);
 }
 
 .schedule-activity-featured .schedule-activity-marker {
@@ -3327,6 +3356,24 @@ p {
 
   .schedule-activity-marker {
     display: none;
+  }
+
+  .schedule-activity-with-communities {
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .schedule-activity-with-communities .schedule-activity-title {
+    flex: 1 1 4rem;
+  }
+
+  .schedule-community-logos {
+    max-width: 1.5rem;
+  }
+
+  .schedule-community-logos img {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .schedule-empty {
