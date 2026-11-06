@@ -638,6 +638,11 @@
       minute: "2-digit",
       hour12: false
     });
+    var dayFormatter = new Intl.DateTimeFormat(body.dataset.language === "en" ? "en-US" : "es-CL", {
+      weekday: "long",
+      month: "long",
+      day: "numeric"
+    });
 
     function dateInTimeZone(dateTime) {
       var match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/.exec(dateTime);
@@ -677,6 +682,32 @@
       var formattedRange = formatScheduleRange(timeElement.dataset.startAt, timeElement.dataset.endAt, timeElement.dataset.showEnd !== "false");
       if (formattedRange) timeElement.textContent = formattedRange;
     });
+
+    // Midnight falls at different rows in each visitor's timezone.
+    var dayGroups = scheduleGrid.querySelectorAll(".schedule-day-group");
+    var entries = Array.from(scheduleGrid.querySelectorAll(".schedule-entry")).map(function (row) {
+      return { row: row, start: dateInTimeZone(row.querySelector("[data-schedule-time]").dataset.startAt) };
+    });
+    if (entries.length && entries.every(function (entry) { return !Number.isNaN(entry.start.getTime()); })) {
+      var table = dayGroups[0].parentNode;
+      var divider = dayGroups[0].querySelector(".schedule-day-divider");
+      var currentDay;
+      var group;
+      entries.forEach(function (entry) {
+        var localDay = entry.start.toDateString();
+        if (localDay !== currentDay) {
+          currentDay = localDay;
+          group = document.createElement("tbody");
+          group.className = "schedule-day-group";
+          var heading = divider.cloneNode(true);
+          heading.querySelector("th").textContent = dayFormatter.format(entry.start);
+          group.appendChild(heading);
+          table.insertBefore(group, dayGroups[0]);
+        }
+        group.appendChild(entry.row);
+      });
+      dayGroups.forEach(function (oldGroup) { oldGroup.remove(); });
+    }
 
     var scheduleDialog = document.getElementById("schedule-dialog");
     if (scheduleDialog) {
