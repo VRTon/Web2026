@@ -3,7 +3,7 @@ current_event:
   year: "2026"
   # Hero countdown target: ISO 8601 with UTC offset (20:00 in Chile, first schedule slot).
   start_date: "2026-11-06T20:00:00-03:00"
-  end_date: "2026-11-07"
+  end_date: "2026-11-08T01:00:00-03:00"
   attend_url: "https://vrc.group/VRTON.0659"
   streaming:
     youtube_url: "https://www.youtube.com/@VRTonOficial/live"
@@ -11,11 +11,11 @@ current_event:
   volunteer_form:
     es: "https://forms.gle/ubg5U2t4eMCuu9k18"
     en: "https://forms.gle/3fgqHpuLAs8mDVqV8"
-  donation_url: ""
+  donation_url: "https://sitiospublicos.bancochile.cl/personas/teleton"
   # Donation window, independent of event dates. Use ISO 8601 with UTC offset.
-  # Provisional: first event slot through the end of the closing ceremony (schedule.yml).
+  # Opening confirmed at 10:00 in Chile; closing still follows the event schedule.
   # Donations open at start and close at end (exclusive). Replace when confirmed.
-  donation_start_date: "2026-11-06T20:00:00-03:00"
+  donation_start_date: "2026-11-06T10:00:00-03:00"
   donation_end_date: "2026-11-08T01:00:00-03:00"
 
 community:
