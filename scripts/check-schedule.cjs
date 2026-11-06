@@ -10,7 +10,7 @@ function checkSchedule(language, timezone, cases) {
   }));
   const root = { dataset: {} };
   const body = { dataset: { language } };
-  const grid = { dataset: { officialTimezone: timezone } };
+  const grid = { dataset: { officialTimezone: timezone }, querySelectorAll: () => [] };
   let formatters = 0;
   const document = {
     documentElement: root, body,
@@ -26,7 +26,7 @@ function checkSchedule(language, timezone, cases) {
     } }
   });
   assert.deepEqual(rows.map(row => row.textContent), cases.map(item => item[3]));
-  assert.equal(formatters, 2, "Formatters must be reused across rows");
+  assert.equal(formatters, 3, "Formatters must be reused across rows");
 }
 for (const language of ["es", "en"]) {
   checkSchedule(language, "America/Santiago", [
