@@ -24,6 +24,7 @@ if __name__ == "__main__":
     with Image.open(ROOT / "assets/2026/cielos-de-cristal-hero-background.webp") as background:
         background.save(ROOT / "assets/thumbnails/2026/hero-background.avif", format="AVIF", quality=65, speed=6)
     for name, widths in (("vrton-cielos-de-cristal", (800, 1100, 1600)),
+                         ("cielos-de-cristal-hero-background", (480, 960, 1920)),
                          ("itinerario-listo", (480, 960, 1440)),
                          ("cielos-de-cristal-faq-mascot", (400, 800))):
         for width in widths:

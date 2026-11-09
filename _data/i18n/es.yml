@@ -364,6 +364,7 @@ event_page:
   unconfirmed: "Información no publicada"
   gallery: "Fotos y videos"
   gallery_intro: "Registro fotográfico disponible de la edición."
+  no_images: "Aún no hay fotografías publicadas de esta edición."
   participants: "Comunidades participantes"
   volunteers: "Voluntarios de esta edición"
   no_volunteers: "Aún no se han proporcionado nombres de voluntarios para esta edición."

@@ -12,6 +12,14 @@ The total is present in the HTML; a 1.4-second count-up plays once when it enter
 the viewport. System and site reduced-motion preferences keep the final amount
 static, as does browsing without JavaScript.
 
+## Edition archive
+
+`_data/events.yml` stores each edition's published total, beneficiary, communities
+and volunteer credits. The 2026 entry snapshots the current team and community
+catalogues, with its dates and official artwork as `cover`. Its `images` list
+is empty until event photographs are available. Add photographs there to populate
+the gallery. Routes: `/events/2026/` and `/schedule/2026/`, plus their English versions.
+
 ## Donations
 
 The donation guide lives at `/donar/` and `/en/donar/`. In `_data/site.yml`, set
