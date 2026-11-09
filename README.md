@@ -4,14 +4,13 @@ Bilingual Jekyll site. Edit shared styles in `styles.scss`; Jekyll compiles them
 to compressed `/styles.css` using Dart Sass. Page behavior lives in `script.js`,
 and translations live in `_data/i18n/{es,en}.yml`.
 
-The homepage countdown uses `current_event.start_date` in `_data/site.yml`
-(ISO 8601 including time and UTC offset, e.g. `2026-11-06T20:00:00-03:00`).
-It shows days, hours, minutes and seconds to the same instant worldwide, updating
-once per second while the tab is visible. Keep `home_v2.date_compact` in both
-translation files aligned with the event dates when changing editions.
-When the countdown ends, a LIVE banner replaces the counter and date, with links
-configured in `current_event.streaming.youtube_url` and `twitch_url` in the same
-data file. These links open the stream channels without loading video players.
+The homepage displays the final VRTon 2026 result: **US$3,339** raised,
+with a thank-you message and an invitation to next year's edition in Spanish and
+English. Discord is the main way to join the community, alongside social media
+logos. Livestream, attendance and volunteer signup buttons were removed.
+The total is present in the HTML; a 1.4-second count-up plays once when it enters
+the viewport. System and site reduced-motion preferences keep the final amount
+static, as does browsing without JavaScript.
 
 ## Donations
 
