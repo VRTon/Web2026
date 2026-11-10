@@ -4,7 +4,7 @@ layout: default
 {% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
 {% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
 {% assign event = site.data.events | where: "year", page.event_year | first %}
-{% assign hero_image = event.images.first %}
+{% assign hero_image = event.cover | default: event.images.first %}
 {% assign hero_alt = hero_image.alt[active_lang] | default: hero_image.alt.es %}
 {% assign lang_root = '/' %}
 {% if active_lang != site.default_lang %}
@@ -18,7 +18,7 @@ layout: default
     <div class="content-shell event-hero-content">
       <p class="eyebrow eyebrow-light">{{ t.event_page.archive_kicker }}</p>
       <h1>{{ t.event_page.title_prefix }} {{ event.year }}</h1>
-      <p>{{ t.event_page.summary }}</p>
+      <p>{% if event.date_label %}<time datetime="{{ event.start_date }}">{{ event.date_label[active_lang] }}</time> · {% endif %}{{ event.title | default: t.event_page.summary }}</p>
     </div>
   </header>
 
@@ -45,7 +45,7 @@ layout: default
     <div class="content-shell">
       <div class="section-heading section-heading-wide">
         <h2 id="gallery-title">{{ t.event_page.gallery }}</h2>
-        <p>{{ t.event_page.gallery_intro }}</p>
+        <p>{% if event.images.size > 0 %}{{ t.event_page.gallery_intro }}{% else %}{{ t.event_page.no_images }}{% endif %}</p>
       </div>
       <div class="gallery-grid">
         {% for image in event.images %}
