@@ -2836,6 +2836,7 @@ button.schedule-activity-card:hover {
 }
 
 .avatar-resource-card {
+  grid-column: span 2;
   min-width: 0;
   overflow: hidden;
   border-radius: var(--radius);
@@ -2856,15 +2857,10 @@ button.schedule-activity-card:hover {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  transition: transform 300ms ease;
-}
-
-.avatar-resource-card .avatar-placeholder-image {
-  padding: 18%;
-  background: #fff;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
+  background: #fff;
+  transition: transform 300ms ease;
 }
 
 .avatar-resource-card:hover img {
@@ -2895,12 +2891,6 @@ button.schedule-activity-card:hover {
 
 .avatar-resource-card-featured {
   grid-column: span 3;
-}
-
-.avatar-resource-card-featured img {
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: #fff;
 }
 
 .avatar-resource-card-featured .avatar-resource-overlay {
@@ -3403,10 +3393,6 @@ button.schedule-activity-card:hover {
 
   .resource-heading-row {
     gap: 1rem;
-  }
-
-  .avatar-resource-card:not(.avatar-resource-card-featured) {
-    grid-column: span 2;
   }
 
   .brand-kit-preview {
