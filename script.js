@@ -7,46 +7,52 @@
   var preferenceKey = "vrton-preferences";
   var languageKey = "vrton-language";
 
-  function setupCountdown() {
-    var countdown = document.querySelector("[data-countdown-date]");
-    if (!countdown) return;
-    var target = Date.parse(countdown.dataset.countdownDate);
-    if (!Number.isFinite(target)) return;
-    var units = countdown.querySelector("[data-countdown-units]");
-    var numbers = countdown.querySelectorAll("[data-countdown-value]");
-    var label = countdown.querySelector("[data-countdown-label]");
-    var heroCopy = countdown.closest(".hero-copy");
-    var date = heroCopy.querySelector(".hero-date");
-    var streamLinks = heroCopy.querySelector("[data-stream-links]");
+  function setupDonationPeriod() {
+    var period = document.querySelector("[data-donation-period]");
+    if (!period) return;
+    var start = Date.parse(period.dataset.start);
+    var end = Date.parse(period.dataset.end);
+    if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return;
+    var states = period.querySelectorAll("[data-donation-state]");
+    var countdown = period.querySelector("[data-donation-countdown]");
+    var numbers = countdown.querySelectorAll("[data-donation-value]");
+    var formatter = new Intl.DateTimeFormat(body.dataset.language, {
+      dateStyle: "long", timeStyle: "short"
+    });
+    period.querySelectorAll("[data-donation-date]").forEach(function (date) {
+      var value = date.dataset.donationDate === "start" ? start : end;
+      date.dateTime = new Date(value).toISOString();
+      date.textContent = formatter.format(value);
+    });
+    period.querySelector("[data-donation-timezone]").hidden = false;
     var timer;
 
     function update() {
       window.clearTimeout(timer);
       if (document.hidden) return;
-      var remaining = Math.max(0, Math.ceil((target - Date.now()) / 1000));
-      var live = remaining === 0;
-      units.hidden = live;
-      date.hidden = live;
-      streamLinks.hidden = !live;
-      countdown.classList.toggle("is-live", live);
-      var values = [Math.floor(remaining / 86400), Math.floor(remaining / 3600) % 24,
-        Math.floor(remaining / 60) % 60, remaining % 60];
-      numbers.forEach(function (number, index) {
-        var value = String(values[index]).padStart(2, "0");
-        if (number.textContent !== value) number.textContent = value;
+      var now = Date.now();
+      var state = now < start ? "before" : now < end ? "open" : "closed";
+      states.forEach(function (panel) {
+        panel.hidden = panel.dataset.donationState !== state;
       });
-      label.hidden = !live;
-      if (live) label.textContent = countdown.dataset.liveLabel;
-      if (remaining > 0) {
-        timer = window.setTimeout(update, 1000);
+      countdown.hidden = state !== "before";
+      if (state === "before") {
+        var remaining = Math.ceil((start - now) / 1000);
+        var values = [Math.floor(remaining / 86400), Math.floor(remaining / 3600) % 24,
+          Math.floor(remaining / 60) % 60, remaining % 60];
+        numbers.forEach(function (number, index) {
+          var value = String(values[index]).padStart(2, "0");
+          if (number.textContent !== value) number.textContent = value;
+        });
       }
+      if (state !== "closed") timer = window.setTimeout(update, 1000);
     }
 
     update();
     document.addEventListener("visibilitychange", update);
   }
 
-  setupCountdown();
+  setupDonationPeriod();
 
   var defaults = {
     theme: "system",
@@ -147,6 +153,40 @@
   var preferences = getPreferences();
   applyPreferences(preferences, false);
 
+  function setupResultCounter() {
+    var number = document.querySelector("[data-result-total]");
+    if (!number) return;
+    var total = Number(number.dataset.resultTotal);
+    if (!Number.isFinite(total)) return;
+    var formatter = new Intl.NumberFormat("en-US");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    function shouldSkipMotion() {
+      return reducedMotion.matches || root.dataset.reduceMotion === "true";
+    }
+    if (shouldSkipMotion()) return;
+
+    function animate() {
+      var start = performance.now();
+      function update(now) {
+        var progress = shouldSkipMotion() || document.hidden ? 1 : Math.min((now - start) / 1400, 1);
+        number.textContent = formatter.format(Math.round(total * (1 - Math.pow(1 - progress, 3))));
+        if (progress < 1) window.requestAnimationFrame(update);
+      }
+      window.requestAnimationFrame(update);
+    }
+
+    if (!("IntersectionObserver" in window)) return animate();
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries.some(function (entry) { return entry.isIntersecting; })) {
+        observer.disconnect();
+        animate();
+      }
+    });
+    observer.observe(number);
+  }
+
+  setupResultCounter();
+
   var preferenceDialog = document.getElementById("accessibility-dialog");
   var lastDialogTrigger = null;
 
@@ -186,24 +226,6 @@
         announce(document.documentElement.lang === "es" ? "Preferencias restablecidas" : "Preferences reset");
       });
     }
-  }
-
-  var attendanceDialog = document.getElementById("attendance-dialog");
-  if (attendanceDialog && typeof attendanceDialog.showModal === "function") {
-    var attendanceTrigger = null;
-    document.querySelectorAll("[data-open-attendance]").forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        attendanceTrigger = link;
-        attendanceDialog.showModal();
-      });
-    });
-    attendanceDialog.addEventListener("close", function () {
-      if (attendanceTrigger) attendanceTrigger.focus();
-    });
-    attendanceDialog.addEventListener("click", function (event) {
-      if (event.target === attendanceDialog) attendanceDialog.close();
-    });
   }
 
   document.querySelectorAll(".theme-toggle").forEach(function (button) {
@@ -591,6 +613,11 @@
       minute: "2-digit",
       hour12: false
     });
+    var dayFormatter = new Intl.DateTimeFormat(body.dataset.language === "en" ? "en-US" : "es-CL", {
+      weekday: "long",
+      month: "long",
+      day: "numeric"
+    });
 
     function dateInTimeZone(dateTime) {
       var match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/.exec(dateTime);
@@ -630,6 +657,32 @@
       var formattedRange = formatScheduleRange(timeElement.dataset.startAt, timeElement.dataset.endAt, timeElement.dataset.showEnd !== "false");
       if (formattedRange) timeElement.textContent = formattedRange;
     });
+
+    // Midnight falls at different rows in each visitor's timezone.
+    var dayGroups = scheduleGrid.querySelectorAll(".schedule-day-group");
+    var entries = Array.from(scheduleGrid.querySelectorAll(".schedule-entry")).map(function (row) {
+      return { row: row, start: dateInTimeZone(row.querySelector("[data-schedule-time]").dataset.startAt) };
+    });
+    if (entries.length && entries.every(function (entry) { return !Number.isNaN(entry.start.getTime()); })) {
+      var table = dayGroups[0].parentNode;
+      var divider = dayGroups[0].querySelector(".schedule-day-divider");
+      var currentDay;
+      var group;
+      entries.forEach(function (entry) {
+        var localDay = entry.start.toDateString();
+        if (localDay !== currentDay) {
+          currentDay = localDay;
+          group = document.createElement("tbody");
+          group.className = "schedule-day-group";
+          var heading = divider.cloneNode(true);
+          heading.querySelector("th").textContent = dayFormatter.format(entry.start);
+          group.appendChild(heading);
+          table.insertBefore(group, dayGroups[0]);
+        }
+        group.appendChild(entry.row);
+      });
+      dayGroups.forEach(function (oldGroup) { oldGroup.remove(); });
+    }
 
     var scheduleDialog = document.getElementById("schedule-dialog");
     if (scheduleDialog) {

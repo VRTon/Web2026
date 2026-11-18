@@ -40,11 +40,7 @@
                     {% endfor %}
                 </div>
                 <button class="icon-button theme-toggle" type="button" aria-label="{{ t.nav_v2.theme }}" title="{{ t.nav_v2.theme }}"><span aria-hidden="true">◐</span></button>
-                {% if site.data.site.current_event.donation_url != '' %}
-                    <a class="button button-primary button-small" href="{{ site.data.site.current_event.donation_url }}">{{ t.nav_v2.donate }}</a>
-                {% else %}
-                    <button class="button button-primary button-small" type="button" data-notice="{{ t.home_v2.donation_pending }}">{{ t.nav_v2.donate }}</button>
-                {% endif %}
+                <a class="button button-primary button-small" href="{{ lang_root | append: 'donar/' | relative_url }}"{% if page.page_id == 'donate' %} aria-current="page"{% endif %}>{{ t.nav_v2.donate }}</a>
             </div>
         </div>
     </div>

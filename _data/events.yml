@@ -1,3 +1,127 @@
+- year: 2026
+  slug: '2026'
+  title: Cielos de Cristal
+  amount: USD 3,339
+  beneficiary: Teletón Chile
+  start_date: '2026-11-06T20:00:00-03:00'
+  end_date: '2026-11-08T01:00:00-03:00'
+  date_label:
+    es: 6 y 7 de noviembre de 2026
+    en: November 6–7, 2026
+  cover:
+    path: /assets/2026/cielos-de-cristal-hero-background.webp
+    alt:
+      es: Ilustración oficial de Cielos de Cristal, VRTon 2026
+      en: Official Cielos de Cristal artwork for VRTon 2026
+  volunteers:
+  - 3D Master
+  - ValenVRC
+  - DantalionNight
+  - FoxyCTG21
+  - LianRo
+  - YuanX
+  - MiiileChan
+  - DannySmile
+  - Sperto
+  - Karamaty
+  - Ramses0418
+  - DannyLasagna
+  - NebularSoul
+  - JayJefferson
+  - JamirDG
+  - Penagos
+  - FAWN
+  - Blueminescent
+  - Sr Adela
+  - Iza42
+  - Yeusepe
+  - MadKodin
+  - AnaGoat
+  - ZorroCL
+  - Surprise
+  - Artask
+  - Haze
+  - Iza42
+  - KariwiVT
+  - RukasuOverClock
+  - Winet
+  - ZeroSkill
+  - BlueWind
+  - JackerBun
+  - Lexter
+  - MadKoding
+  - Mok0
+  - not-a-skinwalker
+  - Pipe
+  - Le_Fifi
+  images: []
+  communities:
+  - name: ElPecado
+    logo: /assets/Comunidades/ElPecado.webp
+    thumbnail: /assets/thumbnails/Comunidades/ElPecado.webp
+  - name: Copa Cabana
+    logo: /assets/Comunidades/CopaCabana.webp
+    thumbnail: /assets/thumbnails/Comunidades/CopaCabana.webp
+  - name: Cult of Secrets
+    logo: /assets/Comunidades/CultOfSecrets.webp
+    thumbnail: /assets/thumbnails/Comunidades/CultOfSecrets.webp
+  - name: Furality
+    logo: /assets/Comunidades/Furality.webp
+    thumbnail: /assets/thumbnails/Comunidades/Furality.webp
+  - name: El Alba
+    logo: /assets/Comunidades/ElAlba.webp
+    thumbnail: /assets/thumbnails/Comunidades/ElAlba.webp
+  - name: VRBrothers
+    logo: /assets/Comunidades/VTuberFest.webp
+    thumbnail: /assets/thumbnails/Comunidades/VTuberFest.webp
+  - name: AfterHours
+    logo: /assets/Comunidades/AfterHours.webp
+    thumbnail: /assets/thumbnails/Comunidades/AfterHours.webp
+  - name: Furry Argentina
+    logo: /assets/Comunidades/FurryArgentina.webp
+    thumbnail: /assets/thumbnails/Comunidades/FurryArgentina.webp
+  - name: The Secret Society
+    logo: /assets/Comunidades/TheSecretSociety.webp
+    thumbnail: /assets/thumbnails/Comunidades/TheSecretSociety.webp
+  - name: JugandoConL4g
+    logo: /assets/Comunidades/JugandoConLag.webp
+    thumbnail: /assets/thumbnails/Comunidades/JugandoConLag.webp
+  - name: Side V
+    logo: /assets/Comunidades/SideV.webp
+    thumbnail: /assets/thumbnails/Comunidades/SideV.webp
+  - name: Nox Vitae
+    logo: /assets/Comunidades/NoxVitae.webp
+    thumbnail: /assets/thumbnails/Comunidades/NoxVitae.webp
+  - name: Forjadores Hispanos
+    logo: /assets/Comunidades/ForjadoresHispanos.webp
+    thumbnail: /assets/thumbnails/Comunidades/ForjadoresHispanos.webp
+  - name: Drinking Cloud
+    logo: /assets/Comunidades/DrinkingCloud.webp
+    thumbnail: /assets/thumbnails/Comunidades/DrinkingCloud.webp
+  - name: La Fondue
+    logo: /assets/Comunidades/LaFondue.webp
+    thumbnail: /assets/thumbnails/Comunidades/LaFondue.webp
+  - name: BlackOut
+    logo: /assets/Comunidades/BlackOut.webp
+    thumbnail: /assets/thumbnails/Comunidades/BlackOut.webp
+  - name: PIVR
+    logo: /assets/Comunidades/PIVR.webp
+    thumbnail: /assets/thumbnails/Comunidades/PIVR.webp
+  - name: Spin The Wheel Lovers
+    logo: /assets/Comunidades/SpinTheWheelLovers.webp
+    thumbnail: /assets/thumbnails/Comunidades/SpinTheWheelLovers.webp
+  - name: WichitoIA
+    logo: /assets/Comunidades/WichitoIA.webp
+    thumbnail: /assets/thumbnails/Comunidades/WichitoIA.webp
+  - name: Val's Creations
+    logo: /assets/Comunidades/valenvrc.webp
+    thumbnail: /assets/thumbnails/Comunidades/valenvrc.webp
+  - name: Club Strange
+    logo: /assets/Comunidades/ClubStrange.webp
+    thumbnail: /assets/thumbnails/Comunidades/ClubStrange.webp
+  - name: El Parche
+    logo: /assets/Comunidades/ElParche.webp
+
 - year: 2025
   slug: "2025"
   amount: "USD 3,255"

@@ -1,9 +1,10 @@
 {% assign card_event = include.event %}
-{% assign event_alt = card_event.images.first.alt[active_lang] | default: card_event.images.first.alt.es %}
+{% assign card_image = card_event.cover | default: card_event.images.first %}
+{% assign event_alt = card_image.alt[active_lang] | default: card_image.alt.es %}
 {% assign event_url = lang_root | append: 'events/' | append: card_event.slug | append: '/' %}
 <article class="event-card">
   <a class="event-image" href="{{ event_url | relative_url }}" aria-label="{{ t.home_v2.view_event }} VRTon {{ card_event.year }}">
-    {% include responsive-image.html src=card_event.images.first.path alt=event_alt width=1920 height=1080 widths="480,960" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 46vw, 400px" %}
+    {% include responsive-image.html src=card_image.path alt=event_alt width=1920 height=1080 widths="480,960" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 46vw, 400px" %}
     <span class="event-year">{{ card_event.year }}</span>
   </a>
   <div class="event-card-body">

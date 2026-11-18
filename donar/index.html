@@ -1,0 +1,99 @@
+---
+layout: default
+lang: es
+permalink: /donar/
+page_id: donate
+---
+{% assign active_lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'es' %}
+{% assign t = site.data.i18n[active_lang] | default: site.data.i18n.es %}
+{% assign d = t.donate_page %}
+{% assign event = site.data.site.current_event %}
+
+<main id="main-content" tabindex="-1" class="donate-page">
+  <header class="page-hero">
+    <div class="content-shell">
+      <p class="eyebrow">{{ event.name }} · {{ d.eyebrow }}</p>
+      <h1>{{ d.title }}</h1>
+      <p>{{ d.intro }}</p>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="donation-period-title">
+    <div class="content-shell donation-layout">
+      <div class="donation-period" data-donation-period
+           data-start="{{ event.donation_start_date | escape }}"
+           data-end="{{ event.donation_end_date | escape }}">
+        <p class="eyebrow">{{ d.period_label }}</p>
+        <h2 id="donation-period-title">{{ d.period_title }}</h2>
+        <dl class="donation-dates">
+          <div><dt>{{ d.opens }}</dt><dd><time data-donation-date="start">{{ d.to_confirm }}</time></dd></div>
+          <div><dt>{{ d.closes }}</dt><dd><time data-donation-date="end">{{ d.to_confirm }}</time></dd></div>
+        </dl>
+        <p class="donation-timezone" data-donation-timezone hidden>{{ d.local_time }}</p>
+        <div aria-live="polite" aria-atomic="true">
+          <p data-donation-state="pending">{{ d.period_pending }}</p>
+          <p data-donation-state="before" hidden>{{ d.before }}</p>
+          <p data-donation-state="open" hidden>{{ d.open }}</p>
+          <p data-donation-state="closed" hidden><strong>{{ d.closed }}</strong> {{ d.closed_receipts }}</p>
+        </div>
+        <div class="donation-countdown" data-donation-countdown role="timer" aria-live="off" aria-label="{{ d.before | escape }}" hidden>
+          <div><strong data-donation-value>00</strong><span>{{ t.home_v2.countdown_days }}</span></div>
+          <div><strong data-donation-value>00</strong><span>{{ t.home_v2.countdown_hours }}</span></div>
+          <div><strong data-donation-value>00</strong><span>{{ t.home_v2.countdown_minutes }}</span></div>
+          <div><strong data-donation-value>00</strong><span>{{ t.home_v2.countdown_seconds }}</span></div>
+        </div>
+        <div data-donation-state="open" hidden>
+          {% if event.donation_url != blank %}
+            <a class="button button-primary" href="{{ event.donation_url | escape }}" target="_blank" rel="noopener noreferrer">{{ d.official_link }} <span aria-hidden="true">↗</span></a>
+          {% else %}
+            <p>{{ t.home_v2.donation_pending }}</p>
+          {% endif %}
+        </div>
+        <noscript><p>{{ d.no_script }}</p></noscript>
+      </div>
+      <aside class="donation-safety" aria-labelledby="donation-safety-title">
+        <p class="eyebrow">{{ d.safety_label }}</p>
+        <h2 id="donation-safety-title">{{ d.safety_title }}</h2>
+        <p><strong>{{ d.no_money }}</strong></p>
+        <p>{{ d.official_only }}</p>
+        <a class="text-link" href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">{{ d.discord_help }} <span aria-hidden="true">↗</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tinted" aria-labelledby="donation-steps-title">
+    <div class="content-shell">
+      <div class="section-heading section-heading-wide">
+        <p class="eyebrow">{{ d.steps_label }}</p>
+        <h2 id="donation-steps-title">{{ d.steps_title }}</h2>
+        <p>{{ d.steps_intro }}</p>
+      </div>
+      <ol class="donation-steps">
+        {% for step in d.steps %}
+          <li>
+            <span class="donation-step-number" aria-hidden="true">{{ forloop.index }}</span>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.text }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+      <div class="donation-receipts" id="comprobantes">
+        <div>
+          <h3>{{ d.privacy_title }}</h3>
+          <p>{{ d.privacy_text }}</p>
+          <p>{{ d.keep_visible }}</p>
+        </div>
+        <a class="button button-secondary" href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">{{ d.send_receipt }} <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="donation-accounting-title">
+    <div class="content-shell section-heading">
+      <p class="eyebrow">{{ d.accounting_label }}</p>
+      <h2 id="donation-accounting-title">{{ d.accounting_title }}</h2>
+      <p>{{ d.accounting_text }}</p>
+      <p>{{ d.accounting_limit }}</p>
+    </div>
+  </section>
+</main>

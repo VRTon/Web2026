@@ -4,23 +4,6 @@ Bilingual Jekyll site. Edit shared styles in `styles.scss`; Jekyll compiles them
 to compressed `/styles.css` using Dart Sass. Page behavior lives in `script.js`,
 and translations live in `_data/i18n/{es,en}.yml`.
 
-Legal documents are complete Markdown pages in `legal/<document>/index.es.md`
-and `index.en.md`, rendered at build time by `_layouts/legal.html`. Keep each
-translation's `page_id`, `permalink`, version, revision date, and article anchors
-aligned. Use `/legal/<document>/#<article-id>` for cross-references; Polyglot
-localizes those links. Short legal navigation labels remain in the i18n YAML.
-The shared `legal-toc.md` include produces a collapsible contents list that works
-without JavaScript. Update both languages together when revising a policy.
-
-The homepage countdown uses `current_event.start_date` in `_data/site.yml`
-(ISO 8601 including time and UTC offset, e.g. `2026-11-06T20:00:00-03:00`).
-It shows days, hours, minutes and seconds to the same instant worldwide, updating
-once per second while the tab is visible. Keep `home_v2.date_compact` in both
-translation files aligned with the event dates when changing editions.
-When the countdown ends, a LIVE banner replaces the counter and date, with links
-configured in `current_event.streaming.youtube_url` and `twitch_url` in the same
-data file. These links open the stream channels without loading video players.
-
 ## Build and check
 
 ```powershell
@@ -67,3 +50,62 @@ Display image variants are committed under `assets/thumbnails/`. After changing
 event photos, community logos or brand previews, install Pillow locally and run
 `python scripts/prepare_home_images.py`. Jekyll does not need Pillow. Keep gallery
 `data-gallery-image` paths and downloadable archives pointed at the originals.
+
+Schedule activities in `_data/schedule.yml` can optionally include
+`communities: ["Copa Cabana", "JugandoConL4g"]`. Use exact names from
+`_data/communities_2026.yml`; each matching community appears as a circular logo
+on the right of the card, using its `thumbnail` or falling back to `logo`.
+Omit `communities` for cards without logos. Update the community data source in
+`_layouts/schedule.html` when moving to a new edition.
+
+Legal documents are complete Markdown pages in `legal/<document>/index.es.md`
+and `index.en.md`, rendered at build time by `_layouts/legal.html`. Keep each
+translation's `page_id`, `permalink`, version, revision date, and article anchors
+aligned. Use `/legal/<document>/#<article-id>` for cross-references; Polyglot
+localizes those links. Short legal navigation labels remain in the i18n YAML.
+The shared `legal-toc.md` include produces a collapsible contents list that works
+without JavaScript. Update both languages together when revising a policy.
+
+The homepage countdown uses `current_event.start_date` in `_data/site.yml`
+(ISO 8601 including time and UTC offset, e.g. `2026-11-06T20:00:00-03:00`).
+It shows days, hours, minutes and seconds to the same instant worldwide, updating
+once per second while the tab is visible. Keep `home_v2.date_compact` in both
+translation files aligned with the event dates when changing editions.
+When the countdown ends, a LIVE banner replaces the counter and date, with links
+configured in `current_event.streaming.youtube_url` and `twitch_url` in the same
+data file. These links open the stream channels without loading video players.
+
+The homepage displays the final VRTon 2026 result: **US$3,339** raised,
+with a thank-you message and an invitation to next year's edition in Spanish and
+English. Discord is the main way to join the community, alongside social media
+logos. Livestream, attendance and volunteer signup buttons were removed.
+The total is present in the HTML; a 1.4-second count-up plays once when it enters
+the viewport. System and site reduced-motion preferences keep the final amount
+static, as does browsing without JavaScript.
+
+## Edition archive
+
+`_data/events.yml` stores each edition's published total, beneficiary, communities
+and volunteer credits. The 2026 entry snapshots the current team and community
+catalogues, with its dates and official artwork as `cover`. Its `images` list
+is empty until event photographs are available. Add photographs there to populate
+the gallery. Routes: `/events/2026/` and `/schedule/2026/`, plus their English versions.
+
+## Donations
+
+The donation guide lives at `/donar/` and `/en/donar/`. In `_data/site.yml`, set
+`current_event.donation_url` to the confirmed official donation URL, and set
+`donation_start_date` and `donation_end_date` to ISO 8601 timestamps including
+the UTC offset. These dates are independent of the event dates. The start is
+inclusive; the end is exclusive. Leave unknown values empty. Donations open on
+November 6 at 10:00, Chile time. The closing date is still a provisional
+placeholder matching the event schedule (November 8 at 01:00, Chile time);
+replace it when confirmed.
+
+The page shows a countdown before opening, the official donation button while
+open (only when its URL is configured), and a closed notice afterward. Receipt
+submission through the shared `community.discord` link remains available.
+Missing or invalid dates show a pending notice with no donation button. The
+browser checks the period on load, every second and when returning to the tab;
+JavaScript is required for current availability. ES/EN copy is in `donate_page`
+in the translation files.

@@ -36,31 +36,37 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
     </div>
     <div class="content-shell hero-grid">
       <div class="hero-edition-logo" aria-hidden="true">
-        {% include responsive-image.html src="/assets/2026/vrton-cielos-de-cristal.webp" width=1600 height=1600 widths="800,1100,1600" sizes="(max-width: 384px) calc(134.2vw - 43px), (max-width: 820px) 473px, (max-width: 1212px) calc(67.1vw - 43px), 770px" loading="eager" fetchpriority="high" %}
+        {% include responsive-image.html src="/assets/2026/vrton-cielos-de-cristal.webp" width=1600 height=1600 widths="800,1100,1600" sizes="(max-width: 384px) calc(134.2vw - 43px), (max-width: 820px) 473px, 559px" loading="eager" fetchpriority="high" %}
       </div>
       <div class="hero-copy">
-        <p class="hero-eyebrow">{{ t.home_v2.eyebrow }}</p>
-        <h1 class="hero-countdown" id="hero-title" aria-label="{{ t.home.hero.title | escape }}"
-            data-countdown-date="{{ current_event.start_date }}"
-            data-live-label="{{ t.home_v2.countdown_live | escape }}">
-          <span class="hero-countdown-units" data-countdown-units role="timer" aria-live="off" hidden>
-            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_days }}</span></span>
-            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_hours }}</span></span>
-            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_minutes }}</span></span>
-            <span class="hero-countdown-unit"><span class="hero-countdown-number" data-countdown-value>00</span><span class="hero-countdown-unit-label">{{ t.home_v2.countdown_seconds }}</span></span>
-          </span>
-          <span class="hero-countdown-label" data-countdown-label aria-live="polite">{{ t.home.hero.title }}</span>
-        </h1>
-        <time class="hero-date" datetime="{{ current_event.start_date }}">{{ t.home_v2.date_compact }}</time>
-
-        <div class="hero-stream-actions" data-stream-links hidden role="group" aria-label="{{ t.home_v2.live_stream_label }}">
-          <a class="button button-secondary" href="{{ current_event.streaming.youtube_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.watch_youtube }}</a>
-          <a class="button button-secondary" href="{{ current_event.streaming.twitch_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.watch_twitch }}</a>
-        </div>
-
-        <div class="hero-actions" aria-label="{{ t.home_v2.event_label }}">
-          <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ t.home_v2.attend }}</a>
-          <a class="button button-secondary" href="{{ volunteer_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.volunteer }}</a>
+        <div class="hero-result">
+          <p class="hero-eyebrow">{{ t.home_v2.eyebrow }}</p>
+          <h1 id="hero-title" class="hero-result-amount" aria-label="US$3,339 {{ t.home_v2.result_raised | escape }}">
+            <span aria-hidden="true"><span class="hero-result-currency">US$</span><span data-result-total="3339">3,339</span></span>
+          </h1>
+          <div class="hero-result-caption">
+            <p class="hero-result-label">{{ t.home_v2.result_raised }}</p>
+            <p class="hero-result-thanks">{{ t.home_v2.result_thanks }}</p>
+          </div>
+          <div class="hero-next-year">
+            <h2>{{ t.home_v2.next_year_title }}</h2>
+            <p>{{ t.home_v2.next_year_text }}</p>
+            <div class="hero-connect">
+              <a class="button discord-button" href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">
+                <span class="social-icon" aria-hidden="true">{% include social-icons/discord.svg %}</span>
+                <span>{{ t.home_v2.join_discord }}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <nav class="hero-socials" aria-label="{{ t.home_v2.social_label }}">
+                {% for social in site.data.site.social %}
+                  {% assign social_icon = social.name | downcase | prepend: 'social-icons/' | append: '.svg' %}
+                  <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}" title="{{ social.name }}">
+                    <span class="social-icon" aria-hidden="true">{% include {{ social_icon }} %}</span>
+                  </a>
+                {% endfor %}
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -100,8 +106,6 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
                       <button class="button button-secondary" type="button" disabled>{{ slide.cta_label }}</button>
                     {% elsif slide.cta_path %}
                       <a class="button button-secondary" href="{{ lang_root | append: slide.cta_path | relative_url }}">{{ slide.cta_label }}</a>
-                    {% elsif slide.cta_attend %}
-                      <a class="button button-secondary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ slide.cta_label }}</a>
                     {% elsif slide.cta_url %}
                       <a class="button button-secondary" href="{{ slide.cta_url }}" target="_blank" rel="noopener noreferrer">{{ slide.cta_label }}</a>
                     {% endif %}
@@ -230,27 +234,14 @@ image: "/assets/Eventos/2025/event-2025-1.webp"
       </div>
 
       <div class="participation-actions">
-        <a class="button button-primary" href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer" data-open-attendance>{{ t.home_v2.participate_attend }}</a>
-        <a class="button button-secondary" href="{{ volunteer_url }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.participate_volunteer }}</a>
+        <a class="button discord-button" href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">{% include social-icons/discord.svg %}</span>
+          {{ t.home_v2.join_discord }}
+        </a>
       </div>
     </div>
   </section>
 </main>
-
-<dialog class="preferences-dialog attendance-dialog" id="attendance-dialog" aria-labelledby="attendance-title">
-  <div class="preferences-card">
-    <div class="preferences-header">
-      <h2 id="attendance-title">{{ t.home_v2.attendance_title }}</h2>
-      <form method="dialog"><button class="icon-button" aria-label="{{ t.accessibility.close }}">×</button></form>
-    </div>
-    <ol class="attendance-steps">
-      <li>{{ t.home_v2.attendance_register }} <a href="https://vrchat.com/" target="_blank" rel="noopener noreferrer">VRChat</a>.</li>
-      <li>{{ t.home_v2.attendance_join }} <a href="{{ current_event.attend_url }}" target="_blank" rel="noopener noreferrer">VRTON.0659</a>.</li>
-      <li>{{ t.home_v2.attendance_calendar }} <a href="https://vrchat.com/home/group/grp_d66fc7e0-955b-42aa-9abb-372bc72c178f/calendar/cal_7bf39952-a3b2-45f8-923e-08d8535749b9" target="_blank" rel="noopener noreferrer">{{ t.home_v2.attendance_calendar_link }}</a>.</li>
-    </ol>
-    <p class="attendance-note">{{ t.home_v2.attendance_note }} <a href="{{ site.data.site.community.discord }}" target="_blank" rel="noopener noreferrer">{{ t.home_v2.attendance_discord }}</a>.</p>
-  </div>
-</dialog>
 
 <script type="application/ld+json">
 {
